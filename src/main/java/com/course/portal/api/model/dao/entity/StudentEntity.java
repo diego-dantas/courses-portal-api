@@ -3,6 +3,7 @@ package com.course.portal.api.model.dao.entity;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "student")
@@ -14,6 +15,17 @@ public class StudentEntity implements Serializable{
     private long _id;
     private String name;
     private String email;
+    private String password;
+    private List<PlanEntity> plano;
+    private String imagePath;
+    private String zipCode;
+    private String street;
+    private String number;
+    private String neighborhood;
+    private int city;
+    private int state;
+    private String phone;
+    private boolean status;
     private Date dateCreate;
     private Date dateUpdate;
 

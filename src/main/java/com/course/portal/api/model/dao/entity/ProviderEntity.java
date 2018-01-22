@@ -9,7 +9,8 @@ import java.util.List;
 @Table(name = "Provaider")
 public class ProviderEntity implements Serializable{
 
-    private static final long sezializable = 1l;
+	private static final long serialVersionUID = 1L;
+
 
     private long _id;
     private String name;
@@ -126,7 +127,6 @@ public class ProviderEntity implements Serializable{
     public void setDateUpdate(Date dateUpdate) {
         this.dateUpdate = dateUpdate;
     }
-
 
 
     @PrePersist

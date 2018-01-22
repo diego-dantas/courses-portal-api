@@ -3,16 +3,18 @@ package com.course.portal.api.model.dao.entity;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "grid")
 public class GridEntity implements Serializable{
 
-    private static final Long serializable = 1l;
-
-    private Long _id;
+	private static final long serialVersionUID = 1L;
+	
+	private Long _id;
     private ProviderEntity provider;
     private String description;
+    private List<SubGridGridEntity> subGridGridEntity;
     private Date dateCreate;
     private Date dateUpdate;
 
@@ -45,7 +47,16 @@ public class GridEntity implements Serializable{
     public void setDescription(String description) {
         this.description = description;
     }
+    
+    @OneToMany(mappedBy = "grid", fetch = FetchType.LAZY )
+    public List<SubGridGridEntity> getSubGridGridEntity() {
+		return subGridGridEntity;
+	}
 
+	public void setSubGridGridEntity(List<SubGridGridEntity> subGridGridEntity) {
+		this.subGridGridEntity = subGridGridEntity;
+	}
+    
     @Column(name = "date_create", nullable = false)
     public Date getDateCreate() {
         return dateCreate;
@@ -77,4 +88,5 @@ public class GridEntity implements Serializable{
     public void preUpdate(){
         dateUpdate = new Date();
     }
+
 }

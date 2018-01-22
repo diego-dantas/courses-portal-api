@@ -26,7 +26,7 @@ public class DataConfiguration {
 
         //Parametos de conficuração do banco de dados
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/coursesportalDB");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/coursesportaldb");
         dataSource.setUsername("root");
         dataSource.setPassword("");
         return dataSource;

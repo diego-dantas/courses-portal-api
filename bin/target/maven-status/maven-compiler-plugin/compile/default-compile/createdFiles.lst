@@ -1,0 +1,3 @@
+com/course/portal/api/model/dto/StudentDTO.class
+com/course/portal/api/model/dao/repository/StudentRepository.class
+com/course/portal/api/controller/StudentController.class
