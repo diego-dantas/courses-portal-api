@@ -14,15 +14,15 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "sub_grid_grid")
+//@Entity
+//@Table(name = "sub_grid_grid")
 public class SubGridGridEntity implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+/*
 	private Long _id;
-	private GridEntity grid;
-	private SubGridEntity subGrid;
+	//private GridEntity grid;
+	//private SubGridEntity subGrid;
 	private Date dateCreate;
 	private Date dateUpdate;
 	
@@ -37,7 +37,7 @@ public class SubGridGridEntity implements Serializable {
 	public void set_id(Long _id) {
 		this._id = _id;
 	}
-	
+
 	@ManyToOne(fetch = FetchType.EAGER)
 	public GridEntity getGrid() {
 		return grid;
@@ -46,7 +46,7 @@ public class SubGridGridEntity implements Serializable {
 	public void setGridEntity(GridEntity grid) {
 		this.grid = grid;
 	}
-	
+
 	@ManyToOne(fetch = FetchType.EAGER)
 	public SubGridEntity getSubGrid() {
 		return subGrid;
@@ -55,7 +55,7 @@ public class SubGridGridEntity implements Serializable {
 	public void setSubGrid(SubGridEntity subGrid) {
 		this.subGrid = subGrid;
 	}
-	
+
 	@Column(name = "date_create", nullable = false)
     public Date getDateCreate() {
         return dateCreate;
@@ -84,6 +84,6 @@ public class SubGridGridEntity implements Serializable {
     @PreUpdate
     public void preUpdate(){
         dateUpdate = new Date();
-    }
+    }*/
 
 }

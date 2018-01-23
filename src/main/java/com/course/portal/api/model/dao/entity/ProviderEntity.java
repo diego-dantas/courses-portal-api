@@ -21,7 +21,7 @@ public class ProviderEntity implements Serializable{
     private List<EmailEntity> emailEntity;
     private List<GridEntity> gridEntity;
     private List<SubGridEntity> subGridEntity;
-
+    private List<ProviderTopicEntity> providerTopic;
     private Date dateCreate;
     private Date dateUpdate;
 
@@ -108,6 +108,15 @@ public class ProviderEntity implements Serializable{
 
     public void setSubGridEntity(List<SubGridEntity> subGridEntity) {
         this.subGridEntity = subGridEntity;
+    }
+
+    @OneToMany(mappedBy = "provider", fetch = FetchType.LAZY)
+    public List<ProviderTopicEntity> getProviderTopic() {
+        return providerTopic;
+    }
+
+    public void setProviderTopic(List<ProviderTopicEntity> providerTopic) {
+        this.providerTopic = providerTopic;
     }
 
     @Column(name = "date_create", nullable = false)

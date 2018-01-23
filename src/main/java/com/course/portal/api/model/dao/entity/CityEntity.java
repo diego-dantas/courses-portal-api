@@ -17,7 +17,7 @@ public class CityEntity implements Serializable {
 
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private Long _id;
 	private String city;
 	private StateEntity state;
@@ -49,5 +49,5 @@ public class CityEntity implements Serializable {
 	}
 	
 	
-	
+
 }

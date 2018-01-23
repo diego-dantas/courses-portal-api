@@ -17,7 +17,7 @@ import javax.persistence.Table;
 public class StateEntity implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private long _id;
 	private String state;
 	private List<CityEntity> city;

@@ -2,11 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="407ee8c9-0f1e-47d0-b462-525fcb6cf470" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/SubGridEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dto/SubGridDTO.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/GradeEntity.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/ProviderTopicEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/db/DataConfiguration.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/db/DataConfiguration.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/CityEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/CityEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/CourseEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/CourseEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/EmailEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/EmailEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/GridEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/GridEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/PlanEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/PlanEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/PromotionEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/PromotionEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/ProviderEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/ProviderEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/StateEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/StateEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/StudentEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/StudentEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/SubGridEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/SubGridEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/SubGridGridEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/entity/SubGridGridEntity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/db/DataConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/db/DataConfiguration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/CityEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/CityEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/CourseEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/CourseEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/GridEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/GridEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/PlanEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/PlanEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/PromotionEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/PromotionEntity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/ProviderEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/ProviderEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/StateEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/StateEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/SubGridEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/SubGridEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/SubGridGridEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/SubGridGridEntity.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,57 +40,9 @@
       <file leaf-file-name="GridEntity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/GridEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#522#523#0" expanded="true" />
-                <element signature="e#548#549#0" expanded="true" />
-                <element signature="e#584#585#0" expanded="true" />
-                <element signature="e#614#615#0" expanded="true" />
-                <element signature="e#697#698#0" expanded="true" />
-                <element signature="e#728#729#0" expanded="true" />
-                <element signature="e#784#785#0" expanded="true" />
-                <element signature="e#824#825#0" expanded="true" />
-                <element signature="e#929#930#0" expanded="true" />
-                <element signature="e#963#964#0" expanded="true" />
-                <element signature="e#1017#1018#0" expanded="true" />
-                <element signature="e#1063#1064#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmailEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/EmailEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="133" column="42" lean-forward="true" selection-start-line="133" selection-start-column="42" selection-end-line="133" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#942#943#0" expanded="true" />
-                <element signature="e#973#974#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProviderEntity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/ProviderEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="102" column="31" lean-forward="true" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2150#2151#0" expanded="true" />
-                <element signature="e#2183#2184#0" expanded="true" />
-                <element signature="e#2245#2246#0" expanded="true" />
-                <element signature="e#2289#2290#0" expanded="true" />
-                <element signature="e#2404#2405#0" expanded="true" />
-                <element signature="e#2440#2441#0" expanded="true" />
-                <element signature="e#2511#2512#0" expanded="true" />
-                <element signature="e#2561#2562#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="56" column="22" lean-forward="false" selection-start-line="56" selection-start-column="15" selection-end-line="56" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,11 +50,113 @@
       <file leaf-file-name="SubGridEntity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/SubGridEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state relative-caret-position="108">
+              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+              <folding>
+                <element signature="e#1303#1304#0" expanded="true" />
+                <element signature="e#1330#1331#0" expanded="true" />
+                <element signature="e#1380#1381#0" expanded="true" />
+                <element signature="e#1412#1413#0" expanded="true" />
+                <element signature="e#1495#1496#0" expanded="true" />
+                <element signature="e#1524#1525#0" expanded="true" />
+                <element signature="e#1580#1581#0" expanded="true" />
+                <element signature="e#1616#1617#0" expanded="true" />
+                <element signature="e#2258#2259#0" expanded="true" />
+                <element signature="e#2297#2298#0" expanded="true" />
+                <marker date="1516671559691" expanded="false" signature="700:711" ph=" { " />
+                <marker date="1516671559691" expanded="false" signature="722:728" ph=" }" />
+                <marker date="1516671559691" expanded="false" signature="762:773" ph=" { " />
+                <marker date="1516671559691" expanded="false" signature="788:794" ph=" }" />
+                <marker date="1516671559691" expanded="false" signature="875:886" ph=" { " />
+                <marker date="1516671559691" expanded="false" signature="902:908" ph=" }" />
+                <marker date="1516671559691" expanded="false" signature="962:973" ph=" { " />
+                <marker date="1516671559691" expanded="false" signature="998:1004" ph=" }" />
+                <marker date="1516671559691" expanded="false" signature="1089:1100" ph=" { " />
+                <marker date="1516671559691" expanded="false" signature="1119:1125" ph=" }" />
+                <marker date="1516671559691" expanded="false" signature="1177:1188" ph=" { " />
+                <marker date="1516671559691" expanded="false" signature="1219:1225" ph=" }" />
+                <marker date="1516671559691" expanded="false" signature="1702:1713" ph=" { " />
+                <marker date="1516671559691" expanded="false" signature="1731:1737" ph=" }" />
+                <marker date="1516671559691" expanded="false" signature="1785:1796" ph=" { " />
+                <marker date="1516671559691" expanded="false" signature="1825:1831" ph=" }" />
+                <marker date="1516671559691" expanded="false" signature="1916:1927" ph=" { " />
+                <marker date="1516671559691" expanded="false" signature="1945:1951" ph=" }" />
+                <marker date="1516671559691" expanded="false" signature="1999:2010" ph=" { " />
+                <marker date="1516671559691" expanded="false" signature="2039:2045" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProviderEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/ProviderEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="122">
+              <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2736#2737#0" expanded="true" />
+                <element signature="e#2772#2773#0" expanded="true" />
+                <element signature="e#2849#2850#0" expanded="true" />
+                <element signature="e#2899#2900#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CourseEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/CourseEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="176" column="5" lean-forward="true" selection-start-line="146" selection-start-column="4" selection-end-line="176" selection-end-column="5" />
+              <folding>
+                <element signature="e#2462#2463#0" expanded="true" />
+                <element signature="e#2480#2481#0" expanded="true" />
+                <element signature="e#2527#2528#0" expanded="true" />
+                <element signature="e#2550#2551#0" expanded="true" />
+                <element signature="e#2757#2758#0" expanded="true" />
+                <element signature="e#2778#2779#0" expanded="true" />
+                <element signature="e#2834#2835#0" expanded="true" />
+                <element signature="e#2863#2864#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProviderTopicEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/ProviderTopicEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#604#605#0" expanded="true" />
+                <element signature="e#630#631#0" expanded="true" />
+                <element signature="e#666#667#0" expanded="true" />
+                <element signature="e#696#697#0" expanded="true" />
+                <element signature="e#779#780#0" expanded="true" />
+                <element signature="e#810#811#0" expanded="true" />
+                <element signature="e#866#867#0" expanded="true" />
+                <element signature="e#906#907#0" expanded="true" />
+                <element signature="e#1002#1003#0" expanded="true" />
+                <element signature="e#1031#1032#0" expanded="true" />
+                <element signature="e#1075#1076#0" expanded="true" />
+                <element signature="e#1111#1112#0" expanded="true" />
+                <element signature="e#1216#1217#0" expanded="true" />
+                <element signature="e#1250#1251#0" expanded="true" />
+                <element signature="e#1304#1305#0" expanded="true" />
+                <element signature="e#1350#1351#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataConfiguration.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/db/DataConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -112,22 +185,28 @@
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/ApiApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/mysqlDB/mysqlConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/db/mysqlConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/db/DataConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/StudentRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/StudentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dto/StudentDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/StudentEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dto/ProvaiderDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/PlanEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/EmailEntity.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dto/EmailDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/GradeEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/GridEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dto/GridDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/SubGridEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dto/SubGridDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/StudentEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/StateEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/CityEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/PlanEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/EmailEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/PromotionEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/SubGridGridEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/GridEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/CourseEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/SubGridEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/ProviderEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/ProviderTopicEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/db/DataConfiguration.java" />
       </list>
     </option>
   </component>
@@ -168,9 +247,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -232,7 +310,29 @@
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courses-portal-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
               <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courses-portal-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="api" type="b2602c69:ProjectViewProjectNode" />
@@ -248,7 +348,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -376,15 +477,17 @@
       <updated>1516325415842</updated>
       <workItem from="1516325421288" duration="1414000" />
       <workItem from="1516460869525" duration="11802000" />
-      <workItem from="1516557119061" duration="11513000" />
+      <workItem from="1516557119061" duration="12410000" />
+      <workItem from="1516653811018" duration="16341000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24729000" />
+    <option name="totallyTimeSpent" value="41967000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -392,15 +495,15 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7790507" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24549918" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.82160395" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24549918" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21775417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19044006" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -430,14 +533,151 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/GridEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/EmailEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="133" column="42" lean-forward="true" selection-start-line="133" selection-start-column="42" selection-end-line="133" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3201#3202#0" expanded="true" />
+            <element signature="e#3240#3241#0" expanded="true" />
+            <marker date="1516657505394" expanded="false" signature="766:777" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="788:794" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="828:839" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="854:860" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="941:952" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="968:974" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1028:1039" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1064:1070" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1160:1171" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1184:1190" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1230:1241" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1260:1266" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1362:1373" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1389:1395" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1441:1452" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1477:1483" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1554:1565" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1577:1583" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1618:1629" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1646:1652" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1749:1760" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1776:1782" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1828:1839" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1864:1870" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1959:1970" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1988:1994" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2045:2056" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2085:2091" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2196:2207" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2233:2239" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2306:2317" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2362:2368" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2446:2457" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2471:2477" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2520:2531" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2552:2558" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2643:2654" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2672:2678" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2726:2737" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2766:2772" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2857:2868" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2886:2892" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2940:2951" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2980:2986" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/SubGridEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding>
+            <element signature="e#1303#1304#0" expanded="true" />
+            <element signature="e#1330#1331#0" expanded="true" />
+            <element signature="e#1380#1381#0" expanded="true" />
+            <element signature="e#1412#1413#0" expanded="true" />
+            <element signature="e#1495#1496#0" expanded="true" />
+            <element signature="e#1524#1525#0" expanded="true" />
+            <element signature="e#1580#1581#0" expanded="true" />
+            <element signature="e#1616#1617#0" expanded="true" />
+            <element signature="e#2258#2259#0" expanded="true" />
+            <element signature="e#2297#2298#0" expanded="true" />
+            <marker date="1516671559691" expanded="false" signature="700:711" ph=" { " />
+            <marker date="1516671559691" expanded="false" signature="722:728" ph=" }" />
+            <marker date="1516671559691" expanded="false" signature="762:773" ph=" { " />
+            <marker date="1516671559691" expanded="false" signature="788:794" ph=" }" />
+            <marker date="1516671559691" expanded="false" signature="875:886" ph=" { " />
+            <marker date="1516671559691" expanded="false" signature="902:908" ph=" }" />
+            <marker date="1516671559691" expanded="false" signature="962:973" ph=" { " />
+            <marker date="1516671559691" expanded="false" signature="998:1004" ph=" }" />
+            <marker date="1516671559691" expanded="false" signature="1089:1100" ph=" { " />
+            <marker date="1516671559691" expanded="false" signature="1119:1125" ph=" }" />
+            <marker date="1516671559691" expanded="false" signature="1177:1188" ph=" { " />
+            <marker date="1516671559691" expanded="false" signature="1219:1225" ph=" }" />
+            <marker date="1516671559691" expanded="false" signature="1702:1713" ph=" { " />
+            <marker date="1516671559691" expanded="false" signature="1731:1737" ph=" }" />
+            <marker date="1516671559691" expanded="false" signature="1785:1796" ph=" { " />
+            <marker date="1516671559691" expanded="false" signature="1825:1831" ph=" }" />
+            <marker date="1516671559691" expanded="false" signature="1916:1927" ph=" { " />
+            <marker date="1516671559691" expanded="false" signature="1945:1951" ph=" }" />
+            <marker date="1516671559691" expanded="false" signature="1999:2010" ph=" { " />
+            <marker date="1516671559691" expanded="false" signature="2039:2045" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/ProviderEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1206">
+          <caret line="102" column="31" lean-forward="true" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2736#2737#0" expanded="true" />
+            <element signature="e#2772#2773#0" expanded="true" />
+            <element signature="e#2849#2850#0" expanded="true" />
+            <element signature="e#2899#2900#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/StudentEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1044">
           <caret line="82" column="5" lean-forward="false" selection-start-line="52" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1644#1645#0" expanded="true" />
-            <element signature="e#1683#1684#0" expanded="true" />
+            <marker date="1516656597671" expanded="false" signature="852:863" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="874:880" ph=" }" />
+            <marker date="1516656597671" expanded="false" signature="914:925" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="940:946" ph=" }" />
+            <marker date="1516656597671" expanded="false" signature="1036:1047" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="1059:1065" ph=" }" />
+            <marker date="1516656597671" expanded="false" signature="1103:1114" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="1131:1137" ph=" }" />
+            <marker date="1516656597671" expanded="false" signature="1227:1238" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="1251:1257" ph=" }" />
+            <marker date="1516656597671" expanded="false" signature="1297:1308" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="1327:1333" ph=" }" />
+            <marker date="1516656597671" expanded="false" signature="1418:1429" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="1447:1453" ph=" }" />
+            <marker date="1516656597671" expanded="false" signature="1501:1512" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="1541:1547" ph=" }" />
+            <marker date="1516656597671" expanded="false" signature="1632:1643" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="1661:1667" ph=" }" />
+            <marker date="1516656597671" expanded="false" signature="1715:1726" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="1755:1761" ph=" }" />
+            <marker date="1516656597671" expanded="false" signature="1976:1986" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="2010:2016" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -446,7 +686,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2063#2064#0" expanded="true" />
+            <element signature="e#2102#2103#0" expanded="true" />
+            <marker date="1516656895285" expanded="false" signature="777:782" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="793:796" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="826:831" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="846:849" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="947:952" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="971:974" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="1022:1027" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="1058:1061" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="1155:1160" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="1177:1180" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="1224:1229" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="1256:1259" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="1332:1337" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="1351:1354" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="1393:1398" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="1419:1422" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="1505:1516" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="1534:1540" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="1588:1599" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="1628:1634" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="1719:1730" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="1748:1754" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="1802:1813" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="1842:1848" ph=" }" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -456,42 +724,52 @@
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#767#768#0" expanded="true" />
-            <element signature="e#793#794#0" expanded="true" />
-            <element signature="e#829#830#0" expanded="true" />
-            <element signature="e#859#860#0" expanded="true" />
-            <element signature="e#942#943#0" expanded="true" />
-            <element signature="e#973#974#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1069#1070#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1231#1232#0" expanded="true" />
-            <element signature="e#1265#1266#0" expanded="true" />
-            <element signature="e#1363#1364#0" expanded="true" />
-            <element signature="e#1394#1395#0" expanded="true" />
-            <element signature="e#1442#1443#0" expanded="true" />
-            <element signature="e#1482#1483#0" expanded="true" />
-            <element signature="e#1555#1556#0" expanded="true" />
-            <element signature="e#1582#1583#0" expanded="true" />
-            <element signature="e#1619#1620#0" expanded="true" />
-            <element signature="e#1651#1652#0" expanded="true" />
-            <element signature="e#1750#1751#0" expanded="true" />
-            <element signature="e#1781#1782#0" expanded="true" />
-            <element signature="e#1829#1830#0" expanded="true" />
-            <element signature="e#1869#1870#0" expanded="true" />
-            <element signature="e#1960#1961#0" expanded="true" />
-            <element signature="e#1993#1994#0" expanded="true" />
-            <element signature="e#2046#2047#0" expanded="true" />
-            <element signature="e#2090#2091#0" expanded="true" />
-            <element signature="e#2197#2198#0" expanded="true" />
-            <element signature="e#2238#2239#0" expanded="true" />
-            <element signature="e#2307#2308#0" expanded="true" />
-            <element signature="e#2367#2368#0" expanded="true" />
-            <element signature="e#2447#2448#0" expanded="true" />
-            <element signature="e#2476#2477#0" expanded="true" />
-            <element signature="e#2521#2522#0" expanded="true" />
-            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="e#3201#3202#0" expanded="true" />
+            <element signature="e#3240#3241#0" expanded="true" />
+            <marker date="1516657505394" expanded="false" signature="766:777" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="788:794" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="828:839" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="854:860" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="941:952" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="968:974" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1028:1039" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1064:1070" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1160:1171" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1184:1190" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1230:1241" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1260:1266" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1362:1373" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1389:1395" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1441:1452" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1477:1483" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1554:1565" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1577:1583" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1618:1629" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1646:1652" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1749:1760" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1776:1782" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1828:1839" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1864:1870" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1959:1970" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1988:1994" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2045:2056" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2085:2091" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2196:2207" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2233:2239" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2306:2317" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2362:2368" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2446:2457" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2471:2477" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2520:2531" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2552:2558" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2643:2654" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2672:2678" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2726:2737" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2766:2772" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2857:2868" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2886:2892" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2940:2951" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2980:2986" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -502,14 +780,10 @@
           <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2150#2151#0" expanded="true" />
-            <element signature="e#2183#2184#0" expanded="true" />
-            <element signature="e#2245#2246#0" expanded="true" />
-            <element signature="e#2289#2290#0" expanded="true" />
-            <element signature="e#2404#2405#0" expanded="true" />
-            <element signature="e#2440#2441#0" expanded="true" />
-            <element signature="e#2511#2512#0" expanded="true" />
-            <element signature="e#2561#2562#0" expanded="true" />
+            <element signature="e#2736#2737#0" expanded="true" />
+            <element signature="e#2772#2773#0" expanded="true" />
+            <element signature="e#2849#2850#0" expanded="true" />
+            <element signature="e#2899#2900#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -518,7 +792,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding />
+          <folding>
+            <element signature="e#410#411#0" expanded="false" />
+            <element signature="e#446#447#0" expanded="false" />
+            <element signature="e#476#477#0" expanded="false" />
+            <element signature="e#518#519#0" expanded="false" />
+            <element signature="e#551#552#0" expanded="false" />
+            <element signature="e#608#609#0" expanded="false" />
+            <element signature="e#652#653#0" expanded="false" />
+            <element signature="e#684#685#0" expanded="false" />
+            <element signature="e#712#713#0" expanded="false" />
+            <element signature="e#754#755#0" expanded="false" />
+            <element signature="e#788#789#0" expanded="false" />
+            <element signature="e#823#824#0" expanded="false" />
+            <element signature="e#854#855#0" expanded="false" />
+            <element signature="e#902#903#0" expanded="false" />
+            <element signature="e#942#943#0" expanded="false" />
+            <element signature="e#973#974#0" expanded="false" />
+            <element signature="e#1000#1001#0" expanded="false" />
+            <element signature="e#1040#1041#0" expanded="false" />
+            <element signature="e#1072#1073#0" expanded="false" />
+            <element signature="e#1107#1108#0" expanded="false" />
+            <element signature="e#1138#1139#0" expanded="false" />
+            <element signature="e#1186#1187#0" expanded="false" />
+            <element signature="e#1226#1227#0" expanded="false" />
+            <element signature="e#1263#1264#0" expanded="false" />
+            <element signature="e#1296#1297#0" expanded="false" />
+            <element signature="e#1348#1349#0" expanded="false" />
+            <element signature="e#1392#1393#0" expanded="false" />
+            <element signature="e#1437#1438#0" expanded="false" />
+            <element signature="e#1478#1479#0" expanded="false" />
+            <element signature="e#1546#1547#0" expanded="false" />
+            <element signature="e#1606#1607#0" expanded="false" />
+            <element signature="e#1639#1640#0" expanded="false" />
+            <element signature="e#1668#1669#0" expanded="false" />
+            <element signature="e#1713#1714#0" expanded="false" />
+            <element signature="e#1749#1750#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -535,13 +845,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/StudentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -580,36 +883,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/db/DataConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/PlanEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/StudentEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="82" column="5" lean-forward="false" selection-start-line="52" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1644#1645#0" expanded="true" />
-            <element signature="e#1683#1684#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -623,41 +896,41 @@
         <state relative-caret-position="126">
           <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
           <folding>
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#446#447#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
-            <element signature="e#551#552#0" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-            <element signature="e#652#653#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#754#755#0" expanded="true" />
-            <element signature="e#788#789#0" expanded="true" />
-            <element signature="e#823#824#0" expanded="true" />
-            <element signature="e#854#855#0" expanded="true" />
-            <element signature="e#902#903#0" expanded="true" />
-            <element signature="e#942#943#0" expanded="true" />
-            <element signature="e#973#974#0" expanded="true" />
-            <element signature="e#1000#1001#0" expanded="true" />
-            <element signature="e#1040#1041#0" expanded="true" />
-            <element signature="e#1072#1073#0" expanded="true" />
-            <element signature="e#1107#1108#0" expanded="true" />
-            <element signature="e#1138#1139#0" expanded="true" />
-            <element signature="e#1186#1187#0" expanded="true" />
-            <element signature="e#1226#1227#0" expanded="true" />
-            <element signature="e#1263#1264#0" expanded="true" />
-            <element signature="e#1296#1297#0" expanded="true" />
-            <element signature="e#1348#1349#0" expanded="true" />
-            <element signature="e#1392#1393#0" expanded="true" />
-            <element signature="e#1437#1438#0" expanded="true" />
-            <element signature="e#1478#1479#0" expanded="true" />
-            <element signature="e#1546#1547#0" expanded="true" />
-            <element signature="e#1606#1607#0" expanded="true" />
-            <element signature="e#1639#1640#0" expanded="true" />
-            <element signature="e#1668#1669#0" expanded="true" />
-            <element signature="e#1713#1714#0" expanded="true" />
-            <element signature="e#1749#1750#0" expanded="true" />
+            <element signature="e#410#411#0" expanded="false" />
+            <element signature="e#446#447#0" expanded="false" />
+            <element signature="e#476#477#0" expanded="false" />
+            <element signature="e#518#519#0" expanded="false" />
+            <element signature="e#551#552#0" expanded="false" />
+            <element signature="e#608#609#0" expanded="false" />
+            <element signature="e#652#653#0" expanded="false" />
+            <element signature="e#684#685#0" expanded="false" />
+            <element signature="e#712#713#0" expanded="false" />
+            <element signature="e#754#755#0" expanded="false" />
+            <element signature="e#788#789#0" expanded="false" />
+            <element signature="e#823#824#0" expanded="false" />
+            <element signature="e#854#855#0" expanded="false" />
+            <element signature="e#902#903#0" expanded="false" />
+            <element signature="e#942#943#0" expanded="false" />
+            <element signature="e#973#974#0" expanded="false" />
+            <element signature="e#1000#1001#0" expanded="false" />
+            <element signature="e#1040#1041#0" expanded="false" />
+            <element signature="e#1072#1073#0" expanded="false" />
+            <element signature="e#1107#1108#0" expanded="false" />
+            <element signature="e#1138#1139#0" expanded="false" />
+            <element signature="e#1186#1187#0" expanded="false" />
+            <element signature="e#1226#1227#0" expanded="false" />
+            <element signature="e#1263#1264#0" expanded="false" />
+            <element signature="e#1296#1297#0" expanded="false" />
+            <element signature="e#1348#1349#0" expanded="false" />
+            <element signature="e#1392#1393#0" expanded="false" />
+            <element signature="e#1437#1438#0" expanded="false" />
+            <element signature="e#1478#1479#0" expanded="false" />
+            <element signature="e#1546#1547#0" expanded="false" />
+            <element signature="e#1606#1607#0" expanded="false" />
+            <element signature="e#1639#1640#0" expanded="false" />
+            <element signature="e#1668#1669#0" expanded="false" />
+            <element signature="e#1713#1714#0" expanded="false" />
+            <element signature="e#1749#1750#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -678,52 +951,18 @@
         <state relative-caret-position="162">
           <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
           <folding>
-            <element signature="e#204#205#0" expanded="true" />
-            <element signature="e#230#231#0" expanded="true" />
-            <element signature="e#266#267#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#367#368#0" expanded="true" />
-            <element signature="e#420#421#0" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#586#587#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/GridEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#548#549#0" expanded="true" />
-            <element signature="e#584#585#0" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-            <element signature="e#728#729#0" expanded="true" />
-            <element signature="e#784#785#0" expanded="true" />
-            <element signature="e#824#825#0" expanded="true" />
-            <element signature="e#929#930#0" expanded="true" />
-            <element signature="e#963#964#0" expanded="true" />
-            <element signature="e#1017#1018#0" expanded="true" />
-            <element signature="e#1063#1064#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/EmailEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="133" column="42" lean-forward="true" selection-start-line="133" selection-start-column="42" selection-end-line="133" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#942#943#0" expanded="true" />
-            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#204#205#0" expanded="false" />
+            <element signature="e#230#231#0" expanded="false" />
+            <element signature="e#266#267#0" expanded="false" />
+            <element signature="e#296#297#0" expanded="false" />
+            <element signature="e#336#337#0" expanded="false" />
+            <element signature="e#367#368#0" expanded="false" />
+            <element signature="e#420#421#0" expanded="false" />
+            <element signature="e#460#461#0" expanded="false" />
+            <element signature="e#498#499#0" expanded="false" />
+            <element signature="e#532#533#0" expanded="false" />
+            <element signature="e#586#587#0" expanded="false" />
+            <element signature="e#632#633#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -733,46 +972,376 @@
         <state relative-caret-position="198">
           <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
           <folding>
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#432#433#0" expanded="true" />
-            <element signature="e#472#473#0" expanded="true" />
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#544#545#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="false" />
+            <element signature="e#278#279#0" expanded="false" />
+            <element signature="e#308#309#0" expanded="false" />
+            <element signature="e#348#349#0" expanded="false" />
+            <element signature="e#379#380#0" expanded="false" />
+            <element signature="e#432#433#0" expanded="false" />
+            <element signature="e#472#473#0" expanded="false" />
+            <element signature="e#510#511#0" expanded="false" />
+            <element signature="e#544#545#0" expanded="false" />
+            <element signature="e#598#599#0" expanded="false" />
+            <element signature="e#644#645#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/SubGridEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/StudentRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        <state relative-caret-position="108">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/StudentEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="98" column="33" lean-forward="true" selection-start-line="98" selection-start-column="33" selection-end-line="98" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1516656597671" expanded="false" signature="852:863" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="874:880" ph=" }" />
+            <marker date="1516656597671" expanded="false" signature="914:925" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="940:946" ph=" }" />
+            <marker date="1516656597671" expanded="false" signature="1036:1047" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="1059:1065" ph=" }" />
+            <marker date="1516656597671" expanded="false" signature="1103:1114" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="1131:1137" ph=" }" />
+            <marker date="1516656597671" expanded="false" signature="1227:1238" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="1251:1257" ph=" }" />
+            <marker date="1516656597671" expanded="false" signature="1297:1308" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="1327:1333" ph=" }" />
+            <marker date="1516656597671" expanded="false" signature="1418:1429" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="1447:1453" ph=" }" />
+            <marker date="1516656597671" expanded="false" signature="1501:1512" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="1541:1547" ph=" }" />
+            <marker date="1516656597671" expanded="false" signature="1632:1643" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="1661:1667" ph=" }" />
+            <marker date="1516656597671" expanded="false" signature="1715:1726" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="1755:1761" ph=" }" />
+            <marker date="1516656597671" expanded="false" signature="1976:1986" ph=" { " />
+            <marker date="1516656597671" expanded="false" signature="2010:2016" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/StateEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-257">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#1110#1111#0" expanded="true" />
+            <element signature="e#1133#1134#0" expanded="true" />
+            <marker date="1516656668447" expanded="false" signature="695:700" ph=" { " />
+            <marker date="1516656668447" expanded="false" signature="711:714" ph=" }" />
+            <marker date="1516656668447" expanded="false" signature="745:750" ph=" { " />
+            <marker date="1516656668447" expanded="false" signature="765:768" ph=" }" />
+            <marker date="1516656668447" expanded="false" signature="853:858" ph=" { " />
+            <marker date="1516656668447" expanded="false" signature="871:874" ph=" }" />
+            <marker date="1516656668447" expanded="false" signature="911:916" ph=" { " />
+            <marker date="1516656668447" expanded="false" signature="935:938" ph=" }" />
+            <marker date="1516656668447" expanded="false" signature="1037:1042" ph=" { " />
+            <marker date="1516656668447" expanded="false" signature="1054:1057" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/CityEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <marker date="1516656774894" expanded="false" signature="642:647" ph=" { " />
+            <marker date="1516656774894" expanded="false" signature="658:661" ph=" }" />
+            <marker date="1516656774894" expanded="false" signature="691:696" ph=" { " />
+            <marker date="1516656774894" expanded="false" signature="711:714" ph=" }" />
+            <marker date="1516656774894" expanded="false" signature="797:802" ph=" { " />
+            <marker date="1516656774894" expanded="false" signature="814:817" ph=" }" />
+            <marker date="1516656774894" expanded="false" signature="851:856" ph=" { " />
+            <marker date="1516656774894" expanded="false" signature="873:876" ph=" }" />
+            <marker date="1516656774894" expanded="false" signature="946:951" ph=" { " />
+            <marker date="1516656774894" expanded="false" signature="964:967" ph=" }" />
+            <marker date="1516656774894" expanded="false" signature="1008:1013" ph=" { " />
+            <marker date="1516656774894" expanded="false" signature="1032:1035" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/PlanEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2063#2064#0" expanded="true" />
+            <element signature="e#2102#2103#0" expanded="true" />
+            <marker date="1516656895285" expanded="false" signature="777:782" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="793:796" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="826:831" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="846:849" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="947:952" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="971:974" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="1022:1027" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="1058:1061" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="1155:1160" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="1177:1180" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="1224:1229" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="1256:1259" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="1332:1337" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="1351:1354" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="1393:1398" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="1419:1422" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="1505:1516" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="1534:1540" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="1588:1599" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="1628:1634" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="1719:1730" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="1748:1754" ph=" }" />
+            <marker date="1516656895285" expanded="false" signature="1802:1813" ph=" { " />
+            <marker date="1516656895285" expanded="false" signature="1842:1848" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/EmailEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3201#3202#0" expanded="true" />
+            <element signature="e#3240#3241#0" expanded="true" />
+            <marker date="1516657505394" expanded="false" signature="766:777" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="788:794" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="828:839" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="854:860" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="941:952" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="968:974" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1028:1039" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1064:1070" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1160:1171" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1184:1190" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1230:1241" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1260:1266" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1362:1373" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1389:1395" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1441:1452" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1477:1483" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1554:1565" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1577:1583" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1618:1629" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1646:1652" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1749:1760" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1776:1782" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1828:1839" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1864:1870" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="1959:1970" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="1988:1994" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2045:2056" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2085:2091" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2196:2207" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2233:2239" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2306:2317" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2362:2368" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2446:2457" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2471:2477" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2520:2531" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2552:2558" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2643:2654" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2672:2678" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2726:2737" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2766:2772" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2857:2868" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2886:2892" ph=" }" />
+            <marker date="1516657505394" expanded="false" signature="2940:2951" ph=" { " />
+            <marker date="1516657505394" expanded="false" signature="2980:2986" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/PromotionEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding>
+            <element signature="e#2523#2524#0" expanded="true" />
+            <element signature="e#2562#2563#0" expanded="true" />
+            <marker date="1516658551833" expanded="false" signature="824:829" ph=" { " />
+            <marker date="1516658551833" expanded="false" signature="840:843" ph=" }" />
+            <marker date="1516658551833" expanded="false" signature="873:878" ph=" { " />
+            <marker date="1516658551833" expanded="false" signature="893:896" ph=" }" />
+            <marker date="1516658551833" expanded="false" signature="994:999" ph=" { " />
+            <marker date="1516658551833" expanded="false" signature="1018:1021" ph=" }" />
+            <marker date="1516658551833" expanded="false" signature="1069:1074" ph=" { " />
+            <marker date="1516658551833" expanded="false" signature="1105:1108" ph=" }" />
+            <marker date="1516658551833" expanded="false" signature="1188:1193" ph=" { " />
+            <marker date="1516658551833" expanded="false" signature="1212:1215" ph=" }" />
+            <marker date="1516658551833" expanded="false" signature="1261:1266" ph=" { " />
+            <marker date="1516658551833" expanded="false" signature="1297:1300" ph=" }" />
+            <marker date="1516658551833" expanded="false" signature="1379:1384" ph=" { " />
+            <marker date="1516658551833" expanded="false" signature="1401:1404" ph=" }" />
+            <marker date="1516658551833" expanded="false" signature="1446:1451" ph=" { " />
+            <marker date="1516658551833" expanded="false" signature="1478:1481" ph=" }" />
+            <marker date="1516658551833" expanded="false" signature="1562:1567" ph=" { " />
+            <marker date="1516658551833" expanded="false" signature="1585:1588" ph=" }" />
+            <marker date="1516658551833" expanded="false" signature="1634:1639" ph=" { " />
+            <marker date="1516658551833" expanded="false" signature="1668:1671" ph=" }" />
+            <marker date="1516658551833" expanded="false" signature="1768:1773" ph=" { " />
+            <marker date="1516658551833" expanded="false" signature="1792:1795" ph=" }" />
+            <marker date="1516658551833" expanded="false" signature="1843:1848" ph=" { " />
+            <marker date="1516658551833" expanded="false" signature="1879:1882" ph=" }" />
+            <marker date="1516658551833" expanded="false" signature="1965:1976" ph=" { " />
+            <marker date="1516658551833" expanded="false" signature="1994:2000" ph=" }" />
+            <marker date="1516658551833" expanded="false" signature="2048:2059" ph=" { " />
+            <marker date="1516658551833" expanded="false" signature="2088:2094" ph=" }" />
+            <marker date="1516658551833" expanded="false" signature="2179:2190" ph=" { " />
+            <marker date="1516658551833" expanded="false" signature="2208:2214" ph=" }" />
+            <marker date="1516658551833" expanded="false" signature="2262:2273" ph=" { " />
+            <marker date="1516658551833" expanded="false" signature="2302:2308" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/SubGridGridEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="16" column="2" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+          <folding>
+            <marker date="1516662874391" expanded="false" signature="854:859" ph=" { " />
+            <marker date="1516662874391" expanded="false" signature="870:873" ph=" }" />
+            <marker date="1516662874391" expanded="false" signature="904:909" ph=" { " />
+            <marker date="1516662874391" expanded="false" signature="924:927" ph=" }" />
+            <marker date="1516662874391" expanded="false" signature="994:999" ph=" { " />
+            <marker date="1516662874391" expanded="false" signature="1011:1014" ph=" }" />
+            <marker date="1516662874391" expanded="false" signature="1059:1064" ph=" { " />
+            <marker date="1516662874391" expanded="false" signature="1081:1084" ph=" }" />
+            <marker date="1516662874391" expanded="false" signature="1157:1162" ph=" { " />
+            <marker date="1516662874391" expanded="false" signature="1177:1180" ph=" }" />
+            <marker date="1516662874391" expanded="false" signature="1228:1233" ph=" { " />
+            <marker date="1516662874391" expanded="false" signature="1256:1259" ph=" }" />
+            <marker date="1516662874391" expanded="false" signature="1341:1352" ph=" { " />
+            <marker date="1516662874391" expanded="false" signature="1370:1376" ph=" }" />
+            <marker date="1516662874391" expanded="false" signature="1424:1435" ph=" { " />
+            <marker date="1516662874391" expanded="false" signature="1464:1470" ph=" }" />
+            <marker date="1516662874391" expanded="false" signature="1555:1566" ph=" { " />
+            <marker date="1516662874391" expanded="false" signature="1584:1590" ph=" }" />
+            <marker date="1516662874391" expanded="false" signature="1638:1649" ph=" { " />
+            <marker date="1516662874391" expanded="false" signature="1678:1684" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/GridEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="56" column="22" lean-forward="false" selection-start-line="56" selection-start-column="15" selection-end-line="56" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/CourseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="176" column="5" lean-forward="true" selection-start-line="146" selection-start-column="4" selection-end-line="176" selection-end-column="5" />
+          <folding>
+            <element signature="e#2462#2463#0" expanded="true" />
+            <element signature="e#2480#2481#0" expanded="true" />
+            <element signature="e#2527#2528#0" expanded="true" />
+            <element signature="e#2550#2551#0" expanded="true" />
+            <element signature="e#2757#2758#0" expanded="true" />
+            <element signature="e#2778#2779#0" expanded="true" />
+            <element signature="e#2834#2835#0" expanded="true" />
+            <element signature="e#2863#2864#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/ProviderEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="102" column="31" lean-forward="true" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
+        <state relative-caret-position="122">
+          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2150#2151#0" expanded="true" />
-            <element signature="e#2183#2184#0" expanded="true" />
-            <element signature="e#2245#2246#0" expanded="true" />
-            <element signature="e#2289#2290#0" expanded="true" />
-            <element signature="e#2404#2405#0" expanded="true" />
-            <element signature="e#2440#2441#0" expanded="true" />
-            <element signature="e#2511#2512#0" expanded="true" />
-            <element signature="e#2561#2562#0" expanded="true" />
+            <element signature="e#2736#2737#0" expanded="true" />
+            <element signature="e#2772#2773#0" expanded="true" />
+            <element signature="e#2849#2850#0" expanded="true" />
+            <element signature="e#2899#2900#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/SubGridEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="e#1303#1304#0" expanded="true" />
+            <element signature="e#1330#1331#0" expanded="true" />
+            <element signature="e#1380#1381#0" expanded="true" />
+            <element signature="e#1412#1413#0" expanded="true" />
+            <element signature="e#1495#1496#0" expanded="true" />
+            <element signature="e#1524#1525#0" expanded="true" />
+            <element signature="e#1580#1581#0" expanded="true" />
+            <element signature="e#1616#1617#0" expanded="true" />
+            <element signature="e#2258#2259#0" expanded="true" />
+            <element signature="e#2297#2298#0" expanded="true" />
+            <marker date="1516671559691" expanded="false" signature="700:711" ph=" { " />
+            <marker date="1516671559691" expanded="false" signature="722:728" ph=" }" />
+            <marker date="1516671559691" expanded="false" signature="762:773" ph=" { " />
+            <marker date="1516671559691" expanded="false" signature="788:794" ph=" }" />
+            <marker date="1516671559691" expanded="false" signature="875:886" ph=" { " />
+            <marker date="1516671559691" expanded="false" signature="902:908" ph=" }" />
+            <marker date="1516671559691" expanded="false" signature="962:973" ph=" { " />
+            <marker date="1516671559691" expanded="false" signature="998:1004" ph=" }" />
+            <marker date="1516671559691" expanded="false" signature="1089:1100" ph=" { " />
+            <marker date="1516671559691" expanded="false" signature="1119:1125" ph=" }" />
+            <marker date="1516671559691" expanded="false" signature="1177:1188" ph=" { " />
+            <marker date="1516671559691" expanded="false" signature="1219:1225" ph=" }" />
+            <marker date="1516671559691" expanded="false" signature="1702:1713" ph=" { " />
+            <marker date="1516671559691" expanded="false" signature="1731:1737" ph=" }" />
+            <marker date="1516671559691" expanded="false" signature="1785:1796" ph=" { " />
+            <marker date="1516671559691" expanded="false" signature="1825:1831" ph=" }" />
+            <marker date="1516671559691" expanded="false" signature="1916:1927" ph=" { " />
+            <marker date="1516671559691" expanded="false" signature="1945:1951" ph=" }" />
+            <marker date="1516671559691" expanded="false" signature="1999:2010" ph=" { " />
+            <marker date="1516671559691" expanded="false" signature="2039:2045" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/ProviderTopicEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#604#605#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#1031#1032#0" expanded="true" />
+            <element signature="e#1075#1076#0" expanded="true" />
+            <element signature="e#1111#1112#0" expanded="true" />
+            <element signature="e#1216#1217#0" expanded="true" />
+            <element signature="e#1250#1251#0" expanded="true" />
+            <element signature="e#1304#1305#0" expanded="true" />
+            <element signature="e#1350#1351#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/db/DataConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>

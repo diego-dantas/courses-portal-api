@@ -2,22 +2,16 @@ package com.course.portal.api.model.dao.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "couse")
 public class CourseEntity implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private Long _id;
 	private Long id;
 	private String name;
@@ -28,6 +22,8 @@ public class CourseEntity implements Serializable{
 	private String wayImage;
 	private boolean status;
 	private int views;
+	private List<GridEntity> grid;
+	private List<SubGridEntity> subGrid;
 	private Date dateCreate;
     private Date dateUpdate;
 	
@@ -123,7 +119,31 @@ public class CourseEntity implements Serializable{
 	public void setViews(int views) {
 		this.views = views;
 	}
-	
+
+	@ManyToMany
+	@JoinTable(name = "grid_course",
+				joinColumns = {@JoinColumn(name = "course_id")},
+				inverseJoinColumns = {@JoinColumn(name = "grid_id")})
+	public List<GridEntity> getGrid() {
+		return grid;
+	}
+
+	public void setGrid(List<GridEntity> grid) {
+		this.grid = grid;
+	}
+
+	@ManyToMany
+	@JoinTable(name = "sub_grid_course",
+			joinColumns = {@JoinColumn(name = "course_id")},
+			inverseJoinColumns = {@JoinColumn(name = "subGrid_id")})
+	public List<SubGridEntity> getSubGrid() {
+		return subGrid;
+	}
+
+	public void setSubGrid(List<SubGridEntity> subGrid) {
+		this.subGrid = subGrid;
+	}
+
 	@Column(name = "date_create", nullable = false)
     public Date getDateCreate() {
         return dateCreate;
@@ -155,6 +175,6 @@ public class CourseEntity implements Serializable{
     public void preUpdate(){
         dateUpdate = new Date();
     }
-	
+
 
 }
