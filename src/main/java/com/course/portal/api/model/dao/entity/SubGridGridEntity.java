@@ -18,8 +18,8 @@ import javax.persistence.Table;
 //@Table(name = "sub_grid_grid")
 public class SubGridGridEntity implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-/*
+/*	private static final long serialVersionUID = 1L;
+
 	private Long _id;
 	//private GridEntity grid;
 	//private SubGridEntity subGrid;

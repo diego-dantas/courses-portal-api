@@ -9,23 +9,24 @@ import java.util.List;
 @Table(name = "student")
 public class StudentEntity implements Serializable{
 
-    private static final long serializable = 1l;
+  	private static final long serialVersionUID = 1L;
+
+
 
 
     private long _id;
     private String name;
     private String email;
     private String password;
-    private List<PlanEntity> plano;
     private String imagePath;
     private String zipCode;
     private String street;
     private String number;
     private String neighborhood;
-    private int city;
-    private int state;
     private String phone;
     private boolean status;
+    private PlanEntity plan;
+    private CityEntity city;
     private Date dateCreate;
     private Date dateUpdate;
 
@@ -41,28 +42,112 @@ public class StudentEntity implements Serializable{
 
     public void set_id(long _id) {
         this._id = _id;
-    }
-
-
-    @Column(name  = "name", nullable = false, length = 150)
+    }    
+    
+    @Column(name = "name", length = 200, nullable = false)
     public String getName() {
-        return name;
-    }
+		return name;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	@Column(name = "email", length = 200, nullable = false)
+	public String getEmail() {
+		return email;
+	}
 
-    @Column(name = "email", nullable = false, length = 150)
-    public String getEmail() {
-        return email;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	@Column(name = "password", length = 1000, nullable = false)
+	public String getPassword() {
+		return password;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
 
-    @Column(name = "date_create", nullable = false)
+	public String getImagePath() {
+		return imagePath;
+	}
+
+	public void setImagePath(String imagePath) {
+		this.imagePath = imagePath;
+	}
+
+	public String getZipCode() {
+		return zipCode;
+	}
+
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode;
+	}
+
+	public String getStreet() {
+		return street;
+	}
+
+	public void setStreet(String street) {
+		this.street = street;
+	}
+
+	public String getNumber() {
+		return number;
+	}
+
+	public void setNumber(String number) {
+		this.number = number;
+	}
+
+	public String getNeighborhood() {
+		return neighborhood;
+	}
+
+	public void setNeighborhood(String neighborhood) {
+		this.neighborhood = neighborhood;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public boolean isStatus() {
+		return status;
+	}
+
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
+	
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	public PlanEntity getPlan() {
+		return plan;
+	}
+
+	public void setPlan(PlanEntity plan) {
+		this.plan = plan;
+	}
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	public CityEntity getCity() {
+		return city;
+	}
+	
+	public void setCity(CityEntity city) {
+		this.city = city;
+	}
+	
+	@Column(name = "date_create", nullable = false)
     public Date getDateCreate() {
         return dateCreate;
     }
@@ -70,7 +155,7 @@ public class StudentEntity implements Serializable{
     public void setDateCreate(Date dateCreate) {
         this.dateCreate = dateCreate;
     }
-
+    
     @Column(name = "date_update", nullable = false)
     public Date getDateUpdate() {
         return dateUpdate;
@@ -94,14 +179,4 @@ public class StudentEntity implements Serializable{
         dateUpdate = new Date();
     }
 
-    @Override
-    public String toString() {
-        return "StudentEntity{" +
-                "id=" + _id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", dateCreate=" + dateCreate +
-                ", dateUpdate=" + dateUpdate +
-                '}';
-    }
 }

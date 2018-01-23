@@ -7,13 +7,13 @@ import java.util.List;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "couse")
+@Table(name = "course")
 public class CourseEntity implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 
-	private Long _id;
-	private Long id;
+	private long _id;
+	private long id;
 	private String name;
 	private String description;
 	private String objective;
@@ -22,8 +22,10 @@ public class CourseEntity implements Serializable{
 	private String wayImage;
 	private boolean status;
 	private int views;
-	private List<GridEntity> grid;
-	private List<SubGridEntity> subGrid;
+	private List<StepsEntity> steps;
+	//private List<GridEntity> grid;
+	//private List<SubGridEntity> subGrid;
+	//private List<GridCourseEntity> gridCourses;
 	private Date dateCreate;
     private Date dateUpdate;
 	
@@ -31,20 +33,20 @@ public class CourseEntity implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	public Long get_id() {
+	public long get_id() {
 		return _id;
 	}
 
-	public void set_id(Long _id) {
+	public void set_id(long _id) {
 		this._id = _id;
 	}
 	
 	@Column(name = "id", nullable = false)
-	public Long getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	
@@ -119,7 +121,18 @@ public class CourseEntity implements Serializable{
 	public void setViews(int views) {
 		this.views = views;
 	}
+	
+	
+	@OneToMany(mappedBy = "course", fetch = FetchType.LAZY)
+	public List<StepsEntity> getSteps() {
+		return steps;
+	}
 
+	public void setSteps(List<StepsEntity> steps) {
+		this.steps = steps;
+	}
+
+/*
 	@ManyToMany
 	@JoinTable(name = "grid_course",
 				joinColumns = {@JoinColumn(name = "course_id")},
@@ -143,7 +156,18 @@ public class CourseEntity implements Serializable{
 	public void setSubGrid(List<SubGridEntity> subGrid) {
 		this.subGrid = subGrid;
 	}
+	
+	
+	
+	@OneToMany(mappedBy = "courses", cascade = CascadeType.ALL)
+	public List<GridCourseEntity> getGridCourses() {
+		return gridCourses;
+	}
 
+	public void setGridCourses(List<GridCourseEntity> gridCourses) {
+		this.gridCourses = gridCourses;
+	}
+*/
 	@Column(name = "date_create", nullable = false)
     public Date getDateCreate() {
         return dateCreate;
@@ -175,6 +199,5 @@ public class CourseEntity implements Serializable{
     public void preUpdate(){
         dateUpdate = new Date();
     }
-
 
 }

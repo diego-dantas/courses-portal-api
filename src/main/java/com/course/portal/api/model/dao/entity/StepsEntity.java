@@ -2,7 +2,6 @@ package com.course.portal.api.model.dao.entity;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,70 +9,74 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "plan")
-public class PlanEntity implements Serializable{
-
+@Table(name = "steps")
+public class StepsEntity implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-
-	private Long _id;
+	
+	private long _id;
+	private CourseEntity course;
+	private int stepsOrder;
+	private String name;
 	private String description;
-	private String wayImagen;
-	private boolean status;
-	private List<StudentEntity> student;
 	private Date dateCreate;
     private Date dateUpdate;
-    
-	public PlanEntity(){}
+	
+	public StepsEntity() {
+	}
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	public Long get_id() {
+	public long get_id() {
 		return _id;
 	}
-	public void set_id(Long _id) {
+
+	public void set_id(long _id) {
 		this._id = _id;
 	}
 	
-	@Column(name = "description", length = 1000, nullable = false)
+	@ManyToOne(fetch = FetchType.EAGER)
+	public CourseEntity getCourse() {
+		return course;
+	}
+
+	public void setCourse(CourseEntity course) {
+		this.course = course;
+	}
+	
+	@Column(name = "steps_order", nullable = false)
+	public int getStepsOrder() {
+		return stepsOrder;
+	}
+
+	public void setStepsOrder(int stepsOrder) {
+		this.stepsOrder = stepsOrder;
+	}
+	
+	@Column(name = "name", length = 100, nullable = false)
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	@Column(name = "description", length = 2000, nullable = false)
 	public String getDescription() {
 		return description;
 	}
+
 	public void setDescription(String description) {
 		this.description = description;
 	}
 	
-	@Column(name = "way_imagen", length = 200, nullable = false)
-	public String getWayImagen() {
-		return wayImagen;
-	}
-	public void setWayImagen(String wayImagen) {
-		this.wayImagen = wayImagen;
-	}
-	
-	@Column(name = "status", nullable = false)
-	public boolean isStatus() {
-		return status;
-	}
-	public void setStatus(boolean status) {
-		this.status = status;
-	}
-	
-	@OneToMany(mappedBy = "plan", fetch = FetchType.LAZY)
-	public List<StudentEntity> getStudent() {
-		return student;
-	}
-
-	public void setStudent(List<StudentEntity> student) {
-		this.student = student;
-	}
-
 	@Column(name = "date_create", nullable = false)
     public Date getDateCreate() {
         return dateCreate;
@@ -105,5 +108,9 @@ public class PlanEntity implements Serializable{
     public void preUpdate(){
         dateUpdate = new Date();
     }
+    
+	
+	
+	
 
 }

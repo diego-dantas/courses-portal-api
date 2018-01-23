@@ -12,15 +12,14 @@ import java.util.Date;
 @Entity
 @Table(name = "sub_grid")
 public class SubGridEntity implements Serializable{
-
-    
+   
 	private static final long serialVersionUID = 1L;
 	
 	private Long _id;
     private ProviderEntity provider;
     private String description;
-    private List<GridEntity> grid;
-    private List<CourseEntity> course;
+    //private List<GridEntity> grid;
+    //private List<CourseEntity> course;
     private Date dateCreate;
     private Date dateUpdate;
 
@@ -54,7 +53,7 @@ public class SubGridEntity implements Serializable{
         this.description = description;
     }
 
-    @ManyToMany(mappedBy = "subGrid")
+ /*   @ManyToMany(mappedBy = "subGrid")
     public List<GridEntity> getGrid() {
         return grid;
     }
@@ -71,7 +70,7 @@ public class SubGridEntity implements Serializable{
     public void setCourse(List<CourseEntity> course) {
         this.course = course;
     }
-
+*/
     @Column(name = "date_create", nullable = false)
     public Date getDateCreate() {
         return dateCreate;

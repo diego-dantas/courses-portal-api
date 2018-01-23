@@ -14,8 +14,9 @@ public class GridEntity implements Serializable{
 	private Long _id;
     private ProviderEntity provider;
     private String description;
-    private List<SubGridEntity> subGrid;
-    private List<CourseEntity> course;
+   // private List<SubGridEntity> subGrid;
+   // private List<CourseEntity> course;
+   // private List<GridCourseEntity> gridCourses;
     private Date dateCreate;
     private Date dateUpdate;
 
@@ -48,7 +49,7 @@ public class GridEntity implements Serializable{
     public void setDescription(String description) {
         this.description = description;
     }
-
+/*
     @ManyToMany
     @JoinTable(name = "sub_grid_grid",
                 joinColumns = {@JoinColumn(name = "grid_id")},
@@ -69,8 +70,25 @@ public class GridEntity implements Serializable{
     public void setCourse(List<CourseEntity> course) {
         this.course = course;
     }
+    
+    
+    @OneToMany(mappedBy = "grid", cascade = CascadeType.ALL)
+    public List<GridCourseEntity> getGridCourses() {
+		return gridCourses;
+	}
 
-    @Column(name = "date_create", nullable = false)
+	public void setGridCourses(List<GridCourseEntity> gridCourses) {
+		this.gridCourses = gridCourses;
+	}
+
+    
+  */  
+    
+    //Date of create or/and update
+    
+    
+   
+	@Column(name = "date_create", nullable = false)
     public Date getDateCreate() {
         return dateCreate;
     }

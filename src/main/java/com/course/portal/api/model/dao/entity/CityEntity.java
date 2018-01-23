@@ -1,6 +1,7 @@
 package com.course.portal.api.model.dao.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -21,6 +23,7 @@ public class CityEntity implements Serializable {
 	private Long _id;
 	private String city;
 	private StateEntity state;
+	private List<StudentEntity> student;
 	
 	
 	@Id
@@ -46,6 +49,14 @@ public class CityEntity implements Serializable {
 	}
 	public void setState(StateEntity state) {
 		this.state = state;
+	}
+	
+	@OneToMany(mappedBy = "city", fetch = FetchType.LAZY)
+	public List<StudentEntity> getStudent() {
+		return student;
+	}
+	public void setStudent(List<StudentEntity> student) {
+		this.student = student;
 	}
 	
 	
