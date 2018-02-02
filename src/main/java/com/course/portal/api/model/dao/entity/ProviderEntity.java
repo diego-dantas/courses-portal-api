@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "Provaider")
+@Table(name = "Provider")
 public class ProviderEntity implements Serializable{
 
 	private static final long serialVersionUID = 1L;

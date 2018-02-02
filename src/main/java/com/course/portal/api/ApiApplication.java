@@ -1,5 +1,8 @@
 package com.course.portal.api;
 
+import com.course.portal.api.model.dao.entity.ProviderEntity;
+import com.course.portal.api.model.dao.repository.ProviderRepository;
+import com.course.portal.api.security.PasswordSecurity;
 import org.hibernate.HibernateException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -18,21 +21,23 @@ public class ApiApplication {
 	public static void main(String[] args) {SpringApplication.run(ApiApplication.class, args);	}
 	
 /*	@Autowired
-	private StateRepository stateRepository;
-	StateEntity stateEntity = new StateEntity();*/
+	private ProviderRepository providerRepository;
+	ProviderEntity providerEntity = new ProviderEntity();
+
 	
 	@GetMapping("/")
 	public String getTeste(){
-	/*	stateEntity.setState("Teste Estadoa");
-		System.out.println(stateEntity.getState());
+		System.out.println("Tenho numeros" + providerRepository.count());
+		*//*providerEntity.setEmail("admin@courses.com.br");
+		providerEntity.setName("admin");
+		providerEntity.setPassword(PasswordSecurity.getPasswod("admin"));
 		try {
-			System.out.println("Numero de registro " + stateRepository.count());
-			stateRepository.save(stateEntity);
-			System.out.println("Numero de registro " + stateRepository.count());
+			providerRepository.save(providerEntity);
+			System.out.println("Dados salvo");
 		}catch(HibernateException e) {
 			System.out.println("Erro " + e);
-		}*/
+		}*//*
 		
-		return "Retorno do controller";
-	}
+		return "Deu certo mano";
+	}*/
 }
