@@ -21,9 +21,11 @@
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dto/ProviderDTO.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dto/StudentDTO.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/controller/ProviderController.java
+/home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dao/repository/ProviderRepository.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dao/repository/StateRepository.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dao/entity/PromotionEntity.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dao/db/DataConfiguration.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dao/entity/SubGridGridEntity.java
+/home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/service/ProviderService.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dao/entity/StepsEntity.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/controller/response/Response.java

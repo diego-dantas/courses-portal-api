@@ -20,15 +20,15 @@ public class ApiApplication {
 
 	public static void main(String[] args) {SpringApplication.run(ApiApplication.class, args);	}
 	
-/*	@Autowired
+	@Autowired
 	private ProviderRepository providerRepository;
-	ProviderEntity providerEntity = new ProviderEntity();
+//	ProviderEntity providerEntity = new ProviderEntity();
 
 	
 	@GetMapping("/")
 	public String getTeste(){
-		System.out.println("Tenho numeros" + providerRepository.count());
-		*//*providerEntity.setEmail("admin@courses.com.br");
+		System.out.println("Tenho numeros " + providerRepository.count());
+		/*providerEntity.setEmail("admin@courses.com.br");
 		providerEntity.setName("admin");
 		providerEntity.setPassword(PasswordSecurity.getPasswod("admin"));
 		try {
@@ -36,8 +36,10 @@ public class ApiApplication {
 			System.out.println("Dados salvo");
 		}catch(HibernateException e) {
 			System.out.println("Erro " + e);
-		}*//*
-		
+		}*/
+		ProviderEntity providerEntity;
+		providerEntity = providerRepository.findByEmail("admin@courses.com.br");
+		System.out.println("id e " + providerEntity.getName());
 		return "Deu certo mano";
-	}*/
+	}
 }

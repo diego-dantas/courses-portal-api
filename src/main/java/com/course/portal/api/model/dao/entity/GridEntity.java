@@ -119,4 +119,12 @@ public class GridEntity implements Serializable{
         dateUpdate = new Date();
     }
 
+    @Override
+    public String toString() {
+        return "GridEntity{" +
+                "_id=" + _id +
+                ", provider=" + provider.get_id() +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }
