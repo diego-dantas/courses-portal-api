@@ -71,7 +71,7 @@ public class SubGridEntity implements Serializable{
         this.course = course;
     }
 */
-    @Column(name = "date_create", nullable = false)
+    @Column(name = "date_create")
     public Date getDateCreate() {
         return dateCreate;
     }
@@ -80,7 +80,7 @@ public class SubGridEntity implements Serializable{
         this.dateCreate = dateCreate;
     }
 
-    @Column(name = "date_update", nullable = false)
+    @Column(name = "date_update")
     public Date getDateUpdate() {
         return dateUpdate;
     }
