@@ -14,7 +14,7 @@ public class GridEntity implements Serializable{
 	private Long _id;
     private ProviderEntity provider;
     private String description;
-   // private List<SubGridEntity> subGrid;
+    private List<SubGridEntity> subGridEntity;
    // private List<CourseEntity> course;
    // private List<GridCourseEntity> gridCourses;
     private Date dateCreate;
@@ -49,19 +49,17 @@ public class GridEntity implements Serializable{
     public void setDescription(String description) {
         this.description = description;
     }
-/*
-    @ManyToMany
-    @JoinTable(name = "sub_grid_grid",
-                joinColumns = {@JoinColumn(name = "grid_id")},
-                inverseJoinColumns = {@JoinColumn(name = "subGrid_id")})
-    public List<SubGridEntity> getSubGrid() {
-        return subGrid;
+
+    @OneToMany(mappedBy = "grid", fetch = FetchType.LAZY)
+    public List<SubGridEntity> getSubGridEntity() {
+        return subGridEntity;
     }
 
-    public void setSubGrid(List<SubGridEntity> subGrid) {
-        this.subGrid = subGrid;
+    public void setSubGridEntity(List<SubGridEntity> subGridEntity) {
+        this.subGridEntity = subGridEntity;
     }
 
+    /*
     @ManyToMany(mappedBy = "grid")
     public List<CourseEntity> getCourse() {
         return course;
@@ -71,7 +69,7 @@ public class GridEntity implements Serializable{
         this.course = course;
     }
     
-    
+
     @OneToMany(mappedBy = "grid", cascade = CascadeType.ALL)
     public List<GridCourseEntity> getGridCourses() {
 		return gridCourses;
@@ -82,13 +80,13 @@ public class GridEntity implements Serializable{
 	}
 
     
-  */  
+  */
     
     //Date of create or/and update
     
     
    
-	@Column(name = "date_create", nullable = false)
+	@Column(name = "date_create")
     public Date getDateCreate() {
         return dateCreate;
     }
@@ -97,7 +95,7 @@ public class GridEntity implements Serializable{
         this.dateCreate = dateCreate;
     }
 
-    @Column(name = "date_update", nullable = false)
+    @Column(name = "date_update")
     public Date getDateUpdate() {
         return dateUpdate;
     }

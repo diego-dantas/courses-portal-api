@@ -3,7 +3,7 @@ package com.course.portal.api.model.dto;
 public class SubGridDTO {
 
     private Long _id;
-    private ProviderDTO provider;
+    private GridDTO grid;
     private String description;
 
     public SubGridDTO() {
@@ -17,12 +17,12 @@ public class SubGridDTO {
         this._id = _id;
     }
 
-    public ProviderDTO getProvider() {
-        return provider;
+    public GridDTO getGrid() {
+        return grid;
     }
 
-    public void setProvider(ProviderDTO provider) {
-        this.provider = provider;
+    public void setGrid(GridDTO grid) {
+        this.grid = grid;
     }
 
     public String getDescription() {
@@ -31,5 +31,15 @@ public class SubGridDTO {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+
+    @Override
+    public String toString() {
+        return "SubGridDTO{" +
+                "_id=" + _id +
+                ", grid=" + grid +
+                ", description='" + description + '\'' +
+                '}';
     }
 }

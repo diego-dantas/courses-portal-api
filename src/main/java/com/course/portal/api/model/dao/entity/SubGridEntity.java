@@ -16,7 +16,7 @@ public class SubGridEntity implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private Long _id;
-    private ProviderEntity provider;
+    private GridEntity grid;
     private String description;
     //private List<GridEntity> grid;
     //private List<CourseEntity> course;
@@ -36,12 +36,12 @@ public class SubGridEntity implements Serializable{
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
-    public ProviderEntity getProvider() {
-        return provider;
+    public GridEntity getGrid() {
+        return grid;
     }
 
-    public void setProvider(ProviderEntity provider) {
-        this.provider = provider;
+    public void setGrid(GridEntity grid) {
+        this.grid = grid;
     }
 
     @Column(name = "description", length = 1000)

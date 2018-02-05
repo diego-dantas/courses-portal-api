@@ -5,6 +5,7 @@ import com.course.portal.api.model.dao.entity.GridEntity;
 import com.course.portal.api.model.dao.entity.ProviderEntity;
 import com.course.portal.api.model.dao.repository.GridRepository;
 import com.course.portal.api.model.dto.GridDTO;
+import com.course.portal.api.model.dto.ProviderDTO;
 import com.google.gson.Gson;
 import org.hibernate.HibernateException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,8 +46,27 @@ public class GridController {
         return ResponseEntity.ok(response);
     }
 
+    @PostMapping(value = "/updateGrid")
+    public ResponseEntity<Response<GridDTO>> updateGrid(@RequestBody GridDTO gridDTO){
+        System.out.println("To aqui mano "  +  gridDTO.get_id() + " texte " + gridDTO.getDescription());
 
-    @PostMapping(value = "deleteGrid")
+        GridEntity gridEntity = new GridEntity();
+        ProviderEntity providerEntity = new ProviderEntity();
+        Response<GridDTO> response = new Response<>();
+
+        providerEntity.set_id(gridDTO.getProvider().get_id());
+
+        gridEntity.setProvider(providerEntity);
+        gridEntity.set_id(gridDTO.get_id());
+        gridEntity.setDescription(gridDTO.getDescription());
+
+        gridRepository.save(gridEntity);
+        response.setData(gridDTO);
+
+        return ResponseEntity.ok(response);
+    }
+
+    @PostMapping(value = "/deleteGrid")
     public ResponseEntity<Response<GridDTO>> deleteGrid(@RequestBody GridDTO gridDTO){
         Response<GridDTO> response = new Response<>();
         gridRepository.delete(gridDTO.get_id());
@@ -58,13 +78,19 @@ public class GridController {
 
     @GetMapping(value = "/getGrid")
     public ResponseEntity<Response<List<GridDTO>>> getGrid(){
+
+
         List<GridEntity> gridEntities = new ArrayList<>();
         Response<List<GridDTO>> response = new Response<>();
+        ProviderDTO providerDTO = new ProviderDTO();
+        providerDTO.set_id(1L);
+
 
         List<GridDTO> gridDTOs = new ArrayList<>();
 
 
         gridEntities = gridRepository.findAll();
+
 
         for(GridEntity gridEntity: gridEntities){
 
@@ -72,6 +98,7 @@ public class GridController {
 
             gridDTO.set_id(gridEntity.get_id());
             gridDTO.setDescription(gridEntity.getDescription());
+            gridDTO.setProvider(providerDTO);
 
             gridDTOs.add(gridDTO);
         }
@@ -79,12 +106,10 @@ public class GridController {
         response.setData(gridDTOs);
         Gson gson = new Gson();
 
-
-        //gridDTO.setProvider();
         String gridList = gson.toJson(gridDTOs);
         System.out.println(gridList);
 
-
+        System.out.println("Carreguei os dados");
 
         return ResponseEntity.ok(response);
     }
