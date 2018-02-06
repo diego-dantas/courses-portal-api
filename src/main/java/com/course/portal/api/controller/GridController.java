@@ -22,6 +22,8 @@ public class GridController {
     @Autowired
     private GridRepository gridRepository;
 
+
+
     @PostMapping(value = "/createGrid")
     public ResponseEntity<Response<GridDTO>> createGrid(@RequestBody GridDTO gridDTO){
 
@@ -112,5 +114,21 @@ public class GridController {
         System.out.println("Carreguei os dados");
 
         return ResponseEntity.ok(response);
+    }
+
+
+    @GetMapping(value = "/getMenu")
+    public String getMenu(){
+        List<GridEntity> gridEntities = new ArrayList<>();
+
+        gridEntities = gridRepository.getByGridSubGrid();
+        Gson gson = new Gson();
+        String teste = gson.toJson(gridEntities);
+        System.out.println(teste);
+//        for(GridEntity grid : gridEntities){
+//            System.out.println(grid.get_id() + " desc " +  grid.getDescription());
+//        }
+
+        return "";
     }
 }

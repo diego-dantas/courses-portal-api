@@ -6,7 +6,11 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import java.util.List;
+
 public interface GridRepository extends JpaRepository<GridEntity, Long>{
 
 
+    @Query(value = "select g.*, sg.description from grid g  left join sub_grid sg on sg.grid__id = g._id where g._id = 2", nativeQuery = true)
+    public List<GridEntity> getByGridSubGrid();
 }
