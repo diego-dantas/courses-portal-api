@@ -107,7 +107,7 @@ public class PromotionController {
 
             for(PromotionEntity pro : promotionEntity){
                 PromotionDTO promotionDTO = new PromotionDTO();
-
+                System.out.println(pro.getDateInicial());
 
                 promotionDTO.set_id(pro.get_id());
                 promotionDTO.setCodigoCupom(pro.getCodigoCupom());

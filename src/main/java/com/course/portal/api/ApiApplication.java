@@ -20,14 +20,14 @@ public class ApiApplication {
 
 	public static void main(String[] args) {SpringApplication.run(ApiApplication.class, args);	}
 	
-	@Autowired
-	private ProviderRepository providerRepository;
-	ProviderEntity providerEntity = new ProviderEntity();
+//	@Autowired
+//	private ProviderRepository providerRepository;
+//	ProviderEntity providerEntity = new ProviderEntity();
 
 	
 	@GetMapping("/")
 	public String getTeste(){
-		System.out.println("Tenho numeros " + providerRepository.count());
+		/*System.out.println("Tenho numeros " + providerRepository.count());
 		providerEntity.setEmail("admin@courses.com.br");
 		providerEntity.setName("admin");
 		providerEntity.setPassword(PasswordSecurity.getPasswod("admin"));
@@ -39,7 +39,7 @@ public class ApiApplication {
 		}
 		ProviderEntity providerEntity;
 		providerEntity = providerRepository.findByEmail("admin@courses.com.br");
-		System.out.println("id e " + providerEntity.getName());
-		return "Deu certo mano";
+		System.out.println("id e " + providerEntity.getName());*/
+		return "API EM EXECUÇÃO";
 	}
 }

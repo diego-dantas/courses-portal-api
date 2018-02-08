@@ -147,7 +147,7 @@ public class StudentEntity implements Serializable{
 		this.city = city;
 	}
 	
-	@Column(name = "date_create", nullable = false)
+	@Column(name = "date_create")
     public Date getDateCreate() {
         return dateCreate;
     }
@@ -156,7 +156,7 @@ public class StudentEntity implements Serializable{
         this.dateCreate = dateCreate;
     }
     
-    @Column(name = "date_update", nullable = false)
+    @Column(name = "date_update")
     public Date getDateUpdate() {
         return dateUpdate;
     }
