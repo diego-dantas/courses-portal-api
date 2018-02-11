@@ -13,7 +13,6 @@ public class CourseEntity implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	private long _id;
-	private long id;
 	private String name;
 	private String description;
 	private String objective;
@@ -23,7 +22,7 @@ public class CourseEntity implements Serializable{
 	private boolean status;
 	private int views;
 	private List<StepsEntity> steps;
-	//private List<GridEntity> grid;
+	private List<GridEntity> grid;
 	//private List<SubGridEntity> subGrid;
 	//private List<GridCourseEntity> gridCourses;
 	private Date dateCreate;
@@ -40,15 +39,7 @@ public class CourseEntity implements Serializable{
 	public void set_id(long _id) {
 		this._id = _id;
 	}
-	
-	@Column(name = "id", nullable = false)
-	public long getId() {
-		return id;
-	}
 
-	public void setId(long id) {
-		this.id = id;
-	}
 	
 	@Column(name = "name", length = 100, nullable = false)
 	public String getName() {
@@ -132,11 +123,7 @@ public class CourseEntity implements Serializable{
 		this.steps = steps;
 	}
 
-/*
-	@ManyToMany
-	@JoinTable(name = "grid_course",
-				joinColumns = {@JoinColumn(name = "course_id")},
-				inverseJoinColumns = {@JoinColumn(name = "grid_id")})
+	@OneToMany(mappedBy = "course", fetch = FetchType.LAZY)
 	public List<GridEntity> getGrid() {
 		return grid;
 	}
@@ -144,31 +131,31 @@ public class CourseEntity implements Serializable{
 	public void setGrid(List<GridEntity> grid) {
 		this.grid = grid;
 	}
+	/*
+        @ManyToMany
+        @JoinTable(name = "sub_grid_course",
+                joinColumns = {@JoinColumn(name = "course_id")},
+                inverseJoinColumns = {@JoinColumn(name = "subGrid_id")})
+        public List<SubGridEntity> getSubGrid() {
+            return subGrid;
+        }
 
-	@ManyToMany
-	@JoinTable(name = "sub_grid_course",
-			joinColumns = {@JoinColumn(name = "course_id")},
-			inverseJoinColumns = {@JoinColumn(name = "subGrid_id")})
-	public List<SubGridEntity> getSubGrid() {
-		return subGrid;
-	}
+        public void setSubGrid(List<SubGridEntity> subGrid) {
+            this.subGrid = subGrid;
+        }
 
-	public void setSubGrid(List<SubGridEntity> subGrid) {
-		this.subGrid = subGrid;
-	}
-	
-	
-	
-	@OneToMany(mappedBy = "courses", cascade = CascadeType.ALL)
-	public List<GridCourseEntity> getGridCourses() {
-		return gridCourses;
-	}
 
-	public void setGridCourses(List<GridCourseEntity> gridCourses) {
-		this.gridCourses = gridCourses;
-	}
-*/
-	@Column(name = "date_create", nullable = false)
+
+        @OneToMany(mappedBy = "courses", cascade = CascadeType.ALL)
+        public List<GridCourseEntity> getGridCourses() {
+            return gridCourses;
+        }
+
+        public void setGridCourses(List<GridCourseEntity> gridCourses) {
+            this.gridCourses = gridCourses;
+        }
+    */
+	@Column(name = "date_create")
     public Date getDateCreate() {
         return dateCreate;
     }

@@ -15,7 +15,7 @@ public class GridEntity implements Serializable{
     private ProviderEntity provider;
     private String description;
     private List<SubGridEntity> subGridEntity;
-   // private List<CourseEntity> course;
+    private CourseEntity course;
    // private List<GridCourseEntity> gridCourses;
     private Date dateCreate;
     private Date dateUpdate;
@@ -59,17 +59,17 @@ public class GridEntity implements Serializable{
         this.subGridEntity = subGridEntity;
     }
 
-    /*
-    @ManyToMany(mappedBy = "grid")
-    public List<CourseEntity> getCourse() {
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    public CourseEntity getCourse() {
         return course;
     }
 
-    public void setCourse(List<CourseEntity> course) {
+    public void setCourse(CourseEntity course) {
         this.course = course;
     }
     
-
+/*
     @OneToMany(mappedBy = "grid", cascade = CascadeType.ALL)
     public List<GridCourseEntity> getGridCourses() {
 		return gridCourses;
