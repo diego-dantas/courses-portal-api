@@ -27,6 +27,7 @@ public class PlanEntity implements Serializable{
 	private String wayImagen;
 	private boolean status;
 	private List<StudentEntity> student;
+	private List<CoursePlanEntity> coursePlan;
 	private Date dateCreate;
     private Date dateUpdate;
     
@@ -72,6 +73,15 @@ public class PlanEntity implements Serializable{
 
 	public void setStudent(List<StudentEntity> student) {
 		this.student = student;
+	}
+
+	@OneToMany(mappedBy = "plan", fetch = FetchType.LAZY)
+	public List<CoursePlanEntity> getCoursePlan() {
+		return coursePlan;
+	}
+
+	public void setCoursePlan(List<CoursePlanEntity> coursePlan) {
+		this.coursePlan = coursePlan;
 	}
 
 	@Column(name = "date_create")

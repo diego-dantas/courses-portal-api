@@ -11,6 +11,8 @@ public class CourseDTO {
     private String wayImage;
     private boolean status;
     private int views;
+    private GridDTO grid;
+    private SubGridDTO subGrid;
 
     public long get_id() {
         return _id;
@@ -82,5 +84,21 @@ public class CourseDTO {
 
     public void setViews(int views) {
         this.views = views;
+    }
+
+    public GridDTO getGrid() {
+        return grid;
+    }
+
+    public void setGrid(GridDTO grid) {
+        this.grid = grid;
+    }
+
+    public SubGridDTO getSubGrid() {
+        return subGrid;
+    }
+
+    public void setSubGrid(SubGridDTO subGrid) {
+        this.subGrid = subGrid;
     }
 }

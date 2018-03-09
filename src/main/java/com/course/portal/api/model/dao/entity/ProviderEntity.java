@@ -119,7 +119,7 @@ public class ProviderEntity implements Serializable{
         this.providerTopic = providerTopic;
     }
 
-    @Column(name = "date_create", nullable = false)
+    @Column(name = "date_create")
     public Date getDateCreate() {
         return dateCreate;
     }

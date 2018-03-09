@@ -19,7 +19,7 @@ public class SubGridEntity implements Serializable{
     private GridEntity grid;
     private String description;
     //private List<GridEntity> grid;
-    //private List<CourseEntity> course;
+    private List<CourseEntity> course;
     private Date dateCreate;
     private Date dateUpdate;
 
@@ -61,16 +61,16 @@ public class SubGridEntity implements Serializable{
     public void setGrid(List<GridEntity> grid) {
         this.grid = grid;
     }
-
-    @ManyToMany(mappedBy = "subGrid")
+*/
+    @OneToMany(mappedBy = "subGrid", fetch = FetchType.LAZY)
     public List<CourseEntity> getCourse() {
-        return course;
-    }
+     return course;
+ }
 
     public void setCourse(List<CourseEntity> course) {
         this.course = course;
     }
-*/
+
     @Column(name = "date_create")
     public Date getDateCreate() {
         return dateCreate;

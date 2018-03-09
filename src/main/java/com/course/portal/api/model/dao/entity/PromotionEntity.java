@@ -20,8 +20,8 @@ public class PromotionEntity implements Serializable{
 
 	private long _id;
 	private String description;
-	private Date dateInicial;
-	private Date dateFinal;
+	private String dateInicial;
+	private String dateFinal;
 	private double percentual;
 	private String codigoCupom;
 	private Date dateCreate;
@@ -45,18 +45,18 @@ public class PromotionEntity implements Serializable{
 	}
 	
 	@Column(name = "date_start", nullable = false)
-	public Date getDateInicial() {
+	public String getDateInicial() {
 		return dateInicial;
 	}
-	public void setDateInicial(Date dateInicial) {
+	public void setDateInicial(String dateInicial) {
 		this.dateInicial = dateInicial;
 	}
 	
 	@Column(name = "date_finish", nullable = false)
-	public Date getDateFinal() {
+	public String getDateFinal() {
 		return dateFinal;
 	}
-	public void setDateFinal(Date dateFinal) {
+	public void setDateFinal(String dateFinal) {
 		this.dateFinal = dateFinal;
 	}
 	

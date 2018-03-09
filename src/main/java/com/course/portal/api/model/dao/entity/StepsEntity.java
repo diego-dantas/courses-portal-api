@@ -77,7 +77,7 @@ public class StepsEntity implements Serializable{
 		this.description = description;
 	}
 	
-	@Column(name = "date_create", nullable = false)
+	@Column(name = "date_create")
     public Date getDateCreate() {
         return dateCreate;
     }
@@ -108,9 +108,18 @@ public class StepsEntity implements Serializable{
     public void preUpdate(){
         dateUpdate = new Date();
     }
-    
-	
-	
-	
 
+
+	@Override
+	public String toString() {
+		return "StepsEntity{" +
+				"_id=" + _id +
+				", course=" + course +
+				", stepsOrder=" + stepsOrder +
+				", name='" + name + '\'' +
+				", description='" + description + '\'' +
+				", dateCreate=" + dateCreate +
+				", dateUpdate=" + dateUpdate +
+				'}';
+	}
 }

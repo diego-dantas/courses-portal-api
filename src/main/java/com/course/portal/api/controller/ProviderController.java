@@ -23,20 +23,8 @@ public class ProviderController {
     @PostMapping(value = "/login")
     public ResponseEntity<Response<ProviderDTO>> loginProvider(@RequestBody ProviderDTO providerDTO){
 
-
-        System.out.println("Tenho numeros " + providerRepository.count());
-
         Response<ProviderDTO> response = new Response<ProviderDTO>();
-        ProviderService providerService = new ProviderService();
-
-        if(providerService.validateLogin(providerDTO))
-                System.out.println("deu certo");
-
-        ProviderEntity providerEntity;
-        providerEntity = providerRepository.findByEmail("admin@courses.com.br");
-            System.out.println("id e " + providerEntity.getName());
-
-
+        ProviderEntity providerEntity = providerRepository.findByEmail(providerDTO.getEmail());
 
         //valido a senha para da retorno
         if(providerEntity.getEmail().equals(providerDTO.getEmail()) &&
@@ -53,5 +41,26 @@ public class ProviderController {
 	}
 
 
+	@PostMapping(value = "updateProvider")
+    public ResponseEntity<Response<ProviderDTO>> updateProvider(@RequestBody ProviderDTO providerDTO){
+
+        Response<ProviderDTO> response = new Response<>();
+        ProviderEntity providerEntity = new ProviderEntity();
+
+        try{
+            providerEntity.set_id(providerDTO.get_id());
+            providerEntity.setName(providerDTO.getName());
+            providerEntity.setEmail(providerDTO.getEmail());
+            providerEntity.setPassword(PasswordSecurity.getPasswod(providerDTO.getPassword()));
+
+            providerRepository.save(providerEntity);
+
+            response.setData(providerDTO);
+            return ResponseEntity.ok(response);
+        }catch(Exception e){
+            System.out.println("Erro ao alterar os dados do Provider " + e);
+            return  new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
 
 }

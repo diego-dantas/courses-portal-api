@@ -5,6 +5,7 @@ public class GridDTO {
     private Long _id;
     private ProviderDTO provider;
     private String description;
+    private String labelUrl;
 
     public GridDTO(){}
 
@@ -30,5 +31,13 @@ public class GridDTO {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getLabelUrl() {
+        return labelUrl;
+    }
+
+    public void setLabelUrl(String labelUrl) {
+        this.labelUrl = labelUrl;
     }
 }

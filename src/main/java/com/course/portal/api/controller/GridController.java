@@ -9,6 +9,7 @@ import com.course.portal.api.model.dto.ProviderDTO;
 import com.google.gson.Gson;
 import org.hibernate.HibernateException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,28 +25,30 @@ public class GridController {
 
 
 
-    @PostMapping(value = "/createGrid")
-    public ResponseEntity<Response<GridDTO>> createGrid(@RequestBody GridDTO gridDTO){
+    @PostMapping(value = "/createUpdateGrid")
+    public ResponseEntity<Response<GridDTO>> createUpdateGrid(@RequestBody GridDTO gridDTO){
 
         Response<GridDTO> response = new Response<>();
         GridEntity gridEntity = new GridEntity();
         ProviderEntity providerEntity = new ProviderEntity();
 
-
-        providerEntity.set_id(gridDTO.getProvider().get_id());
-
-        gridEntity.setDescription(gridDTO.getDescription());
-        gridEntity.setProvider(providerEntity);
         try {
-            gridRepository.save(gridEntity);
-            System.out.println("Dados salvo");
 
+            providerEntity.set_id(gridDTO.getProvider().get_id());
+            gridEntity.set_id(gridDTO.get_id());
+            gridEntity.setDescription(gridDTO.getDescription());
+            gridEntity.setLabelUrl(gridDTO.getLabelUrl());
+            gridEntity.setProvider(providerEntity);
+
+            gridRepository.save(gridEntity);
+
+            response.setData(gridDTO);
+            return ResponseEntity.ok(response);
 
         }catch(HibernateException e) {
-            System.out.println("Erro " + e);
+            System.out.println("Erro ao salvar a Category" + e);
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
-        response.setData(gridDTO);
-        return ResponseEntity.ok(response);
     }
 
     @PostMapping(value = "/updateGrid")
@@ -61,6 +64,7 @@ public class GridController {
         gridEntity.setProvider(providerEntity);
         gridEntity.set_id(gridDTO.get_id());
         gridEntity.setDescription(gridDTO.getDescription());
+        gridEntity.setLabelUrl(gridDTO.getLabelUrl());
 
         gridRepository.save(gridEntity);
         response.setData(gridDTO);
@@ -71,9 +75,15 @@ public class GridController {
     @PostMapping(value = "/deleteGrid")
     public ResponseEntity<Response<GridDTO>> deleteGrid(@RequestBody GridDTO gridDTO){
         Response<GridDTO> response = new Response<>();
-        gridRepository.delete(gridDTO.get_id());
-        response.setData(gridDTO);
-        return ResponseEntity.ok(response);
+        try{
+            gridRepository.delete(gridDTO.get_id());
+            response.setData(gridDTO);
+            return ResponseEntity.ok(response);
+
+        }catch(Exception e){
+            System.out.println("Erro ao Excluir uma categoria");
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
     }
 
 
@@ -100,6 +110,7 @@ public class GridController {
 
             gridDTO.set_id(gridEntity.get_id());
             gridDTO.setDescription(gridEntity.getDescription());
+            gridDTO.setLabelUrl(gridEntity.getLabelUrl());
             gridDTO.setProvider(providerDTO);
 
             gridDTOs.add(gridDTO);

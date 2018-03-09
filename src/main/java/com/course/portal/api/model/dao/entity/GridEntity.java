@@ -14,8 +14,9 @@ public class GridEntity implements Serializable{
 	private Long _id;
     private ProviderEntity provider;
     private String description;
+    private String labelUrl;
     private List<SubGridEntity> subGridEntity;
-    private CourseEntity course;
+    private List<CourseEntity> course;
    // private List<GridCourseEntity> gridCourses;
     private Date dateCreate;
     private Date dateUpdate;
@@ -50,6 +51,15 @@ public class GridEntity implements Serializable{
         this.description = description;
     }
 
+    @Column(name = "labelUrl", length = 100, nullable = false)
+    public String getLabelUrl() {
+        return labelUrl;
+    }
+
+    public void setLabelUrl(String labelUrl) {
+        this.labelUrl = labelUrl;
+    }
+
     @OneToMany(mappedBy = "grid", fetch = FetchType.LAZY)
     public List<SubGridEntity> getSubGridEntity() {
         return subGridEntity;
@@ -60,12 +70,12 @@ public class GridEntity implements Serializable{
     }
 
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    public CourseEntity getCourse() {
+    @OneToMany(mappedBy = "grid", fetch = FetchType.LAZY)
+    public List<CourseEntity> getCourse() {
         return course;
     }
 
-    public void setCourse(CourseEntity course) {
+    public void setCourse(List<CourseEntity> course) {
         this.course = course;
     }
     

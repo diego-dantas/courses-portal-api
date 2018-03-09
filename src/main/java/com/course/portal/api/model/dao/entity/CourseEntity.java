@@ -22,8 +22,9 @@ public class CourseEntity implements Serializable{
 	private boolean status;
 	private int views;
 	private List<StepsEntity> steps;
-	private List<GridEntity> grid;
-	//private List<SubGridEntity> subGrid;
+	private List<CoursePlanEntity> coursePlan;
+	private GridEntity grid;
+	private SubGridEntity subGrid;
 	//private List<GridCourseEntity> gridCourses;
 	private Date dateCreate;
     private Date dateUpdate;
@@ -123,38 +124,45 @@ public class CourseEntity implements Serializable{
 		this.steps = steps;
 	}
 
-	@OneToMany(mappedBy = "course", fetch = FetchType.LAZY)
-	public List<GridEntity> getGrid() {
+	@ManyToOne(fetch = FetchType.EAGER)
+	public GridEntity getGrid() {
 		return grid;
 	}
 
-	public void setGrid(List<GridEntity> grid) {
+	public void setGrid(GridEntity grid) {
 		this.grid = grid;
 	}
+
+
+	@ManyToOne(fetch = FetchType.EAGER)
+	public SubGridEntity getSubGrid() {
+		return subGrid;
+	}
+
+	public void setSubGrid(SubGridEntity subGrid) {
+		this.subGrid = subGrid;
+	}
+
+	@OneToMany(mappedBy = "course", fetch = FetchType.LAZY)
+	public List<CoursePlanEntity> getCoursePlan() {
+		return coursePlan;
+	}
+
+	public void setCoursePlan(List<CoursePlanEntity> coursePlan) {
+		this.coursePlan = coursePlan;
+	}
+
 	/*
-        @ManyToMany
-        @JoinTable(name = "sub_grid_course",
-                joinColumns = {@JoinColumn(name = "course_id")},
-                inverseJoinColumns = {@JoinColumn(name = "subGrid_id")})
-        public List<SubGridEntity> getSubGrid() {
-            return subGrid;
-        }
 
-        public void setSubGrid(List<SubGridEntity> subGrid) {
-            this.subGrid = subGrid;
-        }
+            @OneToMany(mappedBy = "courses", cascade = CascadeType.ALL)
+            public List<GridCourseEntity> getGridCourses() {
+                return gridCourses;
+            }
 
-
-
-        @OneToMany(mappedBy = "courses", cascade = CascadeType.ALL)
-        public List<GridCourseEntity> getGridCourses() {
-            return gridCourses;
-        }
-
-        public void setGridCourses(List<GridCourseEntity> gridCourses) {
-            this.gridCourses = gridCourses;
-        }
-    */
+            public void setGridCourses(List<GridCourseEntity> gridCourses) {
+                this.gridCourses = gridCourses;
+            }
+        */
 	@Column(name = "date_create")
     public Date getDateCreate() {
         return dateCreate;

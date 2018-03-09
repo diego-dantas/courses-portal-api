@@ -6,6 +6,7 @@ import com.course.portal.api.model.dao.repository.PromotionRepository;
 import com.course.portal.api.model.dto.PromotionDTO;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -37,12 +38,11 @@ public class PromotionController {
 
             promotionRepository.save(promotionEntity);
             response.setData(promotionDTO);
-
+            return ResponseEntity.ok(response);
         }catch (Exception e){
             System.out.println("Erro ao criar uma nova promoção " + e);
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-
-        return ResponseEntity.ok(response);
     }
 
     @PostMapping(value = "/updatePromotion")
@@ -107,8 +107,6 @@ public class PromotionController {
 
             for(PromotionEntity pro : promotionEntity){
                 PromotionDTO promotionDTO = new PromotionDTO();
-                System.out.println(pro.getDateInicial());
-
                 promotionDTO.set_id(pro.get_id());
                 promotionDTO.setCodigoCupom(pro.getCodigoCupom());
                 promotionDTO.setDescription(pro.getDescription());
