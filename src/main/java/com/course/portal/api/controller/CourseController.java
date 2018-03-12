@@ -1,15 +1,13 @@
 package com.course.portal.api.controller;
 
 import com.course.portal.api.controller.response.Response;
-import com.course.portal.api.model.dao.entity.CourseEntity;
-import com.course.portal.api.model.dao.entity.GridEntity;
-import com.course.portal.api.model.dao.entity.SubGridEntity;
-import com.course.portal.api.model.dao.repository.CourseRepository;
-import com.course.portal.api.model.dto.CourseDTO;
-import com.course.portal.api.model.dto.GridDTO;
-import com.course.portal.api.model.dto.SubGridDTO;
+import com.course.portal.api.model.dao.entity.*;
+import com.course.portal.api.model.dao.repository.*;
+import com.course.portal.api.model.dto.*;
+import org.hibernate.HibernateException;
 import org.hibernate.jpa.criteria.expression.function.AggregationFunction;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,7 +20,14 @@ public class CourseController {
 
     @Autowired
     private CourseRepository courseRepository;
-
+    @Autowired
+    private GridRepository gridRepository;
+    @Autowired
+    private SubGridRepositoy subGridRepositoy;
+    @Autowired
+    private StepsRepository stepsRepository;
+    @Autowired
+    private MaterialRepository materialRepository;
 
     @PostMapping(value = "/createUpdateCourse")
     public ResponseEntity<Response<CourseDTO>>  createUpdateCourse(@RequestBody CourseDTO courseDTO){
@@ -130,6 +135,90 @@ public class CourseController {
         response.setData(courseDTOS);
 
         return ResponseEntity.ok(response);
+    }
+
+
+    @GetMapping(value = "/getCourse")
+    public ResponseEntity<Response<List<MaterialDTO>>> getCourse(@RequestParam String grid,
+                                                          @RequestParam String subGrid){
+        Response<List<MaterialDTO>> response = new Response<>();
+        GridDTO gridDTO = new GridDTO();
+        SubGridDTO subGridDTO = new SubGridDTO();
+        List<CourseEntity> courses = new ArrayList<>();
+
+
+        List<MaterialDTO> listReturn = new ArrayList<>();
+
+
+        try{
+
+            GridEntity gridEntity = gridRepository.findByLabelUrl(grid);
+            SubGridEntity subGridEntity = subGridRepositoy.findByLabelUrl(subGrid);
+            gridDTO.set_id(gridEntity.get_id());
+            subGridDTO.set_id(subGridEntity.get_id());
+
+
+            courses = courseRepository.findByGridAndSubGrid(gridEntity.get_id(), subGridEntity.get_id());
+
+            for(CourseEntity courseEntity : courses){
+
+                CourseDTO courseDTO = new CourseDTO();
+
+                subGridDTO.setGrid(gridDTO);
+                courseDTO.set_id(courseEntity.get_id());
+                courseDTO.setName(courseEntity.getName());
+                courseDTO.setDescription(courseEntity.getDescription());
+                courseDTO.setObjective(courseEntity.getObjective());
+                courseDTO.setHours(courseEntity.getHours());
+                courseDTO.setPrice(courseEntity.getPrice());
+                courseDTO.setStatus(courseEntity.isStatus());
+                courseDTO.setGrid(gridDTO);
+                courseDTO.setSubGrid(subGridDTO);
+
+                //courseDTOS.add(courseDTO);
+
+                List<StepsEntity> stepsEntities = stepsRepository.findByCourse(courseEntity);
+
+                for(StepsEntity stepsEntity : stepsEntities){
+                    StepsDTO stepsDTO = new StepsDTO();
+
+                    stepsDTO.setCourse(courseDTO);
+                    stepsDTO.set_id(stepsEntity.get_id());
+                    stepsDTO.setName(stepsEntity.getName());
+                    stepsDTO.setDescription(stepsEntity.getDescription());
+                    stepsDTO.setStepsOrder(stepsEntity.getStepsOrder());
+
+
+
+                    List<MaterialEntity> materialEntities = materialRepository.findBySteps(stepsEntity);
+
+                    for(MaterialEntity materialEntity : materialEntities){
+
+                        MaterialDTO materialDTO = new MaterialDTO();
+
+                        materialDTO.setSteps(stepsDTO);
+                        materialDTO.set_id(materialEntity.get_id());
+                        materialDTO.setName(materialEntity.getName());
+                        materialDTO.setType(materialEntity.getType());
+                        materialDTO.setUrl(materialEntity.getUrl());
+                        materialDTO.setMaterialOrder(materialEntity.getMaterialOrder());
+                        materialDTO.setDownload(materialEntity.isDownload());
+                        materialDTO.setStatus(materialEntity.isStatus());
+
+                        listReturn.add(materialDTO);
+                    }
+
+                }
+            }
+
+
+            response.setData(listReturn);
+
+            return ResponseEntity.ok(response);
+        }catch(HibernateException e){
+            System.out.println("Erro ao buscar o curso por categoria e subcategoria " + e);
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+        }
     }
 
 }

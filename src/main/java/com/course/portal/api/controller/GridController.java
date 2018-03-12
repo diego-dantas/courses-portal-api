@@ -51,33 +51,44 @@ public class GridController {
         }
     }
 
-    @PostMapping(value = "/updateGrid")
-    public ResponseEntity<Response<GridDTO>> updateGrid(@RequestBody GridDTO gridDTO){
-        System.out.println("To aqui mano "  +  gridDTO.get_id() + " texte " + gridDTO.getDescription());
-
-        GridEntity gridEntity = new GridEntity();
-        ProviderEntity providerEntity = new ProviderEntity();
-        Response<GridDTO> response = new Response<>();
-
-        providerEntity.set_id(gridDTO.getProvider().get_id());
-
-        gridEntity.setProvider(providerEntity);
-        gridEntity.set_id(gridDTO.get_id());
-        gridEntity.setDescription(gridDTO.getDescription());
-        gridEntity.setLabelUrl(gridDTO.getLabelUrl());
-
-        gridRepository.save(gridEntity);
-        response.setData(gridDTO);
-
-        return ResponseEntity.ok(response);
-    }
+//    @PostMapping(value = "/updateGrid")
+//    public ResponseEntity<Response<GridDTO>> updateGrid(@RequestBody GridDTO gridDTO){
+//        System.out.println("To aqui mano "  +  gridDTO.get_id() + " texte " + gridDTO.getDescription());
+//
+//        GridEntity gridEntity = new GridEntity();
+//        ProviderEntity providerEntity = new ProviderEntity();
+//        Response<GridDTO> response = new Response<>();
+//
+//        providerEntity.set_id(gridDTO.getProvider().get_id());
+//
+//        gridEntity.setProvider(providerEntity);
+//        gridEntity.set_id(gridDTO.get_id());
+//        gridEntity.setDescription(gridDTO.getDescription());
+//        gridEntity.setLabelUrl(gridDTO.getLabelUrl());
+//
+//        gridRepository.save(gridEntity);
+//        response.setData(gridDTO);
+//
+//        return ResponseEntity.ok(response);
+//    }
 
     @PostMapping(value = "/deleteGrid")
     public ResponseEntity<Response<GridDTO>> deleteGrid(@RequestBody GridDTO gridDTO){
         Response<GridDTO> response = new Response<>();
+        GridEntity gridEntity = new GridEntity();
+        ProviderEntity providerEntity = new ProviderEntity();
+
         try{
-            gridRepository.delete(gridDTO.get_id());
+
+            providerEntity.set_id(gridDTO.getProvider().get_id());
+            gridEntity.set_id(gridDTO.get_id());
+            gridEntity.setDescription(gridDTO.getDescription());
+            gridEntity.setLabelUrl(gridDTO.getLabelUrl());
+            gridEntity.setProvider(providerEntity);
+
+            gridRepository.delete(gridEntity);
             response.setData(gridDTO);
+
             return ResponseEntity.ok(response);
 
         }catch(Exception e){

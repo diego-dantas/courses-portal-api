@@ -1,6 +1,7 @@
-package com.course.portal.api.controller.response;
+package com.course.portal.api.controller;
 
 
+import com.course.portal.api.controller.response.Response;
 import com.course.portal.api.model.dao.entity.CourseEntity;
 import com.course.portal.api.model.dao.entity.StepsEntity;
 import com.course.portal.api.model.dao.repository.CourseRepository;

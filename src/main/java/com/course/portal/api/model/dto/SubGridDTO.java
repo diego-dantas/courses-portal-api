@@ -5,6 +5,7 @@ public class SubGridDTO {
     private Long _id;
     private GridDTO grid;
     private String description;
+    private String labelUrl;
 
     public SubGridDTO() {
     }
@@ -33,6 +34,13 @@ public class SubGridDTO {
         this.description = description;
     }
 
+    public String getLabelUrl() {
+        return labelUrl;
+    }
+
+    public void setLabelUrl(String labelUrl) {
+        this.labelUrl = labelUrl;
+    }
 
     @Override
     public String toString() {

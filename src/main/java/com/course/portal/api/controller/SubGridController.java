@@ -31,71 +31,58 @@ public class SubGridController {
     @Autowired
     private GridRepository gridRepository;
 
-    @PostMapping(value = "/createSubGrid")
-    public ResponseEntity<Response<SubGridDTO>> createSubGrid(@RequestBody SubGridDTO subGridDTO){
+
+    @PostMapping(value = "/createUpdateSubGrid")
+    public ResponseEntity<Response<SubGridDTO>> createUpdateSubGrid(@RequestBody SubGridDTO subGridDTO){
 
         GridEntity gridEntity = new GridEntity();
         SubGridEntity subGridEntity = new SubGridEntity();
 
         Response<SubGridDTO> response = new Response<>();
 
-        gridEntity.set_id(subGridDTO.getGrid().get_id());
 
-
-        subGridEntity.setDescription(subGridDTO.getDescription());
-        subGridEntity.setGrid(gridEntity);
         try{
-            subGridRepositoy.saveAndFlush(subGridEntity);
-            response.setData(subGridDTO);
-            return ResponseEntity.ok(response);
-        }catch (Exception e){
-            System.out.println("Error Generico " + e );
-        }
+            gridEntity.set_id(subGridDTO.getGrid().get_id());
+            subGridEntity.setGrid(gridEntity);
 
-        return ResponseEntity.ok(response);
+            subGridEntity.set_id(subGridDTO.get_id());
+            subGridEntity.setDescription(subGridDTO.getDescription());
+            subGridEntity.setLabelUrl(subGridDTO.getLabelUrl());
 
-    }
-    
-    @PostMapping(value = "/updateSubGrid")
-    public ResponseEntity<Response<SubGridDTO>> updateSubGrid(@RequestBody SubGridDTO subGridDTO){
-    	
-    	Response<SubGridDTO> response = new Response<>();
-    	GridEntity gridEntity = new GridEntity();
-    	SubGridEntity subGridEntity = new SubGridEntity();
-    	
-    	try{
-    		
-    		gridEntity.set_id(subGridDTO.getGrid().get_id());
-    		
-    		subGridEntity.set_id(subGridDTO.get_id());
-        	subGridEntity.setDescription(subGridDTO.getDescription());
-        	subGridEntity.setGrid(gridEntity);
-        	
-        	
             subGridRepositoy.save(subGridEntity);
+
             response.setData(subGridDTO);
             return ResponseEntity.ok(response);
-        }catch (Exception e){
-            System.out.println("Error Generico " + e );
-        }
 
-        return ResponseEntity.ok(response);
+        }catch (HibernateException e){
+            System.out.println("Error ao salvar o sub grid " + e );
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+        }
     }
     
     @PostMapping(value = "/deleteSubGrid")
     public ResponseEntity<Response<SubGridDTO>> deleteSubGrid(@RequestBody SubGridDTO subGridDTO){
     	
     	Response<SubGridDTO> response = new Response<>();
+        GridEntity gridEntity = new GridEntity();
+        SubGridEntity subGridEntity = new SubGridEntity();
     	try {
-    		
-    		subGridRepositoy.delete(subGridDTO.get_id());
-    		response.setData(subGridDTO);
-    	}catch (Exception e){
-            System.out.println("Erro ao deletar a subGrid " + e );
-            
-        }
+            gridEntity.set_id(subGridDTO.getGrid().get_id());
+            subGridEntity.setGrid(gridEntity);
 
-    	return ResponseEntity.ok(response);
+            subGridEntity.set_id(subGridDTO.get_id());
+            subGridEntity.setDescription(subGridDTO.getDescription());
+            subGridEntity.setLabelUrl(subGridDTO.getLabelUrl());
+
+    		subGridRepositoy.delete(subGridEntity);
+
+            response.setData(subGridDTO);
+            return ResponseEntity.ok(response);
+
+        }catch (HibernateException e){
+            System.out.println("Error ao salvar o sub grid " + e );
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+        }
     }
     
     @GetMapping(value = "/getSubGrid")
@@ -118,11 +105,13 @@ public class SubGridController {
         		gridEntity = gridRepository.findOne(subGridEntity.getGrid().get_id());
         		gridDTO.set_id(gridEntity.get_id());
         		gridDTO.setDescription(gridEntity.getDescription());
+        		gridDTO.setLabelUrl(gridEntity.getLabelUrl());
         		
         		//alimenta a subgrid dto
         		subGridDTO.set_id(subGridEntity.get_id());
         		subGridDTO.setDescription(subGridEntity.getDescription());
         		subGridDTO.setGrid(gridDTO);
+        		subGridDTO.setLabelUrl(subGridEntity.getLabelUrl());
         		
         		subGridDTOs.add(subGridDTO);
     		}catch(Exception e ) {

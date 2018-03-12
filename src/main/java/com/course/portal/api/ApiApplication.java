@@ -41,6 +41,6 @@ public class ApiApplication {
 //		ProviderEntity providerEntity;
 //		providerEntity = providerRepository.findByEmail("admin@courses.com.br");
 //		System.out.println("id e " + providerEntity.getName());
-		return "API EM EXECUÇÃO";
+		return "API EM EXECUÇÃO V2";
 	}
 }

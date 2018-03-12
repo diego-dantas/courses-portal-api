@@ -2,17 +2,9 @@ package com.course.portal.api.model.dao.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "steps")
@@ -21,10 +13,11 @@ public class StepsEntity implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private long _id;
-	private CourseEntity course;
 	private int stepsOrder;
 	private String name;
 	private String description;
+	private CourseEntity course;
+	private List<MaterialEntity> material;
 	private Date dateCreate;
     private Date dateUpdate;
 	
@@ -76,7 +69,16 @@ public class StepsEntity implements Serializable{
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
+
+	@OneToMany(mappedBy = "steps", fetch = FetchType.LAZY)
+	public List<MaterialEntity> getMaterial() {
+		return material;
+	}
+
+	public void setMaterial(List<MaterialEntity> material) {
+		this.material = material;
+	}
+
 	@Column(name = "date_create")
     public Date getDateCreate() {
         return dateCreate;
