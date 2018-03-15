@@ -18,6 +18,7 @@ public class StepsEntity implements Serializable{
 	private String description;
 	private CourseEntity course;
 	private List<MaterialEntity> material;
+	private List<QuestionEntity> question;
 	private Date dateCreate;
     private Date dateUpdate;
 	
@@ -77,6 +78,15 @@ public class StepsEntity implements Serializable{
 
 	public void setMaterial(List<MaterialEntity> material) {
 		this.material = material;
+	}
+
+	@OneToMany(mappedBy = "steps", fetch = FetchType.LAZY)
+	public List<QuestionEntity> getQuestion() {
+		return question;
+	}
+
+	public void setQuestion(List<QuestionEntity> question) {
+		this.question = question;
 	}
 
 	@Column(name = "date_create")

@@ -22,18 +22,18 @@ public class PromotionController {
     private PromotionRepository promotionRepository;
 
 
-    @PostMapping(value = "/createPromotion")
-    public ResponseEntity<Response<PromotionDTO>> createPromotion(@RequestBody PromotionDTO promotionDTO){
+    @PostMapping(value = "/createUpdatePromotion")
+    public ResponseEntity<Response<PromotionDTO>> createUpdatePromotion(@RequestBody PromotionDTO promotionDTO){
 
         Response<PromotionDTO> response = new Response<>();
         PromotionEntity promotionEntity = new PromotionEntity();
 
         try {
-
+            promotionEntity.set_id(promotionDTO.get_id());
             promotionEntity.setCodigoCupom(promotionDTO.getCodigoCupom());
             promotionEntity.setDescription(promotionDTO.getDescription());
-            promotionEntity.setDateInicial(promotionDTO.getDateInicial());
-            promotionEntity.setDateFinal(promotionDTO.getDateFinal());
+            promotionEntity.setDateInicial(promotionDTO.getDateInicial().substring(0, 10));
+            promotionEntity.setDateFinal(promotionDTO.getDateFinal().substring(0, 10));
             promotionEntity.setPercentual(promotionDTO.getPercentual());
 
             promotionRepository.save(promotionEntity);
@@ -91,21 +91,20 @@ public class PromotionController {
     }
 
 
-    @GetMapping(value = "/getPromotion")
-    public String getPromotion(){
-//    public ResponseEntity<String> getPromotion(){
+    @GetMapping(value = "/getPromotions")
+    public ResponseEntity<Response<List<PromotionDTO>>> getPromotions(){
 
-        Response<String> response = new Response<>();
+        Response<List<PromotionDTO>> response = new Response<>();
         List<PromotionEntity> promotionEntity = new ArrayList<>();
         List<PromotionDTO> promotionDTOS = new ArrayList<>();
-        Gson gson = new Gson();
-        String go = "";
+
 
         try {
 
             promotionEntity = promotionRepository.findAll();
 
             for(PromotionEntity pro : promotionEntity){
+
                 PromotionDTO promotionDTO = new PromotionDTO();
                 promotionDTO.set_id(pro.get_id());
                 promotionDTO.setCodigoCupom(pro.getCodigoCupom());
@@ -114,22 +113,15 @@ public class PromotionController {
                 promotionDTO.setDateFinal(pro.getDateFinal());
                 promotionDTO.setPercentual(pro.getPercentual());
 
-
                 promotionDTOS.add(promotionDTO);
             }
 
-            go = gson.toJson(promotionDTOS);
-            System.out.println(go);
-
-
-            response.setData(go);
-
+            response.setData(promotionDTOS);
+            return ResponseEntity.ok(response);
         }catch (Exception e){
             System.out.println("Erro ao buscar as promoções " + e);
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
-
-        //return ResponseEntity.ok(go);
-        return go;
     }
 
 
