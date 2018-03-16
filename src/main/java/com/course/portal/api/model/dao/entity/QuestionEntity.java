@@ -3,6 +3,7 @@ package com.course.portal.api.model.dao.entity;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "question")
@@ -20,6 +21,7 @@ public class QuestionEntity implements Serializable{
     private int         correct;
     private boolean     status;
     private StepsEntity steps;
+    private List<EvaluationQuestionEntity> evaluationQuestion;
     private Date        dateUpdate;
 
     @Id
@@ -111,6 +113,16 @@ public class QuestionEntity implements Serializable{
 
     public void setSteps(StepsEntity steps) {
         this.steps = steps;
+    }
+
+
+    @OneToMany(mappedBy = "question", fetch = FetchType.LAZY)
+    public List<EvaluationQuestionEntity> getEvaluationQuestion() {
+        return evaluationQuestion;
+    }
+
+    public void setEvaluationQuestion(List<EvaluationQuestionEntity> evaluationQuestion) {
+        this.evaluationQuestion = evaluationQuestion;
     }
 
     @Column(name = "date_update", nullable = false)
