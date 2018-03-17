@@ -3,8 +3,10 @@ package com.course.portal.api.controller;
 import com.course.portal.api.controller.response.Response;
 import com.course.portal.api.model.dao.entity.CourseEntity;
 import com.course.portal.api.model.dao.entity.EvaluationEntity;
+import com.course.portal.api.model.dao.entity.EvaluationQuestionEntity;
 import com.course.portal.api.model.dao.entity.StepsEntity;
 import com.course.portal.api.model.dao.repository.CourseRepository;
+import com.course.portal.api.model.dao.repository.EvaluationQuestionRepository;
 import com.course.portal.api.model.dao.repository.EvaluationRepository;
 import com.course.portal.api.model.dao.repository.StepsRepository;
 import com.course.portal.api.model.dto.CourseDTO;
@@ -29,6 +31,8 @@ public class EvaluationController {
     private StepsRepository stepsRepository;
     @Autowired
     private CourseRepository courseRepository;
+    @Autowired
+    private EvaluationQuestionRepository evaluationQuestionRepository;
 
 
     @PostMapping(value = "createUpdateEvaluation")
@@ -72,6 +76,12 @@ public class EvaluationController {
             evaluationEntity.set_id(evaluationDTO.get_id());
             evaluationEntity.setName(evaluationDTO.getName());
             evaluationEntity.setStatus(evaluationDTO.isStatus());
+
+            List<EvaluationQuestionEntity> evaluationQuestionEntities =  evaluationQuestionRepository.findByEvaluation(evaluationEntity);
+
+            for(EvaluationQuestionEntity evaluationQuestionEntity : evaluationQuestionEntities){
+                evaluationQuestionRepository.delete(evaluationQuestionEntity.get_id());
+            }
 
             evaluationRepository.delete(evaluationEntity);
 
