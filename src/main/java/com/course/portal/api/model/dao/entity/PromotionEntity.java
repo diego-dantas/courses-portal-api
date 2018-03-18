@@ -2,15 +2,9 @@ package com.course.portal.api.model.dao.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "promotion")
@@ -24,6 +18,7 @@ public class PromotionEntity implements Serializable{
 	private String dateFinal;
 	private double percentual;
 	private String codigoCupom;
+	private List<CoursePromotionEntity> coursePromotion;
 	private Date dateCreate;
     private Date dateUpdate;
     
@@ -75,7 +70,17 @@ public class PromotionEntity implements Serializable{
 	public void setCodigoCupom(String codigoCupom) {
 		this.codigoCupom = codigoCupom;
 	}
-	
+
+
+	@OneToMany(mappedBy = "promotion", fetch = FetchType.LAZY)
+	public List<CoursePromotionEntity> getCoursePromotion() {
+		return coursePromotion;
+	}
+
+	public void setCoursePromotion(List<CoursePromotionEntity> coursePromotion) {
+		this.coursePromotion = coursePromotion;
+	}
+
 	@Column(name = "date_create")
     public Date getDateCreate() {
         return dateCreate;

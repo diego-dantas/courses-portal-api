@@ -23,6 +23,7 @@ public class CourseEntity implements Serializable{
 	private int views;
 	private List<StepsEntity> steps;
 	private List<CoursePlanEntity> coursePlan;
+	private List<CoursePromotionEntity> coursePromotion;
 	private GridEntity grid;
 	private SubGridEntity subGrid;
 	//private List<GridCourseEntity> gridCourses;
@@ -133,6 +134,14 @@ public class CourseEntity implements Serializable{
 		this.grid = grid;
 	}
 
+	@OneToMany(mappedBy = "course", fetch = FetchType.LAZY)
+	public List<CoursePromotionEntity> getCoursePromotion() {
+		return coursePromotion;
+	}
+
+	public void setCoursePromotion(List<CoursePromotionEntity> coursePromotion) {
+		this.coursePromotion = coursePromotion;
+	}
 
 	@ManyToOne(fetch = FetchType.EAGER)
 	public SubGridEntity getSubGrid() {
