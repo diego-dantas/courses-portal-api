@@ -1,88 +1,46 @@
 package com.course.portal.api.model.dto;
 
+import java.util.List;
+
 public class EmailDTO {
 
-    private long _id;
-    private ProviderDTO providerId;
-    private String email;
-    private String password;
-    private String port;
-    private String hostname;
-    private String utilizaSsl;
-    private String utilizaCredenciais;
-    private boolean status;
+    private StudentDTO studentDTOs;
+    private String assunto;
+    private String textoSimples;
+    private String textoHtml;
+
 
     public EmailDTO(){ }
 
-    public long get_id() {
-        return _id;
+    public StudentDTO getStudentDTOs() {
+        return studentDTOs;
     }
 
-    public void set_id(long _id) {
-        this._id = _id;
+    public void setStudentDTOs(StudentDTO studentDTOs) {
+        this.studentDTOs = studentDTOs;
     }
 
-    public ProviderDTO getProviderId() {
-        return providerId;
+    public String getAssunto() {
+        return assunto;
     }
 
-    public void setProviderId(ProviderDTO providerId) {
-        this.providerId = providerId;
+    public void setAssunto(String assunto) {
+        this.assunto = assunto;
     }
 
-    public String getEmail() {
-        return email;
+    public String getTextoSimples() {
+        return textoSimples;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setTextoSimples(String textoSimples) {
+        this.textoSimples = textoSimples;
     }
 
-    public String getPassword() {
-        return password;
+    public String getTextoHtml() {
+        return textoHtml;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getPort() {
-        return port;
-    }
-
-    public void setPort(String port) {
-        this.port = port;
-    }
-
-    public String getHostname() {
-        return hostname;
-    }
-
-    public void setHostname(String hostname) {
-        this.hostname = hostname;
-    }
-
-    public String getUtilizaSsl() {
-        return utilizaSsl;
-    }
-
-    public void setUtilizaSsl(String utilizaSsl) {
-        this.utilizaSsl = utilizaSsl;
-    }
-
-    public String getUtilizaCredenciais() {
-        return utilizaCredenciais;
-    }
-
-    public void setUtilizaCredenciais(String utilizaCredenciais) {
-        this.utilizaCredenciais = utilizaCredenciais;
-    }
-
-    public boolean isStatus() {
-        return status;
-    }
-
-    public void setStatus(boolean status) {
-        this.status = status;
+    public void setTextoHtml(String textoHtml) {
+        this.textoHtml = textoHtml;
     }
 }

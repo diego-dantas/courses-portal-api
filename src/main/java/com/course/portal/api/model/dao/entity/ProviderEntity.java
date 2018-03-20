@@ -18,7 +18,6 @@ public class ProviderEntity implements Serializable{
     private String password;
     private String welcome;
     private boolean status;
-    private List<EmailEntity> emailEntity;
     private List<GridEntity> gridEntity;
     //private List<SubGridEntity> subGridEntity;
     private List<ProviderTopicEntity> providerTopic;
@@ -81,15 +80,6 @@ public class ProviderEntity implements Serializable{
 
     public void setStatus(boolean status) {
         this.status = status;
-    }
-
-    @OneToMany(mappedBy = "provider", fetch = FetchType.LAZY)
-    public List<EmailEntity> getEmailEntity() {
-        return emailEntity;
-    }
-
-    public void setEmailEntity(List<EmailEntity> emailEntity) {
-        this.emailEntity = emailEntity;
     }
 
     @OneToMany(mappedBy = "provider", fetch = FetchType.LAZY)
