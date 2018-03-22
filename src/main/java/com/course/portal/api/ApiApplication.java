@@ -28,9 +28,9 @@ public class ApiApplication {
 	@GetMapping("/")
 	public String getTeste(){
 //		System.out.println("Tenho numeros " + providerRepository.count());
-//		providerEntity.set_id(2l);
-//		providerEntity.setEmail("admin@courses.com.br");
-//		providerEntity.setName("35134513");
+//
+//		providerEntity.setEmail("admin");
+//		providerEntity.setName("admin");
 //		providerEntity.setPassword(PasswordSecurity.getPasswod("admin"));
 //		try {
 //			providerRepository.save(providerEntity);
@@ -39,7 +39,7 @@ public class ApiApplication {
 //			System.out.println("Erro " + e);
 //		}
 //		ProviderEntity providerEntity;
-//		providerEntity = providerRepository.findByEmail("admin@courses.com.br");
+//		providerEntity = providerRepository.findByEmail("admin");
 //		System.out.println("id e " + providerEntity.getName());
 		return "API EM EXECUÇÃO V2";
 	}

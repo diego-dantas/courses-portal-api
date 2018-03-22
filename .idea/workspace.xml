@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="407ee8c9-0f1e-47d0-b462-525fcb6cf470" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_1_3_2.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/files/abc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/files/aq.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/files/caneca.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/files/te.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/files/abc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/files/aq.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/files/te.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/controller/FileController.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/controller/FileController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/useful/configuration/CorsConfiguration$1.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/useful/configuration/CorsConfiguration$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/useful/configuration/CorsConfiguration.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/useful/configuration/CorsConfiguration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api.iml" afterPath="$PROJECT_DIR$/api.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/CourseController.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/CourseController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/FileController.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/FileController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/configuration/CorsConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/configuration/CorsConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/configuration/SecurityConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/configuration/SecurityConfiguration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/ApiApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/ApiApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/db/DataConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/db/DataConfiguration.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,7 +61,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CourseRepository.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CourseRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/CourseRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
@@ -85,6 +69,26 @@
               <folding>
                 <marker date="1521744256354" expanded="true" signature="409:484" ph="select * fro... course" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataConfiguration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/db/DataConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApiApplication.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/ApiApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="24" column="57" lean-forward="false" selection-start-line="22" selection-start-column="2" selection-end-line="24" selection-end-column="57" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -138,8 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/ApiApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/db/DataConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/StepsRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/StepsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/MaterialRepository.java" />
@@ -189,6 +191,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/FileController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/CourseController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/CourseRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/db/DataConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/ApiApplication.java" />
       </list>
     </option>
   </component>
@@ -291,7 +295,7 @@
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="api" type="b2602c69:ProjectViewProjectNode" />
@@ -501,12 +505,12 @@
       <workItem from="1521656269095" duration="6661000" />
       <workItem from="1521672067599" duration="9385000" />
       <workItem from="1521711777427" duration="4910000" />
-      <workItem from="1521723726947" duration="11091000" />
+      <workItem from="1521723726947" duration="12702000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="314361000" />
+    <option name="totallyTimeSpent" value="315972000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -688,6 +692,22 @@
           <folding>
             <marker date="1521744256354" expanded="true" signature="409:484" ph="select * fro... course" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/db/DataConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/ApiApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="24" column="57" lean-forward="false" selection-start-line="22" selection-start-column="2" selection-end-line="24" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
