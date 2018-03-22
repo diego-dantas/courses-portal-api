@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="407ee8c9-0f1e-47d0-b462-525fcb6cf470" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/ConfigEmailController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dto/ConfigEmailDTO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/FileController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/configuration/SecurityConfiguration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/useful/configuration/CorsConfiguration$1.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/useful/configuration/CorsConfiguration$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/useful/configuration/CorsConfiguration.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/useful/configuration/CorsConfiguration.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/StudentController.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/StudentController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/StudentRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/StudentRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/configuration/CorsConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/configuration/CorsConfiguration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EvaluationQuestionController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/EvaluationQuestionController.java">
+      <file leaf-file-name="FileController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/FileController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="26" column="32" lean-forward="false" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+            <state relative-caret-position="271">
+              <caret line="37" column="42" lean-forward="false" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -30,43 +32,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConfigEmailEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/ConfigEmailEntity.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="24" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="16" selection-end-column="24" />
+            <state relative-caret-position="1062">
+              <caret line="59" column="21" lean-forward="false" selection-start-line="56" selection-start-column="8" selection-end-line="59" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CorsConfiguration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/configuration/CorsConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#529#530#0" expanded="true" />
-                <element signature="e#555#556#0" expanded="true" />
-                <element signature="e#591#592#0" expanded="true" />
-                <element signature="e#621#622#0" expanded="true" />
-                <element signature="e#713#714#0" expanded="true" />
-                <element signature="e#741#742#0" expanded="true" />
-                <element signature="e#783#784#0" expanded="true" />
-                <element signature="e#817#818#0" expanded="true" />
-                <element signature="e#915#916#0" expanded="true" />
-                <element signature="e#946#947#0" expanded="true" />
-                <element signature="e#994#995#0" expanded="true" />
-                <element signature="e#1034#1035#0" expanded="true" />
-                <element signature="e#1133#1134#0" expanded="true" />
-                <element signature="e#1164#1165#0" expanded="true" />
-                <element signature="e#1212#1213#0" expanded="true" />
-                <element signature="e#1252#1253#0" expanded="true" />
-                <element signature="e#1325#1326#0" expanded="true" />
-                <element signature="e#1352#1353#0" expanded="true" />
-                <element signature="e#1389#1390#0" expanded="true" />
-                <element signature="e#1421#1422#0" expanded="true" />
+                <element signature="e#723#909#0" expanded="true" />
+                <element signature="e#908#909#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConfigEmailController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/ConfigEmailController.java">
+      <file leaf-file-name="SecurityConfiguration.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/configuration/SecurityConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="32" column="68" lean-forward="false" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="68" />
+            <state relative-caret-position="126">
+              <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,80 +68,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StudentController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/StudentController.java">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="48" column="37" lean-forward="false" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="37" />
+            <state relative-caret-position="36">
+              <caret line="2" column="66" lean-forward="true" selection-start-line="2" selection-start-column="66" selection-end-line="2" selection-end-column="66" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StudentRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/StudentRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApiApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/ApiApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StudentEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/StudentEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-323">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProviderEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/ProviderEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="96" column="7" lean-forward="true" selection-start-line="96" selection-start-column="7" selection-end-line="96" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CourseEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/CourseEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3">
-              <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-              <folding>
-                <element signature="e#2857#2858#0" expanded="true" />
-                <element signature="e#2902#2903#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PromotionEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/PromotionEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
-              <caret line="74" column="36" lean-forward="false" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
-              <folding>
-                <element signature="e#1837#1838#0" expanded="true" />
-                <element signature="e#1866#1867#0" expanded="true" />
-                <element signature="e#1946#1947#0" expanded="true" />
-                <element signature="e#1991#1992#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -162,6 +88,14 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/main/upload</dir>
+    </dirStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -173,11 +107,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dto/SubGridDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/SubGridController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/MaterialEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dto/MaterialDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/MaterialController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/GridRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/SubGridRepositoy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/ApiApplication.java" />
@@ -213,7 +142,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dto/CoursePromotionDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/CoursePromotionRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/CoursePromotionController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/ConfigEmailEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dto/EmailDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/ConfigEmailRepository.java" />
@@ -224,6 +152,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/ConfigEmailController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/StudentRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/StudentController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/FileController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/configuration/MyConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/configuration/CorsConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/configuration/SecurityConfiguration.java" />
       </list>
     </option>
   </component>
@@ -264,7 +198,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -305,55 +239,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courses-portal-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courses-portal-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courses-portal-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courses-portal-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courses-portal-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="useful" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -364,22 +249,29 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="useful" type="462c0819:PsiDirectoryNode" />
-              <item name="email" type="462c0819:PsiDirectoryNode" />
+              <item name="configuration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courses-portal-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelWidth1" value="75" />
@@ -389,6 +281,11 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -549,12 +446,15 @@
       <workItem from="1521221995610" duration="10869000" />
       <workItem from="1521309007172" duration="2748000" />
       <workItem from="1521375793897" duration="5656000" />
-      <workItem from="1521409106113" duration="12242000" />
+      <workItem from="1521409106113" duration="14349000" />
+      <workItem from="1521637716039" duration="7749000" />
+      <workItem from="1521656269095" duration="6661000" />
+      <workItem from="1521672067599" duration="9269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="272458000" />
+    <option name="totallyTimeSpent" value="298244000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -566,27 +466,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <frame x="170" y="119" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2536825" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6824877" sideWeight="0.5030349" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.66939443" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3764321" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6824877" sideWeight="0.4969651" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33915022" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24203338" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -598,6 +497,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -613,41 +513,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/SubGridRepositoy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="7" column="49" lean-forward="false" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/StepsRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="12" column="62" lean-forward="false" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/testeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/StepsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="107" column="68" lean-forward="false" selection-start-line="103" selection-start-column="16" selection-end-line="107" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/MaterialController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="137" column="65" lean-forward="false" selection-start-line="130" selection-start-column="16" selection-end-line="137" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/CoursePlanRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -785,7 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="519">
           <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -800,7 +664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="48" column="59" lean-forward="false" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -808,12 +671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
           <caret line="74" column="36" lean-forward="false" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
-          <folding>
-            <element signature="e#1837#1838#0" expanded="true" />
-            <element signature="e#1866#1867#0" expanded="true" />
-            <element signature="e#1946#1947#0" expanded="true" />
-            <element signature="e#1991#1992#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -828,9 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -845,9 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="36" column="54" lean-forward="false" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -855,77 +706,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/configuration/CorsConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/configuration/email/Email.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/configuration/email/Email.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/CourseEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-          <folding>
-            <element signature="e#2857#2858#0" expanded="true" />
-            <element signature="e#2902#2903#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/EmailEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-          <folding />
+          <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/EmailEntity.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dto/EmailDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding>
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#377#378#0" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#487#488#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-            <element signature="e#645#646#0" expanded="true" />
-            <element signature="e#701#702#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#785#786#0" expanded="true" />
-            <element signature="e#817#818#0" expanded="true" />
-            <element signature="e#867#868#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="78" column="21" lean-forward="false" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -933,9 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -943,9 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
           <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -953,57 +743,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="35" column="157" lean-forward="false" selection-start-line="35" selection-start-column="157" selection-end-line="35" selection-end-column="157" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/EvaluationQuestionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="26" column="32" lean-forward="false" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/ProviderEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="96" column="7" lean-forward="true" selection-start-line="96" selection-start-column="7" selection-end-line="96" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/ConfigEmailEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="24" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="16" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-            <element signature="e#591#592#0" expanded="true" />
-            <element signature="e#621#622#0" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#741#742#0" expanded="true" />
-            <element signature="e#783#784#0" expanded="true" />
-            <element signature="e#817#818#0" expanded="true" />
-            <element signature="e#915#916#0" expanded="true" />
-            <element signature="e#946#947#0" expanded="true" />
-            <element signature="e#994#995#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
-            <element signature="e#1133#1134#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
-            <element signature="e#1212#1213#0" expanded="true" />
-            <element signature="e#1252#1253#0" expanded="true" />
-            <element signature="e#1325#1326#0" expanded="true" />
-            <element signature="e#1352#1353#0" expanded="true" />
-            <element signature="e#1389#1390#0" expanded="true" />
-            <element signature="e#1421#1422#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1170">
+          <caret line="96" column="7" lean-forward="false" selection-start-line="96" selection-start-column="7" selection-end-line="96" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1011,52 +757,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding>
-            <element signature="e#258#259#0" expanded="true" />
-            <element signature="e#294#295#0" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#495#496#0" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#680#681#0" expanded="true" />
-            <element signature="e#728#729#0" expanded="true" />
-            <element signature="e#768#769#0" expanded="true" />
-            <element signature="e#796#797#0" expanded="true" />
-            <element signature="e#823#824#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
-            <element signature="e#892#893#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/ConfigEmailController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="32" column="68" lean-forward="false" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/StudentEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
+        <state relative-caret-position="108">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/ApiApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        <state relative-caret-position="108">
+          <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1065,15 +779,97 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/StudentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="48" column="37" lean-forward="false" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="37" />
+        <state relative-caret-position="89">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/ConfigEmailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="32" column="68" lean-forward="false" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/ConfigEmailEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="24" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="16" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/EvaluationQuestionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="26" column="32" lean-forward="false" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvnw">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-594">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/security/PasswordSecurity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="49" lean-forward="false" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1062">
+          <caret line="59" column="21" lean-forward="false" selection-start-line="56" selection-start-column="8" selection-end-line="59" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/FileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="37" column="42" lean-forward="false" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/configuration/CorsConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#723#909#0" expanded="true" />
+            <element signature="e#908#909#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="66" lean-forward="true" selection-start-line="2" selection-start-column="66" selection-end-line="2" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/configuration/SecurityConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
