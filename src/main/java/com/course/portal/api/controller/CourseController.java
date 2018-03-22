@@ -4,6 +4,7 @@ import com.course.portal.api.controller.response.Response;
 import com.course.portal.api.model.dao.entity.*;
 import com.course.portal.api.model.dao.repository.*;
 import com.course.portal.api.model.dto.*;
+import com.sun.org.apache.regexp.internal.RE;
 import org.hibernate.HibernateException;
 import org.hibernate.jpa.criteria.expression.function.AggregationFunction;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -121,6 +122,7 @@ public class CourseController {
                 courseDTO.setObjective(courses.getObjective());
                 courseDTO.setHours(courses.getHours());
                 courseDTO.setPrice(courses.getPrice());
+                courseDTO.setWayImage(courses.getWayImage());
                 courseDTO.setStatus(courses.isStatus());
                 courseDTO.setGrid(gridDTO);
                 courseDTO.setSubGrid(subGridDTO);
@@ -171,6 +173,7 @@ public class CourseController {
                 courseDTO.setObjective(courseEntity.getObjective());
                 courseDTO.setHours(courseEntity.getHours());
                 courseDTO.setPrice(courseEntity.getPrice());
+                courseDTO.setWayImage(courseEntity.getWayImage());
                 courseDTO.setStatus(courseEntity.isStatus());
                 courseDTO.setGrid(gridDTO);
                 courseDTO.setSubGrid(subGridDTO);
@@ -219,6 +222,28 @@ public class CourseController {
             System.out.println("Erro ao buscar o curso por categoria e subcategoria " + e);
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
+
+    }
+
+
+    @PostMapping(value = "/courses")
+    public ResponseEntity<Response<CourseDTO>> updateCourses(@RequestBody CourseDTO courseDTO){
+        Response<CourseDTO> response = new Response<>();
+        try{
+
+            CourseEntity courseEntity = courseRepository.findOne(courseDTO.get_id());
+
+            courseEntity.setWayImage(courseDTO.getWayImage());
+
+            courseRepository.save(courseEntity);
+
+            response.setData(courseDTO);
+            return ResponseEntity.ok(response);
+        }catch (Exception e){
+            e.printStackTrace();
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+        }
+
     }
 
 }
