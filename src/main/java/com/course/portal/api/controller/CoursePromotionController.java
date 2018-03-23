@@ -68,6 +68,31 @@ public class CoursePromotionController {
     }
 
 
+    @PostMapping(value = "/deleteCoursePromotion")
+    public ResponseEntity<Response<List<CoursePromotionDTO>>> deleteCoursePromotion(@RequestBody List<CoursePromotionDTO> coursePromotionDTOs){
+        Response<List<CoursePromotionDTO>> response = new Response<>();
+
+        try{
+
+            PromotionEntity promotionEntity = new PromotionEntity();
+            promotionEntity.set_id(coursePromotionDTOs.get(0).getPromotion().get_id());
+
+            List<CoursePromotionEntity> coursePromotionEntities = coursePromotionRepository.findByPromotion(promotionEntity);
+
+            for(CoursePromotionEntity coursePromotionEntity : coursePromotionEntities){
+
+                coursePromotionRepository.delete(coursePromotionEntity.get_id());
+            }
+
+
+            return ResponseEntity.ok(response);
+        }catch(HibernateException e){
+            System.out.println("Erro ao Excluir os cursos da promoção " + e);
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+
     @GetMapping(value = "/getCoursePromotion")
     public ResponseEntity<Response<List<CoursePromotionDTO>>> getCoursePromotion(){
 

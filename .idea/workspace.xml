@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="407ee8c9-0f1e-47d0-b462-525fcb6cf470" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/EvaluationQuestionController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/configuration/SecurityConfiguration.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/EvaluationQuestionController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/useful/configuration/SecurityConfiguration.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/controller/PromotionController.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/controller/PromotionController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/controller/SubGridController.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/controller/SubGridController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/db/DataConfiguration.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/model/dao/db/DataConfiguration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/SubGridController.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/SubGridController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/db/DataConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/db/DataConfiguration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/CoursePromotionController.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/CoursePromotionController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,11 +58,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PromotionController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PromotionController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/PromotionController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="64">
               <caret line="28" column="64" lean-forward="false" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CoursePromotionController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/CoursePromotionController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="519">
+              <caret line="93" column="4" lean-forward="false" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -146,7 +147,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/CourseEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dto/CoursePromotionDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/CoursePromotionRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/CoursePromotionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/ConfigEmailEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dto/EmailDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/ConfigEmailRepository.java" />
@@ -170,6 +170,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/db/DataConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/FileController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/PromotionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/CoursePromotionController.java" />
       </list>
     </option>
   </component>
@@ -456,12 +457,12 @@
       <workItem from="1521672067599" duration="9385000" />
       <workItem from="1521711777427" duration="4910000" />
       <workItem from="1521723726947" duration="17458000" />
-      <workItem from="1521805357157" duration="4458000" />
+      <workItem from="1521805357157" duration="6558000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="325186000" />
+    <option name="totallyTimeSpent" value="327286000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -665,6 +666,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="28" column="64" lean-forward="false" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/CoursePromotionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="93" column="4" lean-forward="false" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="4" />
           <folding />
         </state>
       </provider>
