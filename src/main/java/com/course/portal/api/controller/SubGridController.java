@@ -1,12 +1,11 @@
 package com.course.portal.api.controller;
 
 import com.course.portal.api.controller.response.Response;
-import com.course.portal.api.model.dao.entity.GridEntity;
-import com.course.portal.api.model.dao.entity.SubGridEntity;
+import com.course.portal.api.model.dao.entity.*;
+import com.course.portal.api.model.dao.repository.EvaluationQuestionRepository;
 import com.course.portal.api.model.dao.repository.GridRepository;
 import com.course.portal.api.model.dao.repository.SubGridRepositoy;
-import com.course.portal.api.model.dto.GridDTO;
-import com.course.portal.api.model.dto.SubGridDTO;
+import com.course.portal.api.model.dto.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -123,5 +122,88 @@ public class SubGridController {
     	response.setData(subGridDTOs);
     	
     	return ResponseEntity.ok(response);
+    }
+
+    @RestController
+    @RequestMapping(value = "/api")
+    public static class EvaluationQuestionController {
+
+        @Autowired
+        private EvaluationQuestionRepository evaluationQuestionRepository;
+
+
+        @PostMapping(value = "/saveEvaluationQuestion")
+        public ResponseEntity<Response<List<EvaluationQuestionDTO>>> saveEvaluationQuestion(@RequestBody List<EvaluationQuestionDTO> evaluationQuestionDTOs){
+
+            Response<List<EvaluationQuestionDTO>> response = new Response<>();
+
+            try{
+
+                EvaluationEntity evaluation = new EvaluationEntity();
+                evaluation.set_id(evaluationQuestionDTOs.get(0).getEvaluation().get_id());
+
+                List<EvaluationQuestionEntity> evaluationQuestionEntities =  evaluationQuestionRepository.findByEvaluation(evaluation);
+
+                for(EvaluationQuestionEntity evaluationQuestionEntity : evaluationQuestionEntities){
+                    evaluationQuestionRepository.delete(evaluationQuestionEntity.get_id());
+                }
+
+
+                for(EvaluationQuestionDTO evaluationQuestionDTO : evaluationQuestionDTOs){
+
+                    QuestionEntity questionEntity = new QuestionEntity();
+                    EvaluationEntity evaluationEntity = new EvaluationEntity();
+                    EvaluationQuestionEntity evaluationQuestionEntity = new EvaluationQuestionEntity();
+
+                    questionEntity.set_id(evaluationQuestionDTO.getQuestion().get_id());
+                    evaluationEntity.set_id(evaluationQuestionDTO.getEvaluation().get_id());
+
+                    evaluationQuestionEntity.setQuestion(questionEntity);
+                    evaluationQuestionEntity.setEvaluation(evaluationEntity);
+
+                    evaluationQuestionRepository.save(evaluationQuestionEntity);
+
+                }
+
+                response.setData(evaluationQuestionDTOs);
+                return ResponseEntity.ok(response);
+            }catch(HibernateException e){
+                System.out.println("Erro ao salvar as questões da prova " + e);
+                return new ResponseEntity(HttpStatus.BAD_REQUEST);
+            }
+        }
+
+
+        @GetMapping(value = "/getEvaluationQuestion")
+        public ResponseEntity<Response<List<EvaluationQuestionDTO>>> getEvaluationQuestion(){
+
+            Response<List<EvaluationQuestionDTO>> response = new Response<>();
+            List<EvaluationQuestionDTO> evaluationQuestionDTOs = new ArrayList<>();
+            try{
+
+                List<EvaluationQuestionEntity> evaluationQuestionEntities = evaluationQuestionRepository.findAll();
+                for (EvaluationQuestionEntity evaluationQuestionEntity : evaluationQuestionEntities){
+
+                    EvaluationDTO evaluationDTO = new EvaluationDTO();
+                    QuestionDTO questionDTO = new QuestionDTO();
+                    EvaluationQuestionDTO evaluationQuestionDTO = new EvaluationQuestionDTO();
+
+                    evaluationDTO.set_id(evaluationQuestionEntity.getEvaluation().get_id());
+                    questionDTO.set_id(evaluationQuestionEntity.getQuestion().get_id());
+
+                    evaluationQuestionDTO.set_id(evaluationQuestionEntity.get_id());
+                    evaluationQuestionDTO.setEvaluation(evaluationDTO);
+                    evaluationQuestionDTO.setQuestion(questionDTO);
+
+                    evaluationQuestionDTOs.add(evaluationQuestionDTO);
+                }
+
+                response.setData(evaluationQuestionDTOs);
+                return ResponseEntity.ok(response);
+            }catch(HibernateException e){
+                System.out.println("Erro ao salvar as questões da prova " + e);
+                return new ResponseEntity(HttpStatus.BAD_REQUEST);
+            }
+        }
     }
 }
