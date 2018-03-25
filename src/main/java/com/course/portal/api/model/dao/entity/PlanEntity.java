@@ -24,7 +24,7 @@ public class PlanEntity implements Serializable{
 
 	private Long _id;
 	private String description;
-	private String wayImagen;
+	private String wayImage;
 	private boolean status;
 	private List<StudentEntity> student;
 	private List<CoursePlanEntity> coursePlan;
@@ -50,12 +50,12 @@ public class PlanEntity implements Serializable{
 		this.description = description;
 	}
 	
-	@Column(name = "way_imagen", length = 200, nullable = false)
-	public String getWayImagen() {
-		return wayImagen;
+	@Column(name = "way_imagen", length = 200)
+	public String getWayImage() {
+		return wayImage;
 	}
-	public void setWayImagen(String wayImagen) {
-		this.wayImagen = wayImagen;
+	public void setWayImage(String wayImagen) {
+		this.wayImage = wayImagen;
 	}
 	
 	@Column(name = "status", nullable = false)
@@ -116,4 +116,16 @@ public class PlanEntity implements Serializable{
         dateUpdate = new Date();
     }
 
+
+	@Override
+	public String toString() {
+		return "PlanEntity{" +
+				"_id=" + _id +
+				", description='" + description + '\'' +
+				", wayImage='" + wayImage + '\'' +
+				", status=" + status +
+				", dateCreate=" + dateCreate +
+				", dateUpdate=" + dateUpdate +
+				'}';
+	}
 }

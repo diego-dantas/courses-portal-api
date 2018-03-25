@@ -4,7 +4,7 @@ public class PlanDTO {
 
     private Long _id;
     private String description;
-    private String wayImagen;
+    private String wayImage;
     private boolean status;
 
     public Long get_id() {
@@ -23,12 +23,12 @@ public class PlanDTO {
         this.description = description;
     }
 
-    public String getWayImagen() {
-        return wayImagen;
+    public String getWayImage() {
+        return wayImage;
     }
 
-    public void setWayImagen(String wayImagen) {
-        this.wayImagen = wayImagen;
+    public void setWayImage(String wayImagen) {
+        this.wayImage = wayImagen;
     }
 
     public boolean isStatus() {

@@ -6,6 +6,7 @@ import com.course.portal.api.model.dao.entity.PlanEntity;
 import com.course.portal.api.model.dao.repository.PlanRepository;
 import com.course.portal.api.model.dto.PlanDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,46 +21,26 @@ public class PlanController {
     @Autowired
     private PlanRepository planRepository;
 
-    @PostMapping(value = "/createPlan")
-    public ResponseEntity<Response<PlanDTO>> createPlan(@RequestBody PlanDTO planDTO){
+    @PostMapping(value = "/createUpdatePlan")
+    public ResponseEntity<Response<PlanDTO>> createUpdatePlan(@RequestBody PlanDTO planDTO){
 
         Response<PlanDTO> response = new Response<>();
         PlanEntity planEntity = new PlanEntity();
-
-        try {
-            planEntity.setDescription(planDTO.getDescription());
-            planEntity.setWayImagen(planDTO.getWayImagen());
-            planEntity.setStatus(planDTO.isStatus());
-            planRepository.save(planEntity);
-
-            response.setData(planDTO);
-        }catch (Exception e){
-            System.out.println("Erro ao criar um plano " + e);
-        }
-
-        return ResponseEntity.ok(response);
-    }
-
-
-    @PostMapping(value = "/updatePlan")
-    public ResponseEntity<Response<PlanDTO>> updatePlan(@RequestBody PlanDTO planDTO){
-
-        Response<PlanDTO> response = new Response<>();
-        PlanEntity planEntity = new PlanEntity();
-
         try {
             planEntity.set_id(planDTO.get_id());
             planEntity.setDescription(planDTO.getDescription());
-            planEntity.setWayImagen(planDTO.getWayImagen());
+            planEntity.setWayImage(planDTO.getWayImage());
             planEntity.setStatus(planDTO.isStatus());
             planRepository.save(planEntity);
-            response.setData(planDTO);
-        }catch (Exception e){
-            System.out.println("Erro ao alterar o plano " + planDTO.get_id() + " Erro " +   e);
-        }
 
-        return ResponseEntity.ok(response);
+            response.setData(planDTO);
+            return ResponseEntity.ok(response);
+        }catch (Exception e){
+            System.out.println("Erro ao salvar um plano " + e);
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+        }
     }
+
 
 
     @PostMapping(value = "/deletePlan")
@@ -71,7 +52,7 @@ public class PlanController {
         try {
             planEntity.set_id(planDTO.get_id());
             planEntity.setDescription(planDTO.getDescription());
-            planEntity.setWayImagen(planDTO.getWayImagen());
+            planEntity.setWayImage(planDTO.getWayImage());
             planEntity.setStatus(planDTO.isStatus());
             planRepository.delete(planEntity);
             response.setData(planDTO);
@@ -101,7 +82,7 @@ public class PlanController {
 
                 planDTO.set_id(planEntity.get_id());
                 planDTO.setDescription(planEntity.getDescription());
-                planDTO.setWayImagen(planEntity.getWayImagen());
+                planDTO.setWayImage(planEntity.getWayImage());
                 planDTO.setStatus(planEntity.isStatus());
 
                 planDTOS.add(planDTO);
@@ -115,6 +96,23 @@ public class PlanController {
         return ResponseEntity.ok(response);
     }
 
+
+    @PostMapping(value = "/plan")
+    public ResponseEntity<Response<PlanDTO>> updatePlanImg(@RequestBody PlanDTO planDTO){
+        Response<PlanDTO> response = new Response<>();
+
+
+        try{
+            PlanEntity planEntity = planRepository.findOne(planDTO.get_id());
+            planEntity.setWayImage(planDTO.getWayImage());
+            planRepository.save(planEntity);
+            response.setData(planDTO);
+            return ResponseEntity.ok(response);
+        }catch (Exception e){
+            e.printStackTrace();
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+        }
+    }
 
 
 }

@@ -53,6 +53,7 @@ public class QuestionController {
             questionEntity.setAlterC(questionDTO.getAlterC());
             questionEntity.setAlterD(questionDTO.getAlterD());
             questionEntity.setAlterE(questionDTO.getAlterE());
+            questionEntity.setWayImage(questionDTO.getWayImage());
 
             questionRepository.save(questionEntity);
 
@@ -88,6 +89,7 @@ public class QuestionController {
             questionEntity.setAlterC(questionDTO.getAlterC());
             questionEntity.setAlterD(questionDTO.getAlterD());
             questionEntity.setAlterE(questionDTO.getAlterE());
+            questionEntity.setWayImage(questionDTO.getWayImage());
 
             questionRepository.delete(questionEntity);
 
@@ -139,6 +141,7 @@ public class QuestionController {
                 questionDTO.setAlterC(questionEntity.getAlterC());
                 questionDTO.setAlterD(questionEntity.getAlterD());
                 questionDTO.setAlterE(questionEntity.getAlterE());
+                questionDTO.setWayImage(questionEntity.getWayImage());
 
                 questionDTOS.add(questionDTO);
             }
@@ -149,6 +152,20 @@ public class QuestionController {
             System.out.println("Erro ao buscar as questões " + e);
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
+    }
 
+    @PostMapping(value = "/question")
+    public ResponseEntity<Response<QuestionDTO>> updateQuestion(@RequestBody QuestionDTO questionDTO){
+        Response<QuestionDTO> response = new Response<>();
+        try{
+            QuestionEntity questionEntity = questionRepository.findOne(questionDTO.get_id());
+            questionEntity.setWayImage(questionDTO.getWayImage());
+            questionRepository.save(questionEntity);
+            response.setData(questionDTO);
+            return ResponseEntity.ok(response);
+        }catch (Exception e){
+            e.printStackTrace();
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+        }
     }
 }

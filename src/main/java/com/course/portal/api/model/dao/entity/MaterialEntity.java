@@ -50,7 +50,7 @@ public class MaterialEntity implements Serializable{
         this.name = name;
     }
 
-    @Column(name = "type",  length = 100, nullable = false)
+    @Column(name = "type",  length = 100)
     public String getType() {
         return type;
     }
@@ -59,7 +59,7 @@ public class MaterialEntity implements Serializable{
         this.type = type;
     }
 
-    @Column(name = "url", length = 500, nullable = false)
+    @Column(name = "url", length = 500)
     public String getUrl() {
         return url;
     }

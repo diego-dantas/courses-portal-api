@@ -11,6 +11,7 @@ public class QuestionDTO {
     private String      alterE;
     private int         correct;
     private boolean     status;
+    private String wayImage;
     private StepsDTO    steps;
 
 
@@ -92,5 +93,13 @@ public class QuestionDTO {
 
     public void setSteps(StepsDTO steps) {
         this.steps = steps;
+    }
+
+    public String getWayImage() {
+        return wayImage;
+    }
+
+    public void setWayImage(String wayImage) {
+        this.wayImage = wayImage;
     }
 }

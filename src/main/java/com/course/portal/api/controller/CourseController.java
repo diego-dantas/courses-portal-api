@@ -230,20 +230,15 @@ public class CourseController {
     public ResponseEntity<Response<CourseDTO>> updateCourses(@RequestBody CourseDTO courseDTO){
         Response<CourseDTO> response = new Response<>();
         try{
-
             CourseEntity courseEntity = courseRepository.findOne(courseDTO.get_id());
-
             courseEntity.setWayImage(courseDTO.getWayImage());
-
             courseRepository.save(courseEntity);
-
             response.setData(courseDTO);
             return ResponseEntity.ok(response);
         }catch (Exception e){
             e.printStackTrace();
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
-
     }
 
 }

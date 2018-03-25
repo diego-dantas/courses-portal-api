@@ -22,6 +22,7 @@ public class QuestionEntity implements Serializable{
     private boolean     status;
     private StepsEntity steps;
     private List<EvaluationQuestionEntity> evaluationQuestion;
+    private String      wayImage;
     private Date        dateUpdate;
 
     @Id
@@ -123,6 +124,15 @@ public class QuestionEntity implements Serializable{
 
     public void setEvaluationQuestion(List<EvaluationQuestionEntity> evaluationQuestion) {
         this.evaluationQuestion = evaluationQuestion;
+    }
+
+    @Column(name = "way_imagen", length = 200)
+    public String getWayImage() {
+        return wayImage;
+    }
+
+    public void setWayImage(String wayImage) {
+        this.wayImage = wayImage;
     }
 
     @Column(name = "date_update", nullable = false)

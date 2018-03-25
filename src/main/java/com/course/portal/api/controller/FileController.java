@@ -1,5 +1,6 @@
 package com.course.portal.api.controller;
 
+import com.course.portal.api.model.dao.repository.FileRepository;
 import org.apache.commons.io.IOUtils;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
@@ -16,28 +17,22 @@ import java.nio.file.Paths;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/api/upload")
+@RequestMapping(path = "/api")
 public class FileController {
 
 
-    private String UPLOAD_DIR = "/home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/resources/static/files/";
 
 
-    @PostMapping(path = "/courses")
-    public ResponseEntity uploadFile(@RequestParam("files") List<MultipartFile> files) throws IOException{
 
-        String local = "courses";
+    @PostMapping(path = "/upload/{origin}")
+    public ResponseEntity uploadFilePlan(@PathVariable("origin") String origin,  @RequestParam("files") List<MultipartFile> files) throws IOException{
+
 
         try {
-
             for(MultipartFile f : files){
-                fileUpload(local, f);
+                FileRepository.fileUpload(origin, f);
             }
-
             return ResponseEntity.ok(HttpStatus.OK);
-        }catch (FileNotFoundException e){
-            e.printStackTrace();
-            return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }catch (Exception e){
             e.printStackTrace();
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
@@ -46,18 +41,10 @@ public class FileController {
 
 
 
-    //metodo para realizar o upload da imagem
-    private void fileUpload(String local, MultipartFile file) throws IOException{
-        byte[] bytes = file.getBytes();
-        Path path = Paths.get(UPLOAD_DIR+""+local+"/"+file.getOriginalFilename());
-        Files.write(path, bytes);
-    }
-
-
     @GetMapping(path = "/download")
     public HttpEntity<byte[]> download() throws IOException {
 
-        byte[] arquivo = Files.readAllBytes( Paths.get(UPLOAD_DIR + "boletoBia.pdf") );
+        byte[] arquivo = Files.readAllBytes( Paths.get(FileRepository.getUPLOAD_DIR()+ "boletoBia.pdf") );
 
         HttpHeaders httpHeaders = new HttpHeaders();
 
@@ -73,7 +60,7 @@ public class FileController {
     public void readFile(){
         //Path path = Paths.get(UPLOAD_DIR+"_arquivo_caneca.png");
 
-        File file = new File(UPLOAD_DIR);
+        File file = new File(FileRepository.getUPLOAD_DIR());
         File[] arquivos = file.listFiles();
 
         try {
@@ -86,7 +73,7 @@ public class FileController {
     }
 
 
-    @GetMapping(value="/filesTeste")
+    @GetMapping(value="/getFile")
     @ResponseBody
     public ResponseEntity<byte[]> filesTeste(@RequestParam("name") String name) {
 
@@ -94,7 +81,7 @@ public class FileController {
 
             HttpHeaders headers = new HttpHeaders();
 
-            File file = new File(UPLOAD_DIR+name);
+            File file = new File(FileRepository.getUPLOAD_DIR()+name);
 
             InputStream is = new BufferedInputStream(new FileInputStream(file));
 
