@@ -41,7 +41,7 @@ public class CarouselController {
     @GetMapping(value = "/deleteFile")
     public ResponseEntity deleteFile(@RequestParam("name") String name){
         try{
-            FileRepository.deleteFile("carousel/"+name);
+            FileRepository.deleteFile(name);
             return ResponseEntity.ok(HttpStatus.OK);
         }catch(Exception e){
             e.printStackTrace();

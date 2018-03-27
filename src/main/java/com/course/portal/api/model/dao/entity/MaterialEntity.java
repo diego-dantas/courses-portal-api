@@ -4,6 +4,7 @@ package com.course.portal.api.model.dao.entity;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "material")
@@ -19,6 +20,7 @@ public class MaterialEntity implements Serializable{
     private boolean download;
     private boolean status;
     private StepsEntity steps;
+    private List<MaterialPathEntity> materialPath;
     private Date dateCreate;
     private Date dateUpdate;
 
@@ -93,6 +95,15 @@ public class MaterialEntity implements Serializable{
 
     public void setSteps(StepsEntity steps) {
         this.steps = steps;
+    }
+
+    @OneToMany(mappedBy = "material", fetch = FetchType.LAZY)
+    public List<MaterialPathEntity> getMaterialPath() {
+        return materialPath;
+    }
+
+    public void setMaterialPath(List<MaterialPathEntity> materialPath) {
+        this.materialPath = materialPath;
     }
 
     @Column(name = "date_create")

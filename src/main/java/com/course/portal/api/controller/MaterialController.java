@@ -4,12 +4,15 @@ package com.course.portal.api.controller;
 import com.course.portal.api.controller.response.Response;
 import com.course.portal.api.model.dao.entity.CourseEntity;
 import com.course.portal.api.model.dao.entity.MaterialEntity;
+import com.course.portal.api.model.dao.entity.MaterialPathEntity;
 import com.course.portal.api.model.dao.entity.StepsEntity;
 import com.course.portal.api.model.dao.repository.CourseRepository;
+import com.course.portal.api.model.dao.repository.MaterialPathRepository;
 import com.course.portal.api.model.dao.repository.MaterialRepository;
 import com.course.portal.api.model.dao.repository.StepsRepository;
 import com.course.portal.api.model.dto.CourseDTO;
 import com.course.portal.api.model.dto.MaterialDTO;
+import com.course.portal.api.model.dto.MaterialPathDTO;
 import com.course.portal.api.model.dto.StepsDTO;
 import org.hibernate.HibernateException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +34,7 @@ public class MaterialController {
     private StepsRepository stepsRepository;
     @Autowired
     private CourseRepository courseRepository;
+
 
 
     @PostMapping(value = "/createUpdateMaterial")
@@ -149,4 +153,5 @@ public class MaterialController {
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
     }
+
 }
