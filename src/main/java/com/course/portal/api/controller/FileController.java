@@ -1,19 +1,19 @@
 package com.course.portal.api.controller;
 
 import com.course.portal.api.model.dao.repository.FileRepository;
+import com.google.gson.Gson;
 import org.apache.commons.io.IOUtils;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+
 import java.io.*;
 import java.net.URLConnection;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -22,12 +22,8 @@ public class FileController {
 
 
 
-
-
     @PostMapping(path = "/upload/{origin}")
     public ResponseEntity uploadFilePlan(@PathVariable("origin") String origin,  @RequestParam("files") List<MultipartFile> files) throws IOException{
-
-
         try {
             for(MultipartFile f : files){
                 FileRepository.fileUpload(origin, f);
@@ -38,7 +34,6 @@ public class FileController {
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
     }
-
 
 
     @GetMapping(path = "/download")
@@ -53,23 +48,6 @@ public class FileController {
         HttpEntity<byte[]> entity = new HttpEntity<byte[]>( arquivo, httpHeaders);
 
         return entity;
-    }
-
-
-    @GetMapping(path = "/getImg")
-    public void readFile(){
-        //Path path = Paths.get(UPLOAD_DIR+"_arquivo_caneca.png");
-
-        File file = new File(FileRepository.getUPLOAD_DIR());
-        File[] arquivos = file.listFiles();
-
-        try {
-            for (File arquivo : arquivos) {
-                System.out.println(arquivo.getPath());
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
     }
 
 

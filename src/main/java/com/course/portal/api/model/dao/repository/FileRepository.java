@@ -22,4 +22,11 @@ public class FileRepository {
         Path path = Paths.get(getUPLOAD_DIR()+""+local+"/"+file.getOriginalFilename());
         Files.write(path, bytes);
     }
+
+
+    //metodo para realizar o upload da imagem
+    public static void deleteFile(String name) throws IOException {
+        Path path = Paths.get(getUPLOAD_DIR()+name);
+        Files.delete(path);
+    }
 }
