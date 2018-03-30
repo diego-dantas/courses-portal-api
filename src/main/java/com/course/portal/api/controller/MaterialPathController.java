@@ -1,4 +1,4 @@
-package com.course.portal.api;
+package com.course.portal.api.controller;
 
 import com.course.portal.api.controller.response.Response;
 import com.course.portal.api.model.dao.entity.MaterialEntity;

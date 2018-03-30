@@ -1,5 +1,6 @@
 package com.course.portal.api.useful.email;
 
+import com.course.portal.api.model.dao.entity.ConfigEmailEntity;
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.HtmlEmail;
@@ -9,21 +10,21 @@ import java.net.MalformedURLException;
 
 public class Email {
 
-    private static String EmailRemetente = EmailParameter.SE_EMAIL;
-    private static String Senha = EmailParameter.SE_PASSWORD;
-    private static String HostName = EmailParameter.SE_HOSTNAME;
-    private static Integer SmtpPort = EmailParameter.SE_PORT;
+    EmailParameter emailParameter = new EmailParameter();
 
+    private static String EmailRemetente;
+    private static String Senha;
+    private static String HostName;
+    private static Integer SmtpPort;
 
-    public static void sendSimpleEmail(String Destinatario, String Assunto, String TextoSimples) throws EmailException{
+    public static void sendSimpleEmail(String Destinatario, String Assunto, String TextoSimples, ConfigEmailEntity configEmailEntity) throws EmailException{
 
         SimpleEmail email = new SimpleEmail();
-
-        email.setHostName(HostName);
-        email.setSmtpPort(SmtpPort);
-        email.setAuthenticator(new DefaultAuthenticator(EmailRemetente, Senha));
+        email.setHostName(configEmailEntity.getHostName());
+        email.setSmtpPort(465);
+        email.setAuthenticator(new DefaultAuthenticator(configEmailEntity.getEmail(), configEmailEntity.getPassword()));
         email.setSSLOnConnect(true);
-        email.setFrom(EmailRemetente);
+        email.setFrom(configEmailEntity.getEmail());
         email.addTo(Destinatario);
         email.setSubject(Assunto);
         email.setMsg(TextoSimples);
@@ -31,9 +32,14 @@ public class Email {
 
         System.out.println("Email de texto simples enviado para :" + Destinatario);
 
+        try{
+
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
 
-    public static void sendHtmlEmail(String Destinatario, String Assunto, String TextoHtml, String TextoSimples) throws EmailException, MalformedURLException{
+    public static void sendHtmlEmail(String destinatario, String assunto, String textoHtml, String textoSimples) throws EmailException, MalformedURLException{
 
         HtmlEmail email = new HtmlEmail();
         email.setHostName(HostName);
@@ -41,12 +47,12 @@ public class Email {
         email.setAuthenticator(new DefaultAuthenticator(EmailRemetente, Senha));
         email.setSSLOnConnect(true);
         email.setFrom(EmailRemetente);
-        email.addTo(Destinatario);
-        email.setSubject(Assunto);
-        email.setHtmlMsg(TextoHtml);
-        email.setTextMsg(TextoSimples);
+        email.addTo(destinatario);
+        email.setSubject(assunto);
+        email.setHtmlMsg(textoHtml);
+        email.setTextMsg(textoSimples);
         email.send();
 
-        System.out.println("Email de texto html enviado para :" + Destinatario);
+        System.out.println("Email de texto html enviado para :" + destinatario);
     }
 }
