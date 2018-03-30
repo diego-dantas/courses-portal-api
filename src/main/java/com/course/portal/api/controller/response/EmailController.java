@@ -4,6 +4,7 @@ import com.course.portal.api.model.dao.entity.ConfigEmailEntity;
 import com.course.portal.api.model.dao.repository.ConfigEmailRepository;
 import com.course.portal.api.model.dto.EmailDTO;
 import com.course.portal.api.useful.email.Email;
+import com.course.portal.api.useful.email.EmailParameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,24 +23,31 @@ public class EmailController {
     private ConfigEmailRepository configEmailRepository;
 
     @PostMapping(path = "/sendEmail")
-    public ResponseEntity sendEmail(@RequestBody List<EmailDTO> emailDTO){
+    public ResponseEntity<Response<List<EmailDTO>>> sendEmail(@RequestBody List<EmailDTO> emailDTOs){
 
-        ConfigEmailEntity configEmailEntity = configEmailRepository.findOne(1L);
-        System.out.println(configEmailEntity.getEmail());
-        System.out.println(configEmailEntity.getPassword());
-        System.out.println(configEmailEntity.getHostName());
-        System.out.println(configEmailEntity.getPort());
 
+        Response<List<EmailDTO>> response = new Response<>();
         Email email = new Email();
 
         try{
+            ConfigEmailEntity configEmailEntity = configEmailRepository.findOne(1L);
 
-            email.sendSimpleEmail("diego.dsdantas@gmail.com",
-                                  "teste de envio de email",
-                                  "Texto para envio de email",
-                                   configEmailEntity);
+            for(EmailDTO emailDTO : emailDTOs){
+//                System.out.println(emailDTO.getStudent().getEmail());
+//                System.out.println(emailDTO.getAssunto());
+//                System.out.println(emailDTO.getTextoHtml());
+//                System.out.println(emailDTO.getTextoSimples());
 
-            return new ResponseEntity(HttpStatus.OK);
+                email.sendHtmlEmail(
+                        emailDTO.getStudent().getEmail(),
+                        emailDTO.getAssunto(),
+                        emailDTO.getTextoHtml(),
+                        emailDTO.getTextoSimples());
+            }
+
+            response.setData(emailDTOs);
+
+            return ResponseEntity.ok(response);
         }catch(Exception e){
             e.printStackTrace();
             return new ResponseEntity(HttpStatus.BAD_REQUEST);

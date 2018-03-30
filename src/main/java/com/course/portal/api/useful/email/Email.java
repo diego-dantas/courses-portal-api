@@ -10,21 +10,25 @@ import java.net.MalformedURLException;
 
 public class Email {
 
-    EmailParameter emailParameter = new EmailParameter();
 
-    private static String EmailRemetente;
-    private static String Senha;
-    private static String HostName;
-    private static Integer SmtpPort;
+  private static String EmailRemetente = "thedionisio.birl@gmail.com";
+  private static String Senha = "qnvaidaroq";
+  private static String HostName = "smtp.googlemail.com";
+  private static Integer SmtpPort = 587;
+
+//    private static String EmailRemetente = EmailParameter.SE_EMAIL;
+//    private static String Senha = EmailParameter.SE_PASSWORD;
+//    private static String HostName = EmailParameter.SE_HOSTNAME;
+//    private static Integer SmtpPort = EmailParameter.SE_PORT;
 
     public static void sendSimpleEmail(String Destinatario, String Assunto, String TextoSimples, ConfigEmailEntity configEmailEntity) throws EmailException{
 
         SimpleEmail email = new SimpleEmail();
-        email.setHostName(configEmailEntity.getHostName());
-        email.setSmtpPort(465);
-        email.setAuthenticator(new DefaultAuthenticator(configEmailEntity.getEmail(), configEmailEntity.getPassword()));
+        email.setHostName(HostName);
+        email.setSmtpPort(SmtpPort);
+        email.setAuthenticator(new DefaultAuthenticator(EmailRemetente, Senha));
         email.setSSLOnConnect(true);
-        email.setFrom(configEmailEntity.getEmail());
+        email.setFrom(EmailRemetente);
         email.addTo(Destinatario);
         email.setSubject(Assunto);
         email.setMsg(TextoSimples);

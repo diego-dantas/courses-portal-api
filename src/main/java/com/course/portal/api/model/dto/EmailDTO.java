@@ -4,7 +4,7 @@ import java.util.List;
 
 public class EmailDTO {
 
-    private StudentDTO studentDTOs;
+    private StudentDTO student;
     private String assunto;
     private String textoSimples;
     private String textoHtml;
@@ -12,12 +12,12 @@ public class EmailDTO {
 
     public EmailDTO(){ }
 
-    public StudentDTO getStudentDTOs() {
-        return studentDTOs;
+    public StudentDTO getStudent() {
+        return student;
     }
 
-    public void setStudentDTOs(StudentDTO studentDTOs) {
-        this.studentDTOs = studentDTOs;
+    public void setStudent(StudentDTO student) {
+        this.student = student;
     }
 
     public String getAssunto() {
