@@ -22,19 +22,25 @@ public class MaterialPathController {
     private MaterialPathRepository materialPathRepository;
 
     @PostMapping(value = "/material")
-    public ResponseEntity<Response<MaterialPathDTO>> saveMaterial(@RequestBody MaterialPathDTO materialPathDTO){
+    public ResponseEntity<Response<MaterialPathDTO>> saveMaterial(@RequestBody List<MaterialPathDTO> materialPathDTOs){
         Response<MaterialPathDTO> response = new Response<>();
         try{
-            MaterialEntity materialEntity = new MaterialEntity();
-            materialEntity.set_id(materialPathDTO.getMaterial().get_id());
 
-            MaterialPathEntity materialPathEntity = new MaterialPathEntity();
-            materialPathEntity.setMaterial(materialEntity);
-            materialPathEntity.setImagePath(materialPathDTO.getImagePath());
+            for(MaterialPathDTO materialPathDTO : materialPathDTOs){
 
-            materialPathRepository.save(materialPathEntity);
+                MaterialEntity materialEntity = new MaterialEntity();
+                MaterialPathEntity materialPathEntity = new MaterialPathEntity();
 
-            response.setData(materialPathDTO);
+                materialEntity.set_id(materialPathDTO.getMaterial().get_id());
+
+                materialPathEntity.setMaterial(materialEntity);
+                materialPathEntity.setImagePath(materialPathDTO.getImagePath());
+
+                materialPathRepository.save(materialPathEntity);
+                response.setData(materialPathDTO);
+            }
+
+
             return ResponseEntity.ok(response);
         }catch (Exception e){
             e.printStackTrace();

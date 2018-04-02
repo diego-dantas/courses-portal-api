@@ -1,5 +1,5 @@
 com/course/portal/api/useful/configuration/CorsConfiguration.class
+com/course/portal/api/model/dao/repository/StudentRepository.class
+com/course/portal/api/useful/configuration/CorsConfiguration$1.class
 com/course/portal/api/model/dto/StudentDTO.class
 com/course/portal/api/controller/StudentController.class
-com/course/portal/api/useful/configuration/CorsConfiguration$1.class
-com/course/portal/api/model/dao/repository/StudentRepository.class

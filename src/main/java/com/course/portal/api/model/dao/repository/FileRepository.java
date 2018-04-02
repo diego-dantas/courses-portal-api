@@ -9,7 +9,8 @@ import java.nio.file.Paths;
 
 public class FileRepository {
 
-    private static String UPLOAD_DIR = "/home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/resources/static/files/";
+    //private static String UPLOAD_DIR = "/home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/resources/static/files/";
+    private static String UPLOAD_DIR = "D:/RenovatiJavaWeb/courses-portal-api/src/main/resources/static/files/";
 
     public static String getUPLOAD_DIR() {
         return UPLOAD_DIR;

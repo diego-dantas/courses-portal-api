@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="407ee8c9-0f1e-47d0-b462-525fcb6cf470" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/controller/MaterialPathController.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/controller/MaterialPathController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/controller/response/EmailController.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/controller/response/EmailController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/course/portal/api/useful/email/Email.class" afterPath="$PROJECT_DIR$/target/classes/com/course/portal/api/useful/email/Email.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/MaterialPathController.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/MaterialPathController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/response/EmailController.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/response/EmailController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dto/EmailDTO.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dto/EmailDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/FileRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/FileRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/email/Email.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/email/Email.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/email/EmailParameter.java" afterPath="$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/email/EmailParameter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,7 +26,7 @@
       <file leaf-file-name="FileController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/FileController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-162">
+            <state relative-caret-position="0">
               <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -29,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileRepository.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FileRepository.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/FileRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,18 +50,8 @@
       <file leaf-file-name="MaterialPathController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/MaterialPathController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmailController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/response/EmailController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="41" column="45" lean-forward="false" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+            <state relative-caret-position="252">
+              <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,39 +59,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmailDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dto/EmailDTO.java">
+      <file leaf-file-name="EmailController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/response/EmailController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+            <state relative-caret-position="450">
+              <caret line="25" column="79" lean-forward="false" selection-start-line="25" selection-start-column="75" selection-end-line="25" selection-end-column="79" />
               <folding>
-                <element signature="e#277#278#0" expanded="true" />
-                <element signature="e#307#308#0" expanded="true" />
-                <element signature="e#357#358#0" expanded="true" />
-                <element signature="e#395#396#0" expanded="true" />
-                <element signature="e#429#430#0" expanded="true" />
-                <element signature="e#459#460#0" expanded="true" />
-                <element signature="e#505#506#0" expanded="true" />
-                <element signature="e#543#544#0" expanded="true" />
-                <element signature="e#582#583#0" expanded="true" />
-                <element signature="e#617#618#0" expanded="true" />
-                <element signature="e#673#674#0" expanded="true" />
-                <element signature="e#721#722#0" expanded="true" />
-                <element signature="e#757#758#0" expanded="true" />
-                <element signature="e#789#790#0" expanded="true" />
-                <element signature="e#839#840#0" expanded="true" />
-                <element signature="e#881#882#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Email.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/email/Email.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="45" column="36" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="36" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -169,20 +140,20 @@
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/MaterialPathEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/entity/MaterialEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/MaterialPathRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/FileRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/MaterialController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dto/MaterialPathDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/CarouselController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/MaterialPathController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/db/DataConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/MaterialPathController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/ApiApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/FileController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/email/EmailParameter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/email/Email.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dto/EmailDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/email/Email.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/response/EmailController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/MaterialPathController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/FileRepository.java" />
       </list>
     </option>
   </component>
@@ -492,12 +463,15 @@
       <workItem from="1522242337881" duration="4261000" />
       <workItem from="1522341822659" duration="1340000" />
       <workItem from="1522354903776" duration="759000" />
-      <workItem from="1522414470480" duration="13395000" />
+      <workItem from="1522414470480" duration="13661000" />
+      <workItem from="1522682295048" duration="1512000" />
+      <workItem from="1522689827476" duration="549000" />
+      <workItem from="1522690753350" duration="1583000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="388469000" />
+    <option name="totallyTimeSpent" value="392379000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -510,6 +484,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="170" y="119" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -519,10 +494,10 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7937807" sideWeight="0.50758725" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.59410805" sideWeight="0.49241275" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59247136" sideWeight="0.49241275" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6873977" sideWeight="0.4908953" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.69394433" sideWeight="0.4908953" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24203338" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -659,9 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -708,9 +680,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -831,7 +800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -839,7 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="28" column="49" lean-forward="false" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -851,19 +818,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/FileRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/FileController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
+        <state relative-caret-position="0">
           <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -875,7 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="24" column="62" lean-forward="true" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -883,7 +839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="27" column="12" lean-forward="false" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="84" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -891,7 +846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1245">
           <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -899,55 +853,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="519">
           <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/MaterialPathController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/email/Email.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="702">
+          <caret line="45" column="148" lean-forward="false" selection-start-line="45" selection-start-column="148" selection-end-line="45" selection-end-column="148" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dto/EmailDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
+        <state relative-caret-position="288">
           <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding>
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
             <element signature="e#357#358#0" expanded="true" />
             <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
-            <element signature="e#459#460#0" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-            <element signature="e#543#544#0" expanded="true" />
-            <element signature="e#582#583#0" expanded="true" />
-            <element signature="e#617#618#0" expanded="true" />
-            <element signature="e#673#674#0" expanded="true" />
-            <element signature="e#721#722#0" expanded="true" />
-            <element signature="e#757#758#0" expanded="true" />
-            <element signature="e#789#790#0" expanded="true" />
-            <element signature="e#839#840#0" expanded="true" />
-            <element signature="e#881#882#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/useful/email/Email.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="45" column="36" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/response/EmailController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="41" column="45" lean-forward="false" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+        <state relative-caret-position="450">
+          <caret line="25" column="79" lean-forward="false" selection-start-line="25" selection-start-column="75" selection-end-line="25" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/controller/MaterialPathController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/portal/api/model/dao/repository/FileRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

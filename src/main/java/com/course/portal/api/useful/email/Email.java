@@ -11,10 +11,10 @@ import java.net.MalformedURLException;
 public class Email {
 
 
-  private static String EmailRemetente = "thedionisio.birl@gmail.com";
-  private static String Senha = "qnvaidaroq";
-  private static String HostName = "smtp.googlemail.com";
-  private static Integer SmtpPort = 587;
+//  private static String EmailRemetente = "thedionisio.birl@gmail.com";
+//  private static String Senha = "qnvaidaroq";
+//  private static String HostName = "smtp.googlemail.com";
+//  private static Integer SmtpPort = 587;
 
 //    private static String EmailRemetente = EmailParameter.SE_EMAIL;
 //    private static String Senha = EmailParameter.SE_PASSWORD;
@@ -24,11 +24,11 @@ public class Email {
     public static void sendSimpleEmail(String Destinatario, String Assunto, String TextoSimples, ConfigEmailEntity configEmailEntity) throws EmailException{
 
         SimpleEmail email = new SimpleEmail();
-        email.setHostName(HostName);
-        email.setSmtpPort(SmtpPort);
-        email.setAuthenticator(new DefaultAuthenticator(EmailRemetente, Senha));
+        email.setHostName(configEmailEntity.getHostName());
+        email.setSmtpPort(configEmailEntity.getPort());
+        email.setAuthenticator(new DefaultAuthenticator(configEmailEntity.getEmail(), configEmailEntity.getPassword()));
         email.setSSLOnConnect(true);
-        email.setFrom(EmailRemetente);
+        email.setFrom(configEmailEntity.getEmail());
         email.addTo(Destinatario);
         email.setSubject(Assunto);
         email.setMsg(TextoSimples);
@@ -43,14 +43,14 @@ public class Email {
         }
     }
 
-    public static void sendHtmlEmail(String destinatario, String assunto, String textoHtml, String textoSimples) throws EmailException, MalformedURLException{
+    public static void sendHtmlEmail(String destinatario, String assunto, String textoHtml, String textoSimples, ConfigEmailEntity configEmailEntity) throws EmailException, MalformedURLException{
 
         HtmlEmail email = new HtmlEmail();
-        email.setHostName(HostName);
-        email.setSmtpPort(SmtpPort);
-        email.setAuthenticator(new DefaultAuthenticator(EmailRemetente, Senha));
+        email.setHostName(configEmailEntity.getHostName());
+        email.setSmtpPort(configEmailEntity.getPort());
+        email.setAuthenticator(new DefaultAuthenticator(configEmailEntity.getEmail(), configEmailEntity.getPassword()));
         email.setSSLOnConnect(true);
-        email.setFrom(EmailRemetente);
+        email.setFrom(configEmailEntity.getEmail());
         email.addTo(destinatario);
         email.setSubject(assunto);
         email.setHtmlMsg(textoHtml);

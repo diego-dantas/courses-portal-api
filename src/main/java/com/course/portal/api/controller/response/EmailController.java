@@ -42,7 +42,7 @@ public class EmailController {
                         emailDTO.getStudent().getEmail(),
                         emailDTO.getAssunto(),
                         emailDTO.getTextoHtml(),
-                        emailDTO.getTextoSimples());
+                        emailDTO.getTextoSimples(), configEmailEntity);
             }
 
             response.setData(emailDTOs);
