@@ -43,7 +43,7 @@ public class Email {
         }
     }
 
-    public static void sendHtmlEmail(String destinatario, String assunto, String textoHtml, String textoSimples, ConfigEmailEntity configEmailEntity) throws EmailException, MalformedURLException{
+    public static void sendHtmlEmail(String destinatario, String assunto, String textoHtml, ConfigEmailEntity configEmailEntity) throws EmailException, MalformedURLException{
 
         HtmlEmail email = new HtmlEmail();
         email.setHostName(configEmailEntity.getHostName());
@@ -54,7 +54,6 @@ public class Email {
         email.addTo(destinatario);
         email.setSubject(assunto);
         email.setHtmlMsg(textoHtml);
-        email.setTextMsg(textoSimples);
         email.send();
 
         System.out.println("Email de texto html enviado para :" + destinatario);

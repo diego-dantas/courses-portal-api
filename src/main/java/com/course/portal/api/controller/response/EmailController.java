@@ -33,16 +33,11 @@ public class EmailController {
             ConfigEmailEntity configEmailEntity = configEmailRepository.findOne(1L);
 
             for(EmailDTO emailDTO : emailDTOs){
-//                System.out.println(emailDTO.getStudent().getEmail());
-//                System.out.println(emailDTO.getAssunto());
-//                System.out.println(emailDTO.getTextoHtml());
-//                System.out.println(emailDTO.getTextoSimples());
-
                 email.sendHtmlEmail(
                         emailDTO.getStudent().getEmail(),
                         emailDTO.getAssunto(),
                         emailDTO.getTextoHtml(),
-                        emailDTO.getTextoSimples(), configEmailEntity);
+                        configEmailEntity);
             }
 
             response.setData(emailDTOs);
