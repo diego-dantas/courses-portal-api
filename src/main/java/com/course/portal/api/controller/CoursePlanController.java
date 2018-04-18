@@ -36,27 +36,40 @@ public class CoursePlanController {
 
 
     @PostMapping(value = "createUpdateCoursePlan")
-    public ResponseEntity<Response<CoursePlanDTO>> createUpdateCoursePlan(@RequestBody CoursePlanDTO coursePlanDTO){
-        Response<CoursePlanDTO> response  = new Response<>();
+    public ResponseEntity<Response<List<CoursePlanDTO>>> createUpdateCoursePlan(@RequestBody List<CoursePlanDTO> coursePlanDTOS){
+        Response<List<CoursePlanDTO>> response  = new Response<>();
 
-        CourseEntity     courseEntity     = new CourseEntity();
-        PlanEntity       planEntity       = new PlanEntity();
-        CoursePlanEntity coursePlanEntity = new CoursePlanEntity();
+
 
         try{
 
-            courseEntity.set_id(coursePlanDTO.getCourse().get_id());
-            planEntity.set_id(coursePlanDTO.getPlan().get_id());
+            for(CoursePlanDTO coursePlanDTO : coursePlanDTOS){
 
-            coursePlanEntity.setCourse(courseEntity);
-            coursePlanEntity.setPlan(planEntity);
-            coursePlanEntity.set_id(coursePlanDTO.get_id());
-            coursePlanEntity.setPrice(coursePlanDTO.getPrice());
-            coursePlanRepository.save(coursePlanEntity);
+                CourseEntity     courseEntity     = new CourseEntity();
+                PlanEntity       planEntity       = new PlanEntity();
+                CoursePlanEntity coursePlanEntity = new CoursePlanEntity();
 
-            System.out.println("Dados salvo com sucesso " + coursePlanEntity.toString());
+                courseEntity.set_id(coursePlanDTO.getCourse().get_id());
+                planEntity.set_id(coursePlanDTO.getPlan().get_id());
+                int qtd = coursePlanRepository.countByCourseAndPlan(courseEntity, planEntity);
 
-            response.setData(coursePlanDTO);
+                if(qtd == 1){
+                    System.out.println("Tem valor");
+                    CoursePlanEntity coursePlan = coursePlanRepository.findByCourseAndPlan(courseEntity, planEntity);
+                    coursePlanEntity.set_id(coursePlan.get_id());
+                }
+
+                coursePlanEntity.setCourse(courseEntity);
+                coursePlanEntity.setPlan(planEntity);
+                coursePlanEntity.setPrice(coursePlanDTO.getPrice());
+                coursePlanEntity.setPercentage(coursePlanDTO.getPercentage());
+                coursePlanRepository.save(coursePlanEntity);
+
+
+            }
+
+
+            response.setData(coursePlanDTOS);
             return ResponseEntity.ok(response);
         }catch(Exception e){
             System.out.println("Erro ao criar ou atualizar o plano/curso");
@@ -110,6 +123,7 @@ public class CoursePlanController {
 
                 coursePlanDTO.set_id(coursePlanEntity.get_id());
                 coursePlanDTO.setPrice(coursePlanEntity.getPrice());
+                coursePlanDTO.setPercentage(coursePlanEntity.getPercentage());
                 coursePlanDTO.setPlan(planDTO);
                 coursePlanDTO.setCourse(courseDTO);
 

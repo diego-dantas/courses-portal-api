@@ -11,12 +11,13 @@ public class CoursePlanEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private long _id;
+    private long         _id;
     private CourseEntity course;
-    private PlanEntity plan;
-    private double price;
-    private Date dateCreate;
-    private Date dateUpdate;
+    private PlanEntity   plan;
+    private double       price;
+    private int          percentage;
+    private Date         dateCreate;
+    private Date         dateUpdate;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -53,6 +54,15 @@ public class CoursePlanEntity implements Serializable {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Column(name = "percentage", length = 100, nullable = false)
+    public int getPercentage() {
+        return percentage;
+    }
+
+    public void setPercentage(int percentage) {
+        this.percentage = percentage;
     }
 
     @Column(name = "date_create")

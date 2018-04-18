@@ -5,10 +5,11 @@ import com.course.portal.api.model.dao.entity.PlanEntity;
 
 public class CoursePlanDTO {
 
-    private long _id;
+    private long      _id;
     private CourseDTO course;
-    private PlanDTO plan;
-    private double price;
+    private PlanDTO   plan;
+    private double    price;
+    private int       percentage;
 
 
     public long get_id() {
@@ -41,5 +42,13 @@ public class CoursePlanDTO {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public int getPercentage() {
+        return percentage;
+    }
+
+    public void setPercentage(int percentage) {
+        this.percentage = percentage;
     }
 }
