@@ -78,16 +78,25 @@ public class CoursePlanController {
 
     }
 
-    @PostMapping(value = "deleteCoursePlan")
-    public ResponseEntity<Response<CoursePlanDTO>> deleteCoursePlan(@RequestBody CoursePlanDTO coursePlanDTO){
+    @PostMapping(value = "/deleteCoursePlan")
+    public ResponseEntity<Response<List<CoursePlanDTO>>> deleteCoursePlan(@RequestBody List<CoursePlanDTO> coursePlanDTOs){
 
-        Response<CoursePlanDTO> response  = new Response<>();
+        Response<List<CoursePlanDTO>> response  = new Response<>();
 
         try{
 
-            coursePlanRepository.delete(coursePlanDTO.get_id());
+            PlanEntity planEntity = new PlanEntity();
+            planEntity.set_id(coursePlanDTOs.get(0).getPlan().get_id());
+
+            List<CoursePlanEntity> coursePlanEntites = coursePlanRepository.findByPlan(planEntity);
+
+            for(CoursePlanEntity coursePlanEntity : coursePlanEntites){
+                System.out.println(coursePlanEntity.toString());
+                coursePlanRepository.delete(coursePlanEntity.get_id());
+            }
+
             System.out.println("Dados Excluido com sucesso");
-            response.setData(coursePlanDTO);
+            response.setData(coursePlanDTOs);
             return ResponseEntity.ok(response);
         }catch(Exception e){
             System.out.println("Erro ao excluir o plano/curso");

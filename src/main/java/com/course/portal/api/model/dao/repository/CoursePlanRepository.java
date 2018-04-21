@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface CoursePlanRepository extends JpaRepository<CoursePlanEntity, Long>{
 
-    List<CoursePlanEntity> findByCourse(CourseEntity courseEntity);
+    List<CoursePlanEntity> findByPlan(PlanEntity planEntity);
 
     int countByCourseAndPlan(CourseEntity courseEntity, PlanEntity planEntity);
 
