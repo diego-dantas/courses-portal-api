@@ -49,7 +49,6 @@
 			<scope>test</scope>
 		</dependency>
 		
-
 		<!--Dependency of jpa and db-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
