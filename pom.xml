@@ -6,10 +6,10 @@
 	<groupId>com.course.portal</groupId>
 	<artifactId>api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>api</name>
-	<description>API of platform  to courses</description>
+	<description>API of platform to courses</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -30,6 +30,14 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		 <!-- dependencia para deploy no google cloud -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -40,6 +48,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
 
 		<!--Dependency of jpa and db-->
 		<dependency>
@@ -94,6 +103,12 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!-- appengine-maven-plugin -->
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>appengine-maven-plugin</artifactId>
+                <version>1.3.1</version>
+            </plugin>
 		</plugins>
 	</build>
 

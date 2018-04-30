@@ -65,6 +65,6 @@ public class ApiApplication {
 //		ProviderEntity providerEntity;
 //		providerEntity = providerRepository.findByEmail("admin");
 //		System.out.println("id e " + providerEntity.getName());
-		return "API EM EXECUÇÃO V2";
+		return "API E-ODONTO DIGITAL EM EXECUÇÃO V1";
 	}
 }

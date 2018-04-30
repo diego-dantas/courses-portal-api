@@ -30,12 +30,14 @@
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/controller/CourseController.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/controller/MaterialPathController.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dao/entity/CoursePromotionEntity.java
+/home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/ServletInitializer.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dao/entity/MaterialEntity.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dao/repository/DescriptiveRepository.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dao/entity/DescriptiveEntity.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dao/entity/EvaluationEntity.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dao/repository/StepsRepository.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dto/EvaluationQuestionDTO.java
+/home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dto/NewsletterDTO.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/controller/ProviderController.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dto/CoursePromotionDTO.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dto/QuestionDTO.java
@@ -47,6 +49,7 @@
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dao/entity/StepsEntity.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/controller/response/Response.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dto/GridDTO.java
+/home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dao/repository/NewsletterRepository.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dao/entity/CityEntity.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/useful/configuration/CorsConfiguration.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dao/repository/StudentRepository.java
@@ -56,8 +59,10 @@
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/controller/PlanController.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dto/MaterialPathDTO.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dao/entity/CoursePlanEntity.java
+/home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dao/entity/NewsletterEntity.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/security/PasswordSecurity.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/useful/email/Email.java
+/home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/controller/NewsletterController.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/controller/QuestionController.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/model/dao/entity/ProviderEntity.java
 /home/Dantas/Projetos/courses-portal-v2/courses-portal-api/src/main/java/com/course/portal/api/controller/FileController.java
