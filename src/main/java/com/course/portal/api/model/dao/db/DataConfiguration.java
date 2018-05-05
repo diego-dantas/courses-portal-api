@@ -32,9 +32,9 @@ public class DataConfiguration {
         dataSource.setUrl("jdbc:mysql://mysql.visualmidia.info:3306/visualmidia05");
         dataSource.setUsername("visualmidia05");
         dataSource.setPassword("senha102030");
-//        dataSource.setUrl("jdbc:mysql://localhost:3306/coursesportaldb");
-//        dataSource.setUsername("root");
-//        dataSource.setPassword("");
+    //    dataSource.setUrl("jdbc:mysql://localhost:3306/eodontodigitaldb");
+    //    dataSource.setUsername("root");
+    //    dataSource.setPassword("");
         return dataSource;
     }
 
