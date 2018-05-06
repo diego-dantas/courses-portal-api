@@ -29,12 +29,12 @@ public class DataConfiguration {
         // dataSource.setUrl("jdbc:mysql://courses-api-202517:us-central1:eodontodigital-db");
         // dataSource.setUsername("eodontodigital-db");
         // dataSource.setPassword("102030");
-        // dataSource.setUrl("jdbc:mysql://mysql.visualmidia.info:3306/visualmidia05");
-        // dataSource.setUsername("visualmidia05");
-        // dataSource.setPassword("senha102030");
-       dataSource.setUrl("jdbc:mysql://localhost:3306/eodontodigitaldb");
-       dataSource.setUsername("root");
-       dataSource.setPassword("");
+        dataSource.setUrl("jdbc:mysql://mysql.visualmidia.info:3306/visualmidia05");
+        dataSource.setUsername("visualmidia05");
+        dataSource.setPassword("senha102030");
+    //    dataSource.setUrl("jdbc:mysql://localhost:3306/eodontodigitaldb");
+    //    dataSource.setUsername("root");
+    //    dataSource.setPassword("");
         return dataSource;
     }
 
