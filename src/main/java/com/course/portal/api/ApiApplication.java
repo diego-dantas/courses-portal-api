@@ -44,27 +44,31 @@ public class ApiApplication {
 	}
 
 
-//	@Autowired
-//	private ProviderRepository providerRepository;
-//	ProviderEntity providerEntity = new ProviderEntity();
+	@Autowired
+	private ProviderRepository providerRepository;
+	ProviderEntity providerEntity = new ProviderEntity();
 
-	
 	@GetMapping("/")
-	public String getTeste(){
-//		System.out.println("Tenho numeros " + providerRepository.count());
-//
-//		providerEntity.setEmail("admin");
-//		providerEntity.setName("admin");
-//		providerEntity.setPassword(PasswordSecurity.getPasswod("admin"));
-//		try {
-//			providerRepository.save(providerEntity);
-//			System.out.println("Dados salvo");
-//		}catch(HibernateException e) {
-//			System.out.println("Erro " + e);
-//		}
-//		ProviderEntity providerEntity;
-//		providerEntity = providerRepository.findByEmail("admin");
-//		System.out.println("id e " + providerEntity.getName());
-		return "API E-ODONTO DIGITAL EM EXECUÇÃO V2";
+	public String home(){
+		return "API em execussão";
+	}
+	
+	@GetMapping("/createAdmin")
+	public String createAdmin(){
+		System.out.println("Tenho numeros " + providerRepository.count());
+
+		providerEntity.setEmail("admin");
+		providerEntity.setName("admin");
+		providerEntity.setPassword(PasswordSecurity.getPasswod("admin"));
+		try {
+			providerRepository.save(providerEntity);
+			System.out.println("Dados salvo");
+		}catch(HibernateException e) {
+			System.out.println("Erro " + e);
+		}
+		ProviderEntity providerEntity;
+		providerEntity = providerRepository.findByEmail("admin");
+		System.out.println("id e " + providerEntity.getName());
+		return "admin criado com success";
 	}
 }
