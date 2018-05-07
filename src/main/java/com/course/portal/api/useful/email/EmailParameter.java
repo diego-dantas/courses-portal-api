@@ -3,8 +3,8 @@ package com.course.portal.api.useful.email;
 import com.course.portal.api.model.dao.entity.ConfigEmailEntity;
 import com.course.portal.api.model.dao.repository.ConfigEmailRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.component;
+
+
 
 public class EmailParameter {
 
