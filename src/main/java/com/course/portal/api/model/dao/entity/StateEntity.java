@@ -11,8 +11,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
 @Entity
@@ -23,9 +21,8 @@ public class StateEntity implements Serializable{
 
 	private long _id;
 	private String state;
+	private String name;
 	private List<CityEntity> city;
-	private Date dateCreate;
-    private Date dateUpdate;
 	
 	public StateEntity() {}
 	
@@ -39,13 +36,22 @@ public class StateEntity implements Serializable{
 		this._id = _id;
 	}
 	
-	@Column(name = "state", length = 100, nullable = false)
+	@Column(name = "state", length = 3, nullable = false)
 	public String getState() {
 		return state;
 	}
 
 	public void setState(String state) {
 		this.state = state;
+	}
+
+	@Column(name = "name", length = 100, nullable = false)
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	@OneToMany(mappedBy = "state", fetch = FetchType.LAZY)
@@ -57,37 +63,5 @@ public class StateEntity implements Serializable{
 		this.city = city;
 	}
 	
-	@Column(name = "date_create", nullable = false)
-    public Date getDateCreate() {
-        return dateCreate;
-    }
-
-    public void setDateCreate(Date dateCreate) {
-        this.dateCreate = dateCreate;
-    }
-
-    @Column(name = "date_update", nullable = false)
-    public Date getDateUpdate() {
-        return dateUpdate;
-    }
-
-    public void setDateUpdate(Date dateUpdate) {
-        this.dateUpdate = dateUpdate;
-    }
-
-
-
-    @PrePersist
-    public void preCreate(){
-        final Date dateToday = new Date();
-        this.dateCreate = dateToday;
-        this.dateUpdate = dateToday;
-    }
-
-    @PreUpdate
-    public void preUpdate(){
-        dateUpdate = new Date();
-    }
-    
 	
 }

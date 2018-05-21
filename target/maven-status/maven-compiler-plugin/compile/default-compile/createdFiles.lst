@@ -29,6 +29,7 @@ com/course/portal/api/controller/FileController.class
 com/course/portal/api/controller/GridController.class
 com/course/portal/api/model/dao/repository/CoursePlanRepository.class
 com/course/portal/api/model/dto/MaterialDTO.class
+com/course/portal/api/model/dao/entity/NewsletterEntity.class
 com/course/portal/api/controller/DescriptiveController.class
 com/course/portal/api/model/dao/repository/FileRepository.class
 com/course/portal/api/model/dto/CoursePlanDTO.class
@@ -46,6 +47,7 @@ com/course/portal/api/model/dto/ConfigEmailDTO.class
 com/course/portal/api/controller/ConfigEmailController.class
 com/course/portal/api/controller/PromotionController.class
 com/course/portal/api/controller/SubGridController.class
+com/course/portal/api/ServletInitializer.class
 com/course/portal/api/model/dao/repository/SubGridRepositoy.class
 com/course/portal/api/model/dao/repository/CourseRepository.class
 com/course/portal/api/model/dao/repository/PromotionRepository.class
@@ -53,6 +55,8 @@ com/course/portal/api/controller/MaterialController.class
 com/course/portal/api/model/dto/ProviderDTO.class
 com/course/portal/api/controller/CoursePromotionController.class
 com/course/portal/api/model/dto/GridDTO.class
+com/course/portal/api/model/dto/NewsletterDTO.class
+com/course/portal/api/model/dao/repository/NewsletterRepository.class
 com/course/portal/api/model/dao/repository/EvaluationQuestionRepository.class
 com/course/portal/api/model/dao/entity/MaterialEntity.class
 com/course/portal/api/model/dao/repository/PlanRepository.class
@@ -82,6 +86,7 @@ com/course/portal/api/controller/StepsController.class
 com/course/portal/api/security/PasswordSecurity.class
 com/course/portal/api/model/dao/entity/SubGridEntity.class
 com/course/portal/api/model/dto/EvaluationQuestionDTO.class
+com/course/portal/api/controller/NewsletterController.class
 com/course/portal/api/model/dao/repository/CoursePromotionRepository.class
 com/course/portal/api/model/dao/repository/QuestionRepository.class
 com/course/portal/api/model/dao/entity/GridEntity.class
