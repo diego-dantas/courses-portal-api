@@ -2,6 +2,7 @@ package com.course.portal.api.controller;
 
 import com.course.portal.api.controller.response.Response;
 import com.course.portal.api.model.dao.entity.ConfigEmailEntity;
+import com.course.portal.api.model.dao.entity.ProfileEntity;
 import com.course.portal.api.model.dao.entity.StudentEntity;
 import com.course.portal.api.model.dao.repository.ConfigEmailRepository;
 import com.course.portal.api.model.dao.repository.StudentRepository;
@@ -30,8 +31,8 @@ public class StudentController {
     private ConfigEmailRepository configEmailRepository;
 
     
-    @PostMapping(value = "/createUpdateStudent")
-    public ResponseEntity<Response<StudentDTO>> createUpdateStudent(@RequestBody StudentDTO studentDTO) throws MalformedURLException, EmailException{
+    @PostMapping(value = "/createStudent")
+    public ResponseEntity<Response<StudentDTO>> createStudent(@RequestBody StudentDTO studentDTO){
         Response<StudentDTO> response = new Response<StudentDTO>();
         StudentEntity studentEntity = new StudentEntity();
 
@@ -47,8 +48,54 @@ public class StudentController {
                 studentEntity = studentRepository.save(studentEntity);
                 
                 studentDTO.set_id(studentEntity.get_id());
-                sendEmailConfirm(studentEntity.getEmail());
             }
+            
+
+            response.setData(studentDTO);
+            return ResponseEntity.ok(response);
+
+        }catch(HibernateException e){
+            System.out.println("Erro ao salvar o estudante " + e);
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+
+    @PostMapping(value = "/updateStudent")
+    public ResponseEntity<Response<StudentDTO>> updateStudent(@RequestBody StudentDTO studentDTO) throws MalformedURLException, EmailException{
+        Response<StudentDTO> response = new Response<StudentDTO>();
+        StudentEntity studentEntity = new StudentEntity();
+        ProfileEntity profileEntity = new ProfileEntity();
+        try{
+
+            studentEntity.set_id(studentDTO.get_id());
+            studentEntity.setName(studentDTO.getName());
+            studentEntity.setEmail(studentDTO.getEmail());
+            studentEntity.setPassword(PasswordSecurity.getPasswod(studentDTO.getPassword()));
+            studentEntity.setZipCode(studentDTO.getZipCode());
+            studentEntity.setStreet(studentDTO.getStreet());
+            studentEntity.setNumber(studentDTO.getNumber());
+            studentEntity.setNeighborhood(studentDTO.getNeighborhood());
+            studentEntity.setPhone(studentDTO.getPhone());
+            studentEntity.setCellPhone(studentDTO.getCellPhone());
+            studentEntity.setSexo(studentDTO.getSexo());
+            studentEntity.setNews(studentDTO.getNews());
+            studentEntity.setRg(studentDTO.getRg());
+            studentEntity.setCpf(studentDTO.getCpf());
+            studentEntity.setOutro(studentDTO.getOutro());
+            studentEntity.setComple(studentDTO.getComple());
+            studentEntity.setState(studentDTO.getState());
+            studentEntity.setCity(studentDTO.getCity());
+            studentEntity.setStatus(studentDTO.isStatus());
+            
+            
+            profileEntity.set_id(studentDTO.getProfile().get_id());
+            studentEntity.setProfile(profileEntity);
+        
+
+            studentRepository.save(studentEntity);
+            
+            sendEmailConfirm(studentEntity.getEmail());
             
 
             response.setData(studentDTO);
@@ -93,13 +140,19 @@ public class StudentController {
 
 
     public void sendEmailConfirm(String emailStudent) throws MalformedURLException, EmailException{
-        ConfigEmailEntity configEmailEntity = configEmailRepository.findOne(1L);
-        String htmlEmail = "<p> Seja bem-vindo a <h2> E-odonto digital </h2></p> ";
-		Email.sendHtmlEmail(
-            emailStudent,  
-            "Seja bem-vindo !!", 
-            htmlEmail, 
-            configEmailEntity);
+        try {
+            ConfigEmailEntity configEmailEntity = configEmailRepository.findOne(1L);
+            String htmlEmail = "<p> Seja bem-vindo a <h2> E-odonto digital </h2></p> ";
+		    Email.sendHtmlEmail(
+                emailStudent,  
+                "Seja bem-vindo !!", 
+                htmlEmail, 
+                configEmailEntity);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
     }
 
 }

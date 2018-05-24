@@ -9,11 +9,8 @@ import java.util.List;
 @Table(name = "student")
 public class StudentEntity implements Serializable{
 
-  	private static final long serialVersionUID = 1L;
-
-
-
-
+	private static final long serialVersionUID = 1L;
+	  
     private long _id;
     private String name;
     private String email;
@@ -25,12 +22,18 @@ public class StudentEntity implements Serializable{
     private String neighborhood;
 	private String phone;
 	private String cellPhone;
+	private char   sexo;
+	private char   news;
+	private String rg;
+	private String cpf;
+	private String outro;
+	private String comple;
+	private String state;
     private boolean status;
-    private PlanEntity plan;
-    private CityEntity city;
-    private Date dateCreate;
-    private Date dateUpdate;
-
+	private String city;
+	private PlanEntity plan;
+	private ProfileEntity profile;
+	private Date dateUpdate;
 
     public StudentEntity() {
     }
@@ -72,7 +75,7 @@ public class StudentEntity implements Serializable{
 		this.password = password;
 	}
 	
-
+	@Column(name = "imagePath", length = 1000)
 	public String getImagePath() {
 		return imagePath;
 	}
@@ -81,6 +84,7 @@ public class StudentEntity implements Serializable{
 		this.imagePath = imagePath;
 	}
 
+	@Column(name = "zipCode", length = 50)
 	public String getZipCode() {
 		return zipCode;
 	}
@@ -89,6 +93,7 @@ public class StudentEntity implements Serializable{
 		this.zipCode = zipCode;
 	}
 
+	@Column(name = "street", length = 300)
 	public String getStreet() {
 		return street;
 	}
@@ -97,6 +102,7 @@ public class StudentEntity implements Serializable{
 		this.street = street;
 	}
 
+	@Column(name = "number", length = 50)
 	public String getNumber() {
 		return number;
 	}
@@ -104,7 +110,8 @@ public class StudentEntity implements Serializable{
 	public void setNumber(String number) {
 		this.number = number;
 	}
-
+	
+	@Column(name = "neighborhood", length = 100)
 	public String getNeighborhood() {
 		return neighborhood;
 	}
@@ -113,6 +120,7 @@ public class StudentEntity implements Serializable{
 		this.neighborhood = neighborhood;
 	}
 
+	@Column(name = "phone", length = 50)
 	public String getPhone() {
 		return phone;
 	}
@@ -121,6 +129,7 @@ public class StudentEntity implements Serializable{
 		this.phone = phone;
 	}
 
+	@Column(name = "status")
 	public boolean isStatus() {
 		return status;
 	}
@@ -139,23 +148,16 @@ public class StudentEntity implements Serializable{
 		this.plan = plan;
 	}
 	
-	@ManyToOne(fetch = FetchType.EAGER)
-	public CityEntity getCity() {
+	@Column(name = "city", length = 100)
+	public String getCity() {
 		return city;
 	}
 	
-	public void setCity(CityEntity city) {
+	public void setCity(String city) {
 		this.city = city;
 	}
 	
-	@Column(name = "date_create")
-    public Date getDateCreate() {
-        return dateCreate;
-    }
 
-    public void setDateCreate(Date dateCreate) {
-        this.dateCreate = dateCreate;
-    }
     
     @Column(name = "date_update")
     public Date getDateUpdate() {
@@ -166,12 +168,81 @@ public class StudentEntity implements Serializable{
         this.dateUpdate = dateUpdate;
     }
 
+	@Column(name = "cellPhone", length = 50)
+	public String getCellPhone() {
+		return cellPhone;
+	}
 
+	public void setCellPhone(String cellPhone) {
+		this.cellPhone = cellPhone;
+	}
+
+	@Column(name = "sexo")
+	public char getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(char sexo) {
+		this.sexo = sexo;
+	}
+
+	@Column(name = "news")
+	public char getNews() {
+		return news;
+	}
+
+	public void setNews(char news) {
+		this.news = news;
+	}
+
+	@Column(name = "rg", length = 100)
+	public String getRg() {
+		return rg;
+	}
+
+	public void setRg(String rg) {
+		this.rg = rg;
+	}
+
+	@Column(name = "cpf", length = 100)
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	@Column(name = "outro", length = 50)
+	public String getOutro() {
+		return outro;
+	}
+
+	public void setOutro(String outro) {
+		this.outro = outro;
+	}
+
+	@Column(name = "comple", length = 1000)
+	public String getComple() {
+		return comple;
+	}
+
+	public void setComple(String comple) {
+		this.comple = comple;
+	}
+
+	@Column(name = "state", length = 50)
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
 
     @PrePersist
     public void preCreate(){
         final Date dateToday = new Date();
-        this.dateCreate = dateToday;
         this.dateUpdate = dateToday;
     }
 
@@ -179,5 +250,14 @@ public class StudentEntity implements Serializable{
     public void preUpdate(){
         dateUpdate = new Date();
     }
+
+	@ManyToOne(fetch = FetchType.EAGER)
+	public ProfileEntity getProfile() {
+		return profile;
+	}
+
+	public void setProfile(ProfileEntity profile) {
+		this.profile = profile;
+	}
 
 }

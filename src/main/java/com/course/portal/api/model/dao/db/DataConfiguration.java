@@ -10,7 +10,7 @@ import javax.sql.DataSource;
 
 /**
  *  @author : Diego Dantas
- *  @since  : 2017/01/20
+ *  @since  : 2018/01/20
  *  @obs    : class de configuração de banco de dados.
  *            A classe pode ser ultilizada para configurar qual quer database
  *            relacional, ex: mysql, oracle, sqlServer entre outros.

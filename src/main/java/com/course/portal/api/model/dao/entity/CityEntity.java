@@ -23,7 +23,7 @@ public class CityEntity implements Serializable {
 	private Long _id;
 	private String city;
 	private StateEntity state;
-	private List<StudentEntity> student;
+	//private List<StudentEntity> student;
 	
 	
 	@Id
@@ -50,15 +50,4 @@ public class CityEntity implements Serializable {
 	public void setState(StateEntity state) {
 		this.state = state;
 	}
-	
-	@OneToMany(mappedBy = "city", fetch = FetchType.LAZY)
-	public List<StudentEntity> getStudent() {
-		return student;
-	}
-	public void setStudent(List<StudentEntity> student) {
-		this.student = student;
-	}
-	
-	
-
 }
