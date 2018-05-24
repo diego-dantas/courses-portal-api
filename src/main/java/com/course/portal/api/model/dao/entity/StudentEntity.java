@@ -23,7 +23,8 @@ public class StudentEntity implements Serializable{
     private String street;
     private String number;
     private String neighborhood;
-    private String phone;
+	private String phone;
+	private String cellPhone;
     private boolean status;
     private PlanEntity plan;
     private CityEntity city;

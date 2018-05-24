@@ -22,9 +22,6 @@ public class EmailParameter {
     public EmailParameter(){
 
         try {
-
-            System.out.println("To aqui mano ");
-
             ConfigEmailEntity configEmailEntity = configEmailRepository.findOne(1L);
             SE_EMAIL    = configEmailEntity.getEmail();
             SE_PASSWORD = configEmailEntity.getPassword();
