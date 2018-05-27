@@ -6,6 +6,7 @@ import com.course.portal.api.model.dao.entity.ProfileEntity;
 import com.course.portal.api.model.dao.entity.StudentEntity;
 import com.course.portal.api.model.dao.repository.ConfigEmailRepository;
 import com.course.portal.api.model.dao.repository.StudentRepository;
+import com.course.portal.api.model.dto.ProfileDTO;
 import com.course.portal.api.model.dto.StudentDTO;
 import com.course.portal.api.security.PasswordSecurity;
 import com.course.portal.api.useful.email.Email;
@@ -43,6 +44,8 @@ public class StudentController {
                 studentEntity.setName(studentDTO.getName());
                 studentEntity.setEmail(studentDTO.getEmail());
                 studentEntity.setPassword(PasswordSecurity.getPasswod(studentDTO.getPassword()));
+                studentEntity.setImagePath(studentDTO.getImagePath());
+                studentEntity.setSource(studentDTO.getSource());
                 studentEntity.setStatus(false);
                 
                 studentEntity = studentRepository.save(studentEntity);
@@ -87,6 +90,8 @@ public class StudentController {
             studentEntity.setState(studentDTO.getState());
             studentEntity.setCity(studentDTO.getCity());
             studentEntity.setStatus(studentDTO.isStatus());
+            studentEntity.setSource(studentDTO.getSource());
+            studentEntity.setImagePath(studentDTO.getImagePath());
             
             
             profileEntity.set_id(studentDTO.getProfile().get_id());
@@ -95,7 +100,7 @@ public class StudentController {
 
             studentRepository.save(studentEntity);
             
-            sendEmailConfirm(studentEntity.getEmail());
+            //sendEmailConfirm(studentEntity.getEmail());
             
 
             response.setData(studentDTO);
@@ -137,6 +142,61 @@ public class StudentController {
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
     }
+
+    @PostMapping(value = "/loginStudent")
+    public ResponseEntity<Response<StudentDTO>> loginStudent(@RequestBody StudentDTO studentDTO){
+
+        System.out.println("to aquii " + studentDTO.getEmail());
+        System.out.println("to aquii " + studentDTO.getPassword());
+        Response<StudentDTO> response = new Response<StudentDTO>();
+        
+        StudentEntity student = studentRepository.findByEmail(studentDTO.getEmail());
+        
+         try {
+
+             //valido a senha para da retorno
+             if(student.getEmail().equals(studentDTO.getEmail()) &&
+                PasswordSecurity.validatePassword(studentDTO.getPassword(), student.getPassword())){
+                
+                if(student.isStatus()){
+                    studentDTO.set_id(student.get_id());
+                    studentDTO.setName(student.getName());
+                    studentDTO.setEmail(student.getEmail());
+                    studentDTO.setZipCode(student.getZipCode());
+                    studentDTO.setStreet(student.getStreet());
+                    studentDTO.setNumber(student.getNumber());
+                    studentDTO.setNeighborhood(student.getNeighborhood());
+                    studentDTO.setPhone(student.getPhone());
+                    studentDTO.setCellPhone(student.getCellPhone());
+                    studentDTO.setSexo(student.getSexo());
+                    studentDTO.setNews(student.getNews());
+                    studentDTO.setRg(student.getRg());
+                    studentDTO.setCpf(student.getCpf());
+                    studentDTO.setOutro(student.getOutro());
+                    studentDTO.setComple(student.getComple());
+                    studentDTO.setState(student.getState());
+                    studentDTO.setCity(student.getCity());
+                    studentDTO.setStatus(student.isStatus());
+                    studentDTO.setSource(student.getSource());
+                    studentDTO.setImagePath(student.getImagePath());
+                    
+                    ProfileDTO profileDTO = new ProfileDTO();
+                    profileDTO.set_id(student.getProfile().get_id());
+                    studentDTO.setProfile(profileDTO);
+                }
+                
+
+                response.setData(studentDTO);
+                return ResponseEntity.ok(response);
+            }else{
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+	}
 
 
     public void sendEmailConfirm(String emailStudent) throws MalformedURLException, EmailException{

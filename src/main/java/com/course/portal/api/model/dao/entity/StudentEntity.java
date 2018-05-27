@@ -31,6 +31,7 @@ public class StudentEntity implements Serializable{
 	private String state;
     private boolean status;
 	private String city;
+	private String source;
 	private PlanEntity plan;
 	private ProfileEntity profile;
 	private Date dateUpdate;
@@ -258,6 +259,15 @@ public class StudentEntity implements Serializable{
 
 	public void setProfile(ProfileEntity profile) {
 		this.profile = profile;
+	}
+
+	@Column(name = "source", length = 50, nullable = false)
+	public String getSource() {
+		return source;
+	}
+
+	public void setSource(String source) {
+		this.source = source;
 	}
 
 }

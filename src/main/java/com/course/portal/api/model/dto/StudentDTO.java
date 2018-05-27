@@ -22,7 +22,8 @@ public class StudentDTO {
 	private String outro;
 	private String comple;
     private String state;
-    private String city;
+	private String city;
+	private String source;
 	private boolean status;
 	private ProfileDTO profile;
 
@@ -253,5 +254,13 @@ public class StudentDTO {
 
 	public void setProfile(ProfileDTO profile) {
 		this.profile = profile;
+	}
+
+	public String getSource() {
+		return source;
+	}
+
+	public void setSource(String source) {
+		this.source = source;
 	}
 }

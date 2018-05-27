@@ -81,7 +81,6 @@ com/course/portal/api/controller/response/Response.class
 com/course/portal/api/model/dto/CoursePromotionDTO.class
 com/course/portal/api/model/dao/entity/StudentEntity.class
 com/course/portal/api/useful/email/Email.class
-com/course/portal/api/controller/response/EmailController.class
 com/course/portal/api/controller/StepsController.class
 com/course/portal/api/security/PasswordSecurity.class
 com/course/portal/api/model/dao/entity/SubGridEntity.class
