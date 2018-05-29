@@ -13,6 +13,7 @@ public class CourseDTO {
     private int views;
     private GridDTO grid;
     private SubGridDTO subGrid;
+    private String labelUrl;
 
     public long get_id() {
         return _id;
@@ -100,5 +101,13 @@ public class CourseDTO {
 
     public void setSubGrid(SubGridDTO subGrid) {
         this.subGrid = subGrid;
+    }
+
+    public String getLabelUrl() {
+        return labelUrl;
+    }
+
+    public void setLabelUrl(String labelUrl) {
+        this.labelUrl = labelUrl;
     }
 }

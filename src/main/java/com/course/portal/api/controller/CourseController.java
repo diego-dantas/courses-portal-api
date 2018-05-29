@@ -51,6 +51,7 @@ public class CourseController {
             courseEntity.setStatus(courseDTO.isStatus());
             courseEntity.setPrice(courseDTO.getPrice());
             courseEntity.setWayImage(courseDTO.getWayImage());
+            courseEntity.setLabelUrl(courseDTO.getLabelUrl());
             courseEntity.setGrid(gridEntity);
             courseEntity.setSubGrid(subGridEntity);
 
@@ -83,6 +84,7 @@ public class CourseController {
             courseEntity.setStatus(courseDTO.isStatus());
             courseEntity.setPrice(courseDTO.getPrice());
             courseEntity.setWayImage(courseDTO.getWayImage());
+            courseEntity.setLabelUrl(courseDTO.getLabelUrl());
 
             courseRepository.delete(courseEntity);
 
@@ -124,6 +126,7 @@ public class CourseController {
                 courseDTO.setPrice(courses.getPrice());
                 courseDTO.setWayImage(courses.getWayImage());
                 courseDTO.setStatus(courses.isStatus());
+                courseDTO.setLabelUrl(courses.getLabelUrl());
                 courseDTO.setGrid(gridDTO);
                 courseDTO.setSubGrid(subGridDTO);
 
@@ -175,6 +178,7 @@ public class CourseController {
                 courseDTO.setPrice(courseEntity.getPrice());
                 courseDTO.setWayImage(courseEntity.getWayImage());
                 courseDTO.setStatus(courseEntity.isStatus());
+                courseDTO.setLabelUrl(courseEntity.getLabelUrl());
                 courseDTO.setGrid(gridDTO);
                 courseDTO.setSubGrid(subGridDTO);
 
@@ -225,6 +229,47 @@ public class CourseController {
 
     }
 
+
+    @GetMapping(value = "/getCourseID")
+    public ResponseEntity<Response<List<StepsDTO>>> getCourseID(@RequestParam long id){
+
+        try {
+            Response<List<StepsDTO>> response = new Response<>();
+            List<StepsDTO> stepsDTOs = new ArrayList<>();
+
+            CourseEntity courseEntity = courseRepository.findOne(id);
+            CourseDTO courseDTO = new CourseDTO();
+            courseDTO.set_id(courseEntity.get_id());
+            courseDTO.setName(courseEntity.getName());
+            courseDTO.setDescription(courseEntity.getDescription());
+            courseDTO.setObjective(courseEntity.getObjective());
+            courseDTO.setHours(courseEntity.getHours());
+            courseDTO.setPrice(courseEntity.getPrice());
+            courseDTO.setWayImage(courseEntity.getWayImage());
+            courseDTO.setStatus(courseEntity.isStatus());
+            courseDTO.setLabelUrl(courseEntity.getLabelUrl());
+
+            List<StepsEntity> stepsEntities = stepsRepository.findByCourse(courseEntity);
+
+            for(StepsEntity stepsEntity : stepsEntities){
+                StepsDTO stepsDTO = new StepsDTO();
+                stepsDTO.setCourse(courseDTO);
+                stepsDTO.set_id(stepsEntity.get_id());
+                stepsDTO.setName(stepsEntity.getName());
+                stepsDTO.setDescription(stepsEntity.getDescription());
+                stepsDTO.setStepsOrder(stepsEntity.getStepsOrder());
+
+                stepsDTOs.add(stepsDTO);
+            }
+            
+            response.setData(stepsDTOs);
+            return ResponseEntity.ok(response);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>(HttpStatus.BAD_GATEWAY);
+        }
+    }
 
     @PostMapping(value = "/courses")
     public ResponseEntity<Response<CourseDTO>> updateCourses(@RequestBody CourseDTO courseDTO){

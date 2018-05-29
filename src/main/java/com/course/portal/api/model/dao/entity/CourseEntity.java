@@ -26,6 +26,7 @@ public class CourseEntity implements Serializable{
 	private List<CoursePromotionEntity> coursePromotion;
 	private GridEntity grid;
 	private SubGridEntity subGrid;
+	private String labelUrl;
 	//private List<GridCourseEntity> gridCourses;
 	private Date dateCreate;
     private Date dateUpdate;
@@ -171,7 +172,17 @@ public class CourseEntity implements Serializable{
             public void setGridCourses(List<GridCourseEntity> gridCourses) {
                 this.gridCourses = gridCourses;
             }
-        */
+		*/
+		
+	@Column(name = "labelUrl", length = 100, nullable = false)
+	public String getLabelUrl() {
+		return labelUrl;
+	}
+
+	public void setLabelUrl(String labelUrl) {
+		this.labelUrl = labelUrl;
+	}
+	
 	@Column(name = "date_create")
     public Date getDateCreate() {
         return dateCreate;

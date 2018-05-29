@@ -13,4 +13,5 @@ public interface CourseRepository extends JpaRepository<CourseEntity, Long>{
     @Query(value = "select * from course c where c.grid__id =:grid and c.sub_grid__id =:subGrid", nativeQuery = true)
     List<CourseEntity> findByGridAndSubGrid(@Param("grid") Long grid, @Param("subGrid") Long subGrid);
 
+
 }
