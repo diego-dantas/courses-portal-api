@@ -26,6 +26,7 @@ public class StudentDTO {
 	private String source;
 	private boolean status;
 	private ProfileDTO profile;
+	private PlanDTO plan;
 
     public long get_id() {
         return _id;
@@ -262,5 +263,19 @@ public class StudentDTO {
 
 	public void setSource(String source) {
 		this.source = source;
+	}
+
+	/**
+	 * @return the plan
+	 */
+	public PlanDTO getPlan() {
+		return plan;
+	}
+
+	/**
+	 * @param plan the plan to set
+	 */
+	public void setPlan(PlanDTO plan) {
+		this.plan = plan;
 	}
 }

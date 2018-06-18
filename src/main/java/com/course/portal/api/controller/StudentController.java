@@ -6,6 +6,7 @@ import com.course.portal.api.model.dao.entity.ProfileEntity;
 import com.course.portal.api.model.dao.entity.StudentEntity;
 import com.course.portal.api.model.dao.repository.ConfigEmailRepository;
 import com.course.portal.api.model.dao.repository.StudentRepository;
+import com.course.portal.api.model.dto.PlanDTO;
 import com.course.portal.api.model.dto.ProfileDTO;
 import com.course.portal.api.model.dto.StudentDTO;
 import com.course.portal.api.security.PasswordSecurity;
@@ -180,9 +181,22 @@ public class StudentController {
                     studentDTO.setSource(student.getSource());
                     studentDTO.setImagePath(student.getImagePath());
                     
+                    PlanDTO planDTO = new PlanDTO();
+                    planDTO.set_id(student.getPlan().get_id());
+                    studentDTO.setPlan(planDTO);
+
                     ProfileDTO profileDTO = new ProfileDTO();
                     profileDTO.set_id(student.getProfile().get_id());
                     studentDTO.setProfile(profileDTO);
+                }else {
+                    studentDTO.setName(student.getName());
+                    studentDTO.setImagePath(student.getImagePath());
+                    studentDTO.setSource(student.getSource());
+
+                    PlanDTO planDTO = new PlanDTO();
+                    planDTO.set_id(student.getPlan().get_id());
+                    studentDTO.setPlan(planDTO);
+
                 }
                 
 

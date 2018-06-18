@@ -37,7 +37,7 @@ public class DataConfiguration {
         // dataSource.setPassword("senha102030");
        dataSource.setUrl("jdbc:mysql://localhost:3306/eodontodigitaldb");
        dataSource.setUsername("root");
-       dataSource.setPassword("");
+       dataSource.setPassword("102030");
         return dataSource;
     }
 
