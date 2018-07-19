@@ -2,6 +2,7 @@ package com.course.portal.api.controller;
 
 import com.course.portal.api.controller.response.Response;
 import com.course.portal.api.model.dao.entity.ConfigEmailEntity;
+import com.course.portal.api.model.dao.entity.PlanEntity;
 import com.course.portal.api.model.dao.entity.ProfileEntity;
 import com.course.portal.api.model.dao.entity.StudentEntity;
 import com.course.portal.api.model.dao.repository.ConfigEmailRepository;
@@ -70,6 +71,7 @@ public class StudentController {
         Response<StudentDTO> response = new Response<StudentDTO>();
         StudentEntity studentEntity = new StudentEntity();
         ProfileEntity profileEntity = new ProfileEntity();
+        PlanEntity planEntity = new PlanEntity();
         try{
 
             studentEntity.set_id(studentDTO.get_id());
@@ -97,7 +99,10 @@ public class StudentController {
             
             profileEntity.set_id(studentDTO.getProfile().get_id());
             studentEntity.setProfile(profileEntity);
-        
+            
+            //lembrar de alterar a logica quando implementar o plano
+            planEntity.set_id(1L);
+            studentEntity.setPlan(planEntity);
 
             studentRepository.save(studentEntity);
             
@@ -189,6 +194,7 @@ public class StudentController {
                     profileDTO.set_id(student.getProfile().get_id());
                     studentDTO.setProfile(profileDTO);
                 }else {
+                    studentDTO.set_id(student.get_id());
                     studentDTO.setName(student.getName());
                     studentDTO.setImagePath(student.getImagePath());
                     studentDTO.setSource(student.getSource());
