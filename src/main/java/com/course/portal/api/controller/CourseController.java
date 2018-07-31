@@ -52,6 +52,7 @@ public class CourseController {
             courseEntity.setPrice(courseDTO.getPrice());
             courseEntity.setWayImage(courseDTO.getWayImage());
             courseEntity.setLabelUrl(courseDTO.getLabelUrl());
+            courseEntity.setHome(courseDTO.getHome());
             courseEntity.setGrid(gridEntity);
             courseEntity.setSubGrid(subGridEntity);
 
@@ -85,7 +86,7 @@ public class CourseController {
             courseEntity.setPrice(courseDTO.getPrice());
             courseEntity.setWayImage(courseDTO.getWayImage());
             courseEntity.setLabelUrl(courseDTO.getLabelUrl());
-
+            courseEntity.setHome(courseDTO.getHome());
             courseRepository.delete(courseEntity);
 
             response.setData(courseDTO);
@@ -126,6 +127,7 @@ public class CourseController {
                 courseDTO.setPrice(courses.getPrice());
                 courseDTO.setWayImage(courses.getWayImage());
                 courseDTO.setStatus(courses.isStatus());
+                courseDTO.setHome(courses.getHome());
                 courseDTO.setLabelUrl(courses.getLabelUrl());
                 courseDTO.setGrid(gridDTO);
                 courseDTO.setSubGrid(subGridDTO);
@@ -178,6 +180,7 @@ public class CourseController {
                 courseDTO.setPrice(courseEntity.getPrice());
                 courseDTO.setWayImage(courseEntity.getWayImage());
                 courseDTO.setStatus(courseEntity.isStatus());
+                courseDTO.setHome(courseEntity.getHome());
                 courseDTO.setLabelUrl(courseEntity.getLabelUrl());
                 courseDTO.setGrid(gridDTO);
                 courseDTO.setSubGrid(subGridDTO);
@@ -245,8 +248,10 @@ public class CourseController {
             courseDTO.setObjective(courseEntity.getObjective());
             courseDTO.setHours(courseEntity.getHours());
             courseDTO.setPrice(courseEntity.getPrice());
+            courseDTO.setHome(courseEntity.getHome());
             courseDTO.setWayImage(courseEntity.getWayImage());
             courseDTO.setStatus(courseEntity.isStatus());
+            
             courseDTO.setLabelUrl(courseEntity.getLabelUrl());
 
             List<StepsEntity> stepsEntities = stepsRepository.findByCourse(courseEntity);

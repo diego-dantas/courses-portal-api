@@ -21,6 +21,7 @@ public class CourseEntity implements Serializable{
 	private String wayImage;
 	private boolean status;
 	private int views;
+	private int home;
 	private List<StepsEntity> steps;
 	private List<CoursePlanEntity> coursePlan;
 	private List<CoursePromotionEntity> coursePromotion;
@@ -33,6 +34,16 @@ public class CourseEntity implements Serializable{
 	
 	public CourseEntity() {}
 	
+
+	@Column(name = "home", nullable = true)
+	public int getHome() {
+		return home;
+	}
+	
+	public void setHome(int home) {
+		this.home = home;
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public long get_id() {

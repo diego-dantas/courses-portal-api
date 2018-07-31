@@ -11,6 +11,7 @@ public class CourseDTO {
     private String wayImage;
     private boolean status;
     private int views;
+    private int home;
     private GridDTO grid;
     private SubGridDTO subGrid;
     private String labelUrl;
@@ -19,7 +20,15 @@ public class CourseDTO {
         return _id;
     }
 
-    public void set_id(long _id) {
+	public int getHome() {
+		return home;
+	}
+
+	public void setHome(int home) {
+		this.home = home;
+	}
+
+	public void set_id(long _id) {
         this._id = _id;
     }
 

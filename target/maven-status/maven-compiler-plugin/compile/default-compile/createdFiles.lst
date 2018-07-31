@@ -8,6 +8,7 @@ com/course/portal/api/controller/EvaluationController.class
 com/course/portal/api/model/dao/entity/StateEntity.class
 com/course/portal/api/model/dao/entity/CityEntity.class
 com/course/portal/api/model/dao/repository/ProviderRepository.class
+com/course/portal/api/model/dao/repository/ProfileRepository.class
 com/course/portal/api/model/dto/PlanDTO.class
 com/course/portal/api/model/dao/repository/ConfigEmailRepository.class
 com/course/portal/api/model/dao/repository/StepsRepository.class
@@ -16,6 +17,7 @@ com/course/portal/api/model/dao/db/DataConfiguration.class
 com/course/portal/api/model/dto/CourseDTO.class
 com/course/portal/api/controller/MaterialPathController.class
 com/course/portal/api/controller/CourseController.class
+com/course/portal/api/controller/StateController.class
 com/course/portal/api/model/dto/EmailDTO.class
 com/course/portal/api/model/dao/entity/SubGridGridEntity.class
 com/course/portal/api/model/dao/entity/EvaluationEntity.class
@@ -33,14 +35,17 @@ com/course/portal/api/model/dao/entity/NewsletterEntity.class
 com/course/portal/api/controller/DescriptiveController.class
 com/course/portal/api/model/dao/repository/FileRepository.class
 com/course/portal/api/model/dto/CoursePlanDTO.class
+com/course/portal/api/controller/EmailController.class
 com/course/portal/api/model/dao/repository/GridRepository.class
 com/course/portal/api/controller/testeController.class
 com/course/portal/api/model/dto/MaterialPathDTO.class
 com/course/portal/api/controller/SubGridController$EvaluationQuestionController.class
 com/course/portal/api/model/dao/entity/CoursePromotionEntity.class
 com/course/portal/api/model/dto/SubGridDTO.class
+com/course/portal/api/model/dao/repository/CityRepository.class
 com/course/portal/api/model/dto/PromotionDTO.class
 com/course/portal/api/useful/configuration/CorsConfiguration$1.class
+com/course/portal/api/model/dao/entity/ProfileEntity.class
 com/course/portal/api/model/dao/entity/PlanEntity.class
 com/course/portal/api/model/dto/ConfigEmailDTO.class
 com/course/portal/api/ApiApplication.class
@@ -48,6 +53,7 @@ com/course/portal/api/controller/ConfigEmailController.class
 com/course/portal/api/controller/PromotionController.class
 com/course/portal/api/controller/SubGridController.class
 com/course/portal/api/ServletInitializer.class
+com/course/portal/api/controller/ProfileController.class
 com/course/portal/api/model/dao/repository/SubGridRepositoy.class
 com/course/portal/api/model/dao/repository/CourseRepository.class
 com/course/portal/api/model/dao/repository/PromotionRepository.class
@@ -57,6 +63,7 @@ com/course/portal/api/controller/CoursePromotionController.class
 com/course/portal/api/model/dto/GridDTO.class
 com/course/portal/api/model/dto/NewsletterDTO.class
 com/course/portal/api/model/dao/repository/NewsletterRepository.class
+com/course/portal/api/model/dto/ProfileDTO.class
 com/course/portal/api/model/dao/repository/EvaluationQuestionRepository.class
 com/course/portal/api/model/dao/entity/MaterialEntity.class
 com/course/portal/api/model/dao/repository/PlanRepository.class
@@ -83,6 +90,7 @@ com/course/portal/api/model/dao/entity/StudentEntity.class
 com/course/portal/api/useful/email/Email.class
 com/course/portal/api/controller/StepsController.class
 com/course/portal/api/security/PasswordSecurity.class
+com/course/portal/api/model/dto/StateDTO.class
 com/course/portal/api/model/dao/entity/SubGridEntity.class
 com/course/portal/api/model/dto/EvaluationQuestionDTO.class
 com/course/portal/api/controller/NewsletterController.class
